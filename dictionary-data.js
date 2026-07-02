@@ -5,7 +5,7 @@ const dictionaryData = [
     chapters: [
       {
         id: 1,
-        title: "فصل ۱: مفاهیم بنیادین موضوع و روایت",
+        title: "فصل ۱: مفاهیم بنیادین، روایت و ساختار اکوسیستم",
         words: [
 {
   term: "رویداد (Event)",
@@ -5165,13 +5165,7 @@ Behavior Intelligence Center
 
 </div>
 `
-}
-        ]
-      },
-      {
-        id: 2,
-        title: "فصل ۲: ساختار و جریان‌های اکوسیستم رسانه‌ای",
-        words: [
+},
 {
   term: "اکوسیستم رسانه‌ای (Media Ecosystem)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>شبکه پیچیده و به هم پیوسته‌ای از بازیگران، زیرساخت‌ها و جریان‌های اطلاعاتی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>مانند اکوسیستم بیولوژیکی، دارای تولیدکنندگان، توزیع‌کنندگان و مصرف‌کنندگان است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Graph Construction 2. Role Classification 3. Ecosystem Health Scoring</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ecosystem_id": "uuid", "health_metrics": {"voice_diversity_index": "float"}}</div><strong> API:</strong> <span class="api-endpoint">GET /api/ecosystem/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Network Analysis Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اکوسیستم رسانه‌ای متشکل از صداوسیما، توییتر و خبرگزاری‌ها.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>انحصار رسانه‌ای مطلق.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>نقشه کلان سامانه برای تمام عملیات رصد.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Network Vulnerability Analysis</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Community Detection Algorithms</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>داده‌های تعاملی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Information Environment
@@ -8424,6 +8418,343 @@ Boundary Intelligence Center
   ├── Gatekeeper
   ├── Editor
   └── Algorithm</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمایز بین "دروازه‌بانی ویرایشی" (برای کیفیت) و "دروازه‌بانی سانسوری" (برای سرکوب).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Filtering Transparency Score</li><li>Rejection Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Power = (Volume Controlled × Audience Reach) ÷ Transparency Score</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Gatekeeper Bias Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شبیه‌سازی اثر تغییر قوانین فیلتر کردن یک پلتفرم بر دیده‌شدن یک روایت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع دروازه‌بان (انسانی/الگوریتمی)</li></ul></div>`
+},
+{
+  term: "نقشه نفوذ (Influence Map)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>نقشه نفوذ تصویری از شبکه روابط بین بازیگران رسانه‌ای است که نشان می‌دهد چه کسانی بر چه کسانی اثر می‌گذارند، اطلاعات از کجا به کجا جریان دارد، و کانون‌های قدرت رسانه‌ای کجاست.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>نقشه نفوذ یک گراف جهت‌دار است که گره‌های آن بازیگران (اشخاص، رسانه‌ها، حساب‌های کاربری) و یال‌های آن روابط نفوذ (اشتراک‌گذاری، منشن، استناد، تقویت) را نشان می‌دهد. این نقشه به تیم عملیاتی کمک می‌کند مسیر انتشار پیام را پیش‌بینی کند، ضعیف‌ترین حلقه در زنجیر نفوذ را شناسایی نماید، و هسته‌های هماهنگ پنهان را کشف کند.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Interaction Graph Construction</li>
+<li>Edge Weighting (frequency, reach)</li>
+<li>Community Detection (Louvain/Leiden)</li>
+<li>Centrality Calculation (Betweenness, PageRank)</li>
+<li>Influence Flow Simulation</li>
+<li>Temporal Graph Evolution</li>
+<li>Coordinated Behavior Detection</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "map_id": "uuid",
+  "nodes": [
+    {
+      "actor_id": "string",
+      "name": "string",
+      "type": "person|media|account",
+      "influence_score": "float",
+      "centrality": "float",
+      "community": "string"
+    }
+  ],
+  "edges": [
+    {
+      "source": "string",
+      "target": "string",
+      "weight": "float",
+      "relation_type": "retweet|mention|cite|amplify"
+    }
+  ],
+  "communities": ["array"],
+  "generated_at": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/influence/map</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Network Intelligence — Influence Visualization</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>شناسایی یک حساب ناشناس با Betweenness بالا که اطلاعات بین دو شبکه منتقل می‌کند</li>
+<li>کشف شبکه‌ای از ۵۰ اکانت که محتوا را هماهنگ بازنشر می‌کنند</li>
+<li>یافتن مجرای اصلی انتشار یک شایعه</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>فهرست اینفلوئنسرها بر اساس تعداد فالوور نقشه نفوذ نیست؛ نقشه نفوذ روابط پویا را می‌سنجد، نه شاخص‌های ایستا.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>نقشه نفوذ پنهان‌ترین ساختارهای قدرت رسانه‌ای را آشکار می‌کند. این ابزار برای شناسایی عملیات اطلاعاتی، هسته‌های هماهنگ و کانون‌های تکثیر اطلاعات نادرست ضروری است.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Influence Operation Detection</li>
+<li>Key Actor Identification</li>
+<li>Disinformation Source Tracing</li>
+<li>Campaign Targeting</li>
+<li>Coordinated Network Detection</li>
+<li>Crisis Communication Routing</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Graph Neural Networks</li>
+<li>Louvain Community Detection</li>
+<li>PageRank / HITS Algorithm</li>
+<li>Temporal Network Analysis</li>
+<li>Coordinated Behavior Detection (bot-like patterns)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>داده‌های تعامل شبکه اجتماعی (Retweet، منشن)</li>
+<li>داده‌های استناد رسانه‌ای</li>
+<li>پروفایل کاربران</li>
+<li>تاریخچه انتشار</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Influence Map
+ ├── contains → Actor
+ ├── contains → Influencer
+ ├── reveals → Coordinated Network
+ ├── feeds → Social Graph
+ ├── supports → Influence Operation Detection
+ └── built_from → Network Analysis
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>شناسایی ساختار کلی شبکه: ۸۵-۹۵٪. تشخیص شبکه هماهنگ پنهان: ۷۰-۸۵٪ (وابسته به رفتار پنهان‌سازی بازیگران).</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>گراف را به‌صورت temporal (در طول زمان) ذخیره کن نه فقط snapshot</li>
+<li>Edge weight را با decay در طول زمان کاهش بده</li>
+<li>برای نمایش از Force-directed graph استفاده کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Graph Density</li>
+<li>Top-10 Influencer Score</li>
+<li>Community Count and Size</li>
+<li>Coordinated Account Detection Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Influence_Score =
+(PageRank × 0.35) +
+(Betweenness_Centrality × 0.30) +
+(Reach × 0.20) +
+(Engagement_Rate × 0.15)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Influence Network Visualizer</p>
+<ul style="margin-right:20px">
+<li>گراف تعاملی شبکه</li>
+<li>فهرست بازیگران کلیدی بر اساس Centrality</li>
+<li>جوامع شناسایی‌شده و رنگ‌بندی آن‌ها</li>
+<li>تغییر نقشه در طول زمان</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار ورود بازیگر جدید با نفوذ بالا</li>
+<li>شناسایی مسیر مداخله در انتشار محتوا</li>
+<li>پیشنهاد بازیگر key برای ارتباط مستقیم</li>
+<li>هشدار کشف شبکه هماهنگ</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Graph Update Frequency</li>
+<li>Minimum Edge Weight</li>
+<li>Community Detection Algorithm</li>
+<li>Coordinated Behavior Threshold</li>
+<li>Temporal Decay Factor</li>
+</ul>
+</div>`
+},
+{
+  term: "تحلیل شبکه (Network Analysis)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>تحلیل شبکه مطالعه ریاضی روابط بین موجودیت‌ها (اشخاص، رسانه‌ها، محتواها) برای کشف ساختارهای پنهان، مسیرهای انتشار و کانون‌های قدرت است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Network Analysis با نگاه به کل ساختار شبکه به‌جای تک‌تک بازیگران، پدیده‌هایی را آشکار می‌کند که در تحلیل فردی پنهان می‌مانند: شبکه‌های هماهنگ، خوشه‌های ایدئولوژیک، پل‌های اطلاعاتی و نقاط آسیب‌پذیری شبکه. در سیستم رسانه‌ای، Network Analysis پایه‌ای‌ترین ابزار برای درک معماری انتشار اطلاعات است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Graph Construction (Nodes + Edges)</li>
+<li>Centrality Analysis (Degree/Betweenness/Closeness/Eigenvector)</li>
+<li>Community Detection (Louvain/Leiden/Girvan-Newman)</li>
+<li>Path Analysis (Shortest Path, Network Diameter)</li>
+<li>Temporal Network Analysis</li>
+<li>Anomaly Detection (sudden topology change)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "network_id": "uuid",
+  "node_count": "int",
+  "edge_count": "int",
+  "density": "float",
+  "avg_clustering": "float",
+  "communities": [{"id":"string","size":"int","label":"string"}],
+  "top_nodes": [{"id":"string","centrality":"float","type":"string"}],
+  "diameter": "int",
+  "analysis_timestamp": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/network/analysis</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Graph Science — Social Network Analysis (SNA)</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>تشخیص اینکه یک هشتگ از کدام خوشه شروع شد</li>
+<li>یافتن رسانه‌ای که «پل» بین دو جامعه ایدئولوژیک است</li>
+<li>کشف ۳۰ اکانت که همه با فاصله زمانی کمتر از ۱ ثانیه محتوا را بازنشر می‌کنند</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>بررسی نظرات زیر یک پست تحلیل شبکه نیست؛ تحلیل شبکه روابط ساختاری کل گراف را می‌سنجد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>اطلاعات در شبکه‌ها جریان دارد، نه به‌صورت تصادفی. Network Analysis مسیر دقیق این جریان را نشان می‌دهد و امکان مداخله هدفمند (تقویت یا توقف انتشار) را می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Influence Network Mapping</li>
+<li>Coordinated Inauthentic Behavior Detection</li>
+<li>Information Diffusion Analysis</li>
+<li>Community Segmentation</li>
+<li>Key Actor Identification</li>
+<li>Disinformation Spread Mapping</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>NetworkX (Python)</li>
+<li>Graph Tool</li>
+<li>Gephi (Visualization)</li>
+<li>Neo4j Graph Algorithms</li>
+<li>Graph Neural Networks (GNN)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>داده‌های تعامل شبکه اجتماعی</li>
+<li>استنادهای رسانه‌ای</li>
+<li>هایپرلینک‌های بین سایت‌ها</li>
+<li>داده‌های ایمیل یا پیام‌رسان (OSINT)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Network Analysis
+ ├── builds → Influence Map
+ ├── detects → Coordinated Network
+ ├── feeds → Knowledge Graph
+ ├── enables → Diffusion Network Analysis
+ └── uses → Social Graph
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>معیارهای مرکزیت: دقیق ۱۰۰٪ (محاسبه ریاضی). تشخیص جوامع: ۸۰-۹۵٪ (وابسته به الگوریتم). تشخیص هماهنگی پنهان: ۷۰-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>برای شبکه‌های بزرگ (۱M+ node) از Sampling استفاده کن</li>
+<li>گراف را temporal نگه‌دار (Snapshot per time window)</li>
+<li>Edge را با نوع رابطه برچسب بزن (retweet vs. mention vs. quote)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Graph Density</li>
+<li>Average Clustering Coefficient</li>
+<li>Number of Communities</li>
+<li>Top Betweenness Centrality Nodes</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Betweenness_Centrality(v) =
+Σ (σ_st(v) / σ_st) for all s≠v≠t
+
+Coordination_Score =
+(Simultaneous_Actions / Total_Actions) × (1 / Time_Variance)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Network Intelligence Map</p>
+<ul style="margin-right:20px">
+<li>گراف تعاملی شبکه با رنگ‌بندی جوامع</li>
+<li>جدول مرکزیت‌ترین بازیگران</li>
+<li>Timeline تغییر ساختار شبکه</li>
+<li>هشدار ظهور شبکه هماهنگ</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار ظهور خوشه جدید با رشد سریع</li>
+<li>شناسایی بازیگر پل برای ارتباط استراتژیک</li>
+<li>تشخیص شبکه هماهنگ برای گزارش به تیم حفاظت اطلاعات</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Community Detection Algorithm</li>
+<li>Minimum Node Degree Threshold</li>
+<li>Temporal Window Size</li>
+<li>Edge Type Filter</li>
+<li>Coordination Detection Threshold</li>
+</ul>
+</div>`
 }
         ]
       }
@@ -8435,7 +8766,7 @@ Boundary Intelligence Center
     chapters: [
       {
         id: 1,
-        title: "فصل ۱: قالب‌های رسانه‌ای و محتوای تخصصی",
+        title: "فصل ۱: قالب‌های رسانه‌ای، محتوای تصویری، ویدیویی و صوتی",
         words: [
 {
   term: "محتوا (Content)",
@@ -8471,13 +8802,7 @@ Boundary Intelligence Center
   ├── Investigative Report
   ├── Fact Check Desk
   └── Legal Risk</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>استفاده از سیستم "اتاق تمیز" (Clean Room) و رمزنگاری سرتاسری برای حفاظت از اسناد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Evidence Strength</li><li>Legal Risk Mitigation</li><li>Social Impact Score</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Value = (Evidence Strength × Public Interest) ÷ (Legal Risk + Production Cost)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Investigation Pipeline / Legal Risk Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی ریسک-فایده انتشار و پیشنهاد زمان‌بندی بهینه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>سطح محرمانگی</li><li>پروتکل‌های حفاظت از منبع</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 2,
-        title: "فصل ۲: محتوای تصویری، ویدیویی و صوتی",
-        words: [
+},
 {
   term: "اینفوگرافیک (Infographic)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نمایش بصری و گرافیکی داده‌ها یا اطلاعات برای درک سریع و آسان مفاهیم پیچیده.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>تبدیل داده‌های خام به داستان‌های بصری که حافظه تصویری مخاطب را درگیر می‌کند و نرخ اشتراک‌گذاری را به شدت افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>️ پردازش:</strong> 1. Data Binding 2. Visual Hierarchy Mapping 3. SVG/Canvas Rendering 4. Accessibility Check</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"infographic_id": "uuid", "visual_type": "chart|map|timeline", "engagement_score": "float", "share_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/content/infographic/generate</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Visual Communication Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>نمودار مقایسه‌ای بودجه سالانه کشور.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>جدول‌های اکسل خام و متون طولانی بدون تصویر.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش نرخ اشتراک‌گذاری در شبکه‌های اجتماعی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Data Storytelling</li><li>Social Media Campaigns</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Image Metadata Analysis</li><li>Visual Pattern Recognition</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>دیتاست‌های ساختاریافته</li><li>قالب‌های گرافیکی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Content
@@ -8541,41 +8866,6 @@ Boundary Intelligence Center
   ├── Reporter
   ├── Source Network
   └── Published Content</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ابزارهای تحقیق و راستی‌آزمایی برای خبرنگاران.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stories Per Month</li><li>Accuracy Rate</li><li>Source Diversity</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Productivity = (Stories × Quality) ÷ Time Spent</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Reporter Performance Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تخصیص سوژه بر اساس تخصص و عملکرد.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>حوزه تخصصی</li><li>منابع تحت پوشش</li></ul></div>`
-},
-{
-  term: "دبیر سرویس (Desk Editor)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ویراستاری که مسئول نهایی آماده‌سازی اخبار یک سرویس خاص (مانند سرویس داخلی، خارجی، ورزشی) برای انتشار است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>دبیر سرویس آخرین حلقه قبل از انتشار است و مسئول صحت، دقت، و کیفیت نهایی محتوای سرویس خود است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><p>A senior editor responsible for the final review, editing, and approval of all content within a specific news service before publication.</p></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Editorial Quality Control Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>دبیر سرویس ورزشی که اخبار ورزشی را قبل از انتشار تأیید می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خبرنگار که فقط محتوا تولید می‌کند بدون مسئولیت ویراستاری نهایی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حفظ کیفیت و استاندارد محتوای هر سرویس خبری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Final Content Review</li><li>Headline Writing</li><li>Story Prioritization</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Approval Authority Mapping</li><li>Service Assignment Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>لیست اخبار سرویس</li><li>تاریخچه تأییدها</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">News Service
-  ├── Desk Editor
-  ├── Reporter
-  └── Published Stories</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ابزارهای ویراستاری سریع و چک‌لیست کیفیت.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Review Turnaround Time</li><li>Error Rate Post-Publication</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Quality Control = (1 - Error Rate) × Review Speed</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Desk Editor Workflow</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی اخبار بر اساس ارزش خبری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>سرویس تحت نظارت</li><li>استانداردهای ویراستاری</li></ul></div>`
-},
-{
-  term: "خط خبری (News Desk)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>واحد تخصصی در اتاق خبر که مسئول پوشش یک حوزه خاص (مانند سیاست، ورزش، اقتصاد) است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>خط‌های خبری تخصصی اجازه می‌دهند خبرنگاران در حوزه‌های خاص عمیق‌تر شوند و پوشش دقیق‌تری ارائه دهند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Topic Assignment 2. Source Management 3. Story Tracking 4. Cross-Desk Coordination</div><strong> خروجی (JSON):</strong><div class="json-code">{"desk_id": "uuid", "topic": "string", "active_reporters": "int", "stories_in_pipeline": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/newsdesk/{id}/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Editorial Structure Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>خط خبری سیاسی یک روزنامه با ۵ خبرنگار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خبرنگار عمومی که همه حوزه‌ها را پوشش می‌دهد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تخصصی‌سازی پوشش و افزایش عمق تحلیل.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Specialized Coverage</li><li>Source Development</li><li>Expert Reporting</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Topic Classification</li><li>Reporter Assignment Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>حوزه‌های تحت پوشش</li><li>منابع تخصصی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Newsroom
-  ├── News Desk (Politics)
-  ├── News Desk (Sports)
-  └── News Desk (Economy)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>هماهنگی بین خطوط خبری برای داستان‌های چندبعدی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stories Per Day</li><li>Source Diversity Index</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Productivity = (Stories × Depth) ÷ Reporter Count</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>News Desk Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تخصیص بهینه خبرنگاران بر اساس حجم داستان‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>حوزه‌های تحت پوشش</li><li>تعداد خبرنگاران</li></ul></div>`
-},
-{
-  term: "میز خبر (Assignment Desk)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مرکز هماهنگی در اتاق خبر که مسئول تخصیص سوژه‌ها به خبرنگاران و پیگیری پیشرفت گزارش‌ها است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>میز خبر مغز متفکر عملیات روزانه اتاق خبر است و تصمیم می‌گیرد کدام داستان‌ها پوشش داده شوند و توسط چه کسی.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Story Intake 2. Priority Assessment 3. Reporter Assignment 4. Progress Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"assignment_id": "uuid", "story_title": "string", "assigned_reporter": "uuid", "priority": "high|medium|low", "deadline": "timestamp"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/assignment/create</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Editorial Operations Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>میز خبر که سوژه‌های روز را بین خبرنگاران تقسیم می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خبرنگارانی که بدون هماهنگی مرکزی سوژه انتخاب می‌کنند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>جلوگیری از دوباره‌کاری و اطمینان از پوشش کامل رویدادها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Story Assignment</li><li>Resource Allocation</li><li>Deadline Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Assignment Workflow Analysis</li><li>Reporter Workload Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>لیست سوژه‌های فعال</li><li>وضعیت خبرنگاران</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Newsroom
-  ├── Assignment Desk
-  ├── Reporter Pool
-  └── Story Pipeline</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سیستم هشدار برای ددلاین‌های نزدیک.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Assignment Fulfillment Rate</li><li>Deadline Adherence</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Efficiency = (Completed Assignments × Quality) ÷ Total Assigned</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Assignment Desk Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>پیشنهاد تخصیص بر اساس تخصص و بار کاری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>اولویت‌های پیش‌فرض</li><li>ظرفیت خبرنگاران</li></ul></div>`
-},
-{
-  term: "اتاق کنترل (Control Room)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مرکز فنی و عملیاتی که پخش زنده، ضبط برنامه‌ها، و مدیریت سیگنال‌های رسانه‌ای در آن انجام می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اتاق کنترل قلب فنی هر رسانه تصویری/صوتی است و مسئول کیفیت فنی پخش و هماهنگی لحظه‌ای تیم تولید است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Signal Management 2. Live Switching 3. Quality Monitoring 4. Broadcast Coordination</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"control_room_id": "uuid", "active_channels": "int", "broadcast_status": "live|recording|idle"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/control-room/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Broadcast Operations Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اتاق کنترل یک شبکه تلویزیونی که پخش زنده اخبار را مدیریت می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>استودیوی ضبط بدون قابلیت پخش زنده.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تضمین کیفیت فنی و هماهنگی عملیات پخش.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Live Broadcasting</li><li>Signal Quality Control</li><li>Multi-Camera Coordination</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Broadcast Infrastructure Analysis</li><li>Technical Role Mapping</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>وضعیت کانال‌ها</li><li>کیفیت سیگنال</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Broadcast Center
-  ├── Control Room
-  ├── Studio
-  └── Transmission</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سیستم‌های پشتیبان برای جلوگیری از قطعی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Broadcast Uptime</li><li>Technical Error Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Reliability = (Uptime × Quality Score) ÷ Incident Count</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Control Room Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تشخیص خودکار مشکلات فنی و پیشنهاد راه‌حل.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>کانال‌های تحت مدیریت</li><li>آستانه‌های کیفیت</li></ul></div>`
-},
-{
-  term: "استودیو خبر (News Studio)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فضای فیزیکی تخصصی که در آن اخبار و برنامه‌های خبری ضبط یا پخش زنده می‌شوند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>استودیو خبر محیط حرفه‌ای با تجهیزات کامل تصویربرداری، صدا، و گرافیک برای تولید محتوای خبری با کیفیت بالاست.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><p>A specialized physical facility equipped with professional broadcasting equipment for recording or live transmission of news programs.</p></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Broadcast Infrastructure Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استودیوی اصلی یک شبکه خبری با پس‌زمینه دیجیتال و میز اخبار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فضای ضبط غیرحرفه‌ای بدون تجهیزات تخصصی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ارائه تصویر حرفه‌ای و قابل اعتماد به مخاطب.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>News Broadcasting</li><li>Interview Recording</li><li>Panel Discussions</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Facility Infrastructure Analysis</li><li>Equipment Inventory</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>لیست تجهیزات</li><li>برنامه زمان‌بندی استفاده</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Broadcast Center
-  ├── News Studio
-  ├── Control Room
-  └── Post-Production</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>انعطاف‌پذیری برای انواع برنامه‌های خبری.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Studio Utilization Rate</li><li>Production Quality Score</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Efficiency = (Broadcast Hours × Quality) ÷ Downtime</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Studio Scheduling Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی زمان‌بندی استفاده از استودیو.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ظرفیت استودیو</li><li>تجهیزات موجود</li></ul></div>`
 },
 {
   term: "تیم تحریریه (Editorial Team)",
@@ -8795,13 +9085,6 @@ Boundary Intelligence Center
   └── Improvement Plan</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین کمیت و کیفیت.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>KPI Achievement Rate</li><li>Improvement Trend</li><li>Team Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Performance Score = (Achieved KPIs  Total KPIs) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Editorial KPI Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی حوزه‌های نیازمند بهبود.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>شاخص‌های کلیدی</li><li>اهداف دوره‌ای</li></ul></div>`
 },
 {
-  term: "سرعت انتشار (Time-to-Publish)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدت زمان از کشف رویداد تا انتشار نهایی خبر.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>سرعت انتشار در عصر رقابت رسانه‌ای حیاتی است. کاهش زمان انتشار بدون قربانی کردن کیفیت، هدف اصلی اتاق خبر مدرن است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Event Detection Timestamp 2. Publishing Timestamp 3. Duration Calculation 4. Bottleneck Identification</div><strong> خروجی (JSON):</strong><div class="json-code">{"story_id": "uuid", "detected_at": "timestamp", "published_at": "timestamp", "time_to_publish_minutes": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/metrics/time-to-publish</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Editorial Efficiency Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>انتشار خبر زلزله در ۱ دقیقه پس از وقوع.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>انتشار خبر با تأخیر چند ساعته.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>رقابت در بازار خبر و جلب اعتماد مخاطب.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Breaking News Coverage</li><li>Workflow Optimization</li><li>Competitive Analysis</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Timestamp Tracking</li><li>Process Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>زمان کشف</li><li>زمان انتشار</li><li>مراحل فرآیند</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Editorial Efficiency
-  ├── Time-to-Publish
-  ├── Workflow Speed
-  └── Breaking News Response</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>اتوماسیون مراحل تکراری.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Avg Time-to-Publish</li><li>Breaking News Response Time</li><li>Process Efficiency</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Speed Score = 1 ÷ (Time-to-Publish ÷ Target Time)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Speed Metrics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی گلوگاه‌های فرآیند.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>اهداف زمانی</li><li>آستانه‌های هشدار</li></ul></div>`
-},
-{
   term: "دقت خبری (Accuracy Rate)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>درصد اخبار منتشرشده که بدون خطا یا نیاز به اصلاح هستند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>دقت مهم‌ترین معیار اعتبار رسانه است. حتی یک خطا می‌تواند اعتماد مخاطب را برای همیشه از بین ببرد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>️ پردازش:</strong> 1. Error Detection 2. Correction Tracking 3. Fact-Checking Validation 4. Accuracy Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"period": "string", "total_stories": "int", "accurate_stories": "int", "accuracy_rate": "float", "corrections_issued": "int"}</div><strong> API:</strong> <span class="api-endpoint">GET /api/metrics/accuracy</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Journalistic Quality Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>۹۸٪ دقت در ۱۰۰۰ خبر منتشرشده در یک ماه.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>انتشار مکرر اخبار نادرست.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حفظ اعتبار و اعتماد مخاطب.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Quality Assurance</li><li>Trust Building</li><li>Error Reduction</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Fact-Checking</li><li>Correction Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد اصلاحات</li><li>گزارش‌های خطا</li><li>نتایج راستی‌آزمایی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Journalistic Quality
   ├── Accuracy
@@ -8837,25 +9120,11 @@ Boundary Intelligence Center
   ── Loyalty</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ترکیب بازخورد کمی و کیفی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Satisfaction Score</li><li>Net Promoter Score</li><li>Retention Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Satisfaction = (Positive Feedback ÷ Total Feedback) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Audience Satisfaction Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی حوزه‌های بهبود.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>روش‌های جمع‌آوری بازخورد</li><li>آستانه رضایت</li></ul></div>`
 },
 {
-  term: "بهره‌وری خبرنگار (Reporter Productivity)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>میزان خروجی مفید هر خبرنگار در واحد زمان.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>بهره‌وری خبرنگار ترکیبی از کمیت، کیفیت، و سرعت تولید است و برای مدیریت منابع انسانی حیاتی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Output Tracking 2. Quality Assessment 3. Time Analysis 4. Productivity Scoring</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"reporter_id": "uuid", "period": "string", "stories_published": "int", "avg_quality_score": "float", "productivity_score": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/metrics/reporter-productivity</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Human Resource Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>۱۰ مقاله با کیفیت بالا در ماه.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خروجی کم یا کیفیت پایین.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مدیریت عملکرد و توسعه حرفه‌ای.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Performance Review</li><li>Resource Allocation</li><li>Training Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Output Analysis</li><li>Quality Metrics</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد مقالات</li><li>امتیاز کیفیت</li><li>زمان تولید</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Human Resources
-  ├── Reporter Productivity
-  ├── Performance Review
-  └── Professional Development</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین کمیت و کیفیت.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stories Per Month</li><li>Quality Score</li><li>Efficiency Index</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Productivity = (Output × Quality) ÷ Time Spent</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Reporter Productivity Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی نیازهای آموزشی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>اهداف فردی</li><li>معیارهای ارزیابی</li></ul></div>`
-},
-{
   term: "کیفیت محتوایی (Content Quality Score)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>امتیاز کلی کیفیت محتوا بر اساس معیارهای مختلف.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>کیفیت محتوایی ترکیبی از دقت، عمق، خوانایی، و ارزش خبری است و معیار اصلی موفقیت محتوای خبری است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>️ پردازش:</strong> 1. Multi-Criteria Assessment 2. Weighted Scoring 3. Benchmark Comparison 4. Trend Analysis</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"content_id": "uuid", "accuracy_score": "float", "depth_score": "float", "readability_score": "float", "overall_quality": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/metrics/content-quality</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Content Excellence Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>امتیاز ۹ از ۱۰ برای یک مقاله تحلیلی عمیق.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>امتیاز پایین به دلیل خطا یا سطحی بودن.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حفظ استانداردهای حرفه‌ای.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Quality Assurance</li><li>Editorial Standards</li><li>Award Selection</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Peer Review</li><li>Automated Scoring</li><li>Audience Feedback</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>معیارهای کیفیت</li><li>بازخورد ویراستاران</li><li>واکنش مخاطب</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Content Excellence
   ├── Quality Score
   ├── Editorial Standards
   └── Professional Recognition</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ترکیب ارزیابی انسانی و خودکار.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Avg Quality Score</li><li>High-Quality Content Ratio</li><li>Improvement Trend</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Quality = (Accuracy × 0.3) + (Depth × 0.3) + (Readability × 0.2) + (Value × 0.2)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Content Quality Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی محتوای برتر و نیازمند بهبود.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>وزن معیارها</li><li>آستانه کیفیت</li></ul></div>`
-},
-{
-  term: "تحلیل ترند تحریریه (Editorial Trend Analysis)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>بررسی روندها و الگوهای عملکرد تحریریه در طول زمان.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>تحلیل ترند به سازمان‌های خبری اجازه می‌دهد پیشرفت را ردیابی کنند، الگوهای فصلی را شناسایی کنند، و استراتژی‌های بلندمدت تدوین کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Time Series Collection 2. Pattern Detection 3. Seasonal Analysis 4. Forecasting</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"period": "string", "metrics": {"volume": "array", "quality": "array", "speed": "array"}, "trends": {"volume": "up|down", "quality": "stable"}, "forecasts": {"next_month": "object"}}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/metrics/editorial-trends</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Strategic Analysis Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>افزایش ۲۰٪ تولید در سه ماه گذشته.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>عدم تحلیل و برنامه‌ریزی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>برنامه‌ریزی استراتژیک و بهبود مستمر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Strategic Planning</li><li>Resource Forecasting</li><li>Performance Benchmarking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Time Series Analysis</li><li>Statistical Modeling</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>داده‌های تاریخی</li><li>معیارهای عملکرد</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Strategic Management
-  ├── Trend Analysis
-  ├── Forecasting
-  └── Strategic Planning</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ترکیب تحلیل کمی و کیفی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Trend Accuracy</li><li>Forecast Precision</li><li>Strategic Goal Achievement</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Trend = (Current Value - Previous Value) ÷ Previous Value × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Editorial Trends Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>پیش‌بینی عملکرد آینده.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه‌های تحلیل</li><li>معیارهای کلیدی</li></ul></div>`
 }
         ]
       }
@@ -9183,6 +9452,161 @@ Boundary Intelligence Center
 ├── Audience Reaction
 ├── Sentiment
 └── Engagement</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ردیابی تغییرات واکنش.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Reaction Score</li><li>Sentiment</li><li>Engagement</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Audience Reaction = (Sentiment × Engagement) ÷ Reach</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Audience Reaction Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>درک تأثیر محتوا.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>محتوا</li><li>بازه زمانی</li></ul></div>`
+},
+{
+  term: "شبکه انتشار (Diffusion Network)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>شبکه انتشار نقشه مسیر جریان یک محتوا یا ایده در شبکه‌های ارتباطی است: از چه کسی شروع شد، به کجا رفت، چقدر طول کشید.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Diffusion Network یک زیرگراف از شبکه اجتماعی است که مسیر انتشار یک اطلاعات مشخص را نشان می‌دهد. تحلیل آن اطلاعاتی ارزشمند درباره الگوی انتشار (Viral vs. Broadcast vs. Chain)، سرعت انتشار، تأثیرگذارترین گره‌های میانی، و احتمال رسیدن به مخاطبان هدف می‌دهد. این دانش برای طراحی کمپین، مقابله با اطلاعات غلط، و شبیه‌سازی انتشار بحران ضروری است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Cascade Graph Construction (from retweet/share chains)</li>
+<li>Diffusion Model Fitting (SIR/SIS/Independent Cascade)</li>
+<li>Cascade Depth & Breadth Analysis</li>
+<li>Virality Pattern Classification</li>
+<li>Speed-of-Spread Calculation</li>
+<li>Influential Spreader Identification</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "content_id": "uuid",
+  "origin_node": "string",
+  "cascade_depth": "int",
+  "cascade_breadth": "int",
+  "total_reach": "int",
+  "spread_velocity": "float",
+  "pattern": "viral|broadcast|chain|hybrid",
+  "key_amplifiers": ["array"],
+  "time_to_peak_hours": "float"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/diffusion/{content_id}</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Network Science — Information Diffusion</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>ردیابی مسیر یک شایعه از یک اکانت ناشناس تا رسانه‌های بین‌المللی</li>
+<li>تحلیل اینکه چرا یک خبر صحیح وایرال نشد ولی نسخه جعلی آن شد</li>
+<li>شبیه‌سازی انتشار پیام کمپین در شبکه هدف</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>تعداد اشتراک‌گذاری‌های یک پست شبکه انتشار نیست؛ شبکه انتشار ساختار زنجیره‌ای بازنشرها و مسیر آن‌ها را نشان می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>درک الگوی انتشار برای مداخله به‌موقع حیاتی است. تشخیص سریع که یک محتوا مسیر Viral طی می‌کند، پنجره زمانی برای Counter-Narrative را تعیین می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Virality Prediction</li>
+<li>Disinformation Spread Tracking</li>
+<li>Campaign Diffusion Planning</li>
+<li>Crisis Spread Modeling</li>
+<li>Influence Operation Analysis</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Cascade Tree Construction</li>
+<li>Independent Cascade Model</li>
+<li>Hawkes Process</li>
+<li>SIR Epidemic Model Adaptation</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>زنجیره زمانی Retweet/Share</li>
+<li>داده‌های تعامل با timestamp</li>
+<li>شبکه فالوور/فالووینگ</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Diffusion Network
+ ├── subset_of → Social Graph
+ ├── reveals → Influence Map
+ ├── enables → Virality Prediction
+ ├── feeds → Crisis Simulation
+ └── shows → Coordinated Amplification
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>بازسازی cascade واقعی: ۸۵-۹۵٪. پیش‌بینی Virality آینده: ۶۵-۸۰٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>cascade را از لحظه اول به‌صورت Streaming Build کن</li>
+<li>Amplifier nodes را از Originator nodes تفکیک کن</li>
+<li>پنجره زمانی مشخص برای تعریف cascade (مثلاً ۷۲ ساعت) داشته باش</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Cascade Depth</li>
+<li>Viral Coefficient (K-factor)</li>
+<li>Time to Peak Reach</li>
+<li>Amplifier Concentration</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Viral_Coefficient (K) = Avg_Shares_per_Node × Conversion_Rate
+
+Spread_Velocity = ΔReach / Δt (per hour)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Diffusion Tracker</p>
+<ul style="margin-right:20px">
+<li>درخت cascade به‌صورت گرافیکی</li>
+<li>نمودار رشد Reach در زمان</li>
+<li>Amplifierهای اصلی</li>
+<li>مقایسه الگوی انتشار با baseline</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار زمانی که cascade وارد مرحله Exponential شد</li>
+<li>شناسایی نقطه مداخله بهینه در شبکه</li>
+<li>پیشنهاد amplifier برای کمپین‌های مثبت</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Cascade Time Window</li>
+<li>Virality Alert Threshold (K > X)</li>
+<li>Minimum Cascade Size</li>
+<li>Diffusion Model Selection</li>
+</ul>
+</div>`
 }
         ]
       },
@@ -9469,6 +9893,324 @@ Boundary Intelligence Center
 ├── Verification Chain
 ├── Verification Steps
 └── Final Verdict</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ساخت زنجیره تأیید کامل.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Chain Completeness</li><li>Verification Accuracy</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Chain Strength = (Verification Steps × Source Quality) ÷ Breaks</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Verification Chain Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تأیید نهایی بر اساس زنجیره تأییدات.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>verification steps</li><li>chain requirements</li></ul></div>`
+},
+{
+  term: "آستانه هشدار (Alert Threshold)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>آستانه هشدار حد تعریف‌شده‌ای است که وقتی یک شاخص رسانه‌ای از آن عبور کند، سیستم به‌صورت خودکار هشدار می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Alert Threshold قلب موتور هشدار اوی سیستم رسانه‌ای است. هر واژه‌ی Watchlist، هر موجودیت کلیدی، هر موضوع استراتژیک باید مجموعه‌ای از آستانه‌های تنظیم‌شده داشته باشد. آستانه‌های بسیار حساس → False Alert storm؛ آستانه‌های بسیار بی‌تفاوت → Miss Crisis. تنظیم بهینه آستانه یکی از مهارت‌های اصلی تحلیلگر رسانه‌ای است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Metric Calculation (Volume/Sentiment/Velocity)</li>
+<li>Baseline Computation (rolling average)</li>
+<li>Threshold Comparison</li>
+<li>Trigger Condition Evaluation (AND/OR logic)</li>
+<li>Alert Deduplication (cooldown period)</li>
+<li>Escalation Routing (severity → channel)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "alert_id": "uuid",
+  "threshold_name": "string",
+  "metric": "string",
+  "threshold_value": "float",
+  "current_value": "float",
+  "severity": "info|warning|critical",
+  "entity": "string",
+  "triggered_at": "datetime",
+  "context": {"window":"string","baseline":"float"}
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/alerts/thresholds</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Monitoring Configuration — Alert Engineering</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>هشدار وقتی ذکر یک مقام در ۳۰ دقیقه ۵ برابر شد</li>
+<li>هشدار وقتی Sentiment یک کمپین زیر ۰.۲ رفت</li>
+<li>هشدار وقتی یک واژه از Watchlist در ۳ رسانه بین‌المللی همزمان ظاهر شد</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>نمایش صرف داده در داشبورد آستانه هشدار نیست؛ آستانه هشدار وقتی یک مقدار از حد معینی عبور کند، عمل می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>پایش ۲۴/۷ بدون آستانه هشدار ممکن نیست. تحلیلگر نمی‌تواند همیشه داشبورد را نگاه کند؛ آستانه هشدار این نیاز را جایگزین می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Crisis Early Warning</li>
+<li>Reputation Monitoring</li>
+<li>Watchlist Entity Monitoring</li>
+<li>Campaign Performance Tracking</li>
+<li>Competitor Activity Detection</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Static Threshold (مقدار ثابت)</li>
+<li>Dynamic Threshold (درصدی از Baseline)</li>
+<li>Anomaly Detection (Z-score / ML-based)</li>
+<li>Composite Rule (AND/OR چند شاخص)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>سری زمانی شاخص‌های رسانه‌ای</li>
+<li>Baseline تاریخی</li>
+<li>تعریف موجودیت‌های Watchlist</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Alert Threshold
+ ├── monitors → Watchlist
+ ├── triggers → Early Warning
+ ├── part_of → Monitoring Engine
+ ├── uses → Sentiment Score
+ └── uses → Volume Metric
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>دقت تشخیص واقعی (True Positive Rate) هدف: بالای ۸۵٪. False Alert Rate هدف: زیر ۱۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>برای هر موضوع آستانه‌های جداگانه تعریف کن</li>
+<li>Cooldown period برای جلوگیری از هشدار مکرر</li>
+<li>آستانه Dynamic بهتر از Static عمل می‌کند</li>
+<li>به تحلیلگر اجازه بده آستانه‌ها را self-tune کند</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>True Positive Rate</li>
+<li>False Alert Rate</li>
+<li>Alert-to-Action Rate</li>
+<li>Mean Time to Alert (MTTA)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Dynamic_Threshold = Baseline × (1 + Sensitivity_Factor)
+
+Alert_Score = (Current_Value - Baseline) / Baseline_StdDev
+[Alert if Alert_Score > Z_threshold (e.g., 2.5)]
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Alert Configuration Center</p>
+<ul style="margin-right:20px">
+<li>فهرست آستانه‌های فعال و وضعیت هر یک</li>
+<li>تاریخچه هشدارها و نرخ True/False</li>
+<li>اثربخشی هر قانون هشدار</li>
+<li>پیشنهاد تنظیم آستانه بر اساس داده تاریخی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>ارسال فوری به مسئول مربوطه</li>
+<li>فعال‌سازی Playbook بر اساس نوع هشدار</li>
+<li>ثبت خودکار در Log بحران</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Threshold Type (static/dynamic/anomaly)</li>
+<li>Metric and Time Window</li>
+<li>Severity Level</li>
+<li>Notification Channel (SMS/Email/Slack)</li>
+<li>Cooldown Period</li>
+</ul>
+</div>`
+},
+{
+  term: "موتور رصد (Monitoring Engine)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>موتور رصد هسته محاسباتی سیستم است که به‌صورت مداوم محتوای رسانه‌ای را پایش، ارزیابی و با Watchlistها مقایسه می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Monitoring Engine ترکیبی از Stream Processing، Rule Engine، و NLP Pipeline است که در لحظه محتوای ورودی را با معیارهای از پیش تعریف‌شده (موجودیت‌های Watchlist، موضوعات هدف، کلیدواژه‌ها، آستانه‌ها) تطبیق می‌دهد. این موتور «مغز» سیستم هشدار زودهنگام است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Stream Ingestion</li>
+<li>NLP Enrichment (NER/Sentiment/Topics)</li>
+<li>Watchlist Matching</li>
+<li>Rule Evaluation</li>
+<li>Alert Threshold Check</li>
+<li>Priority Scoring</li>
+<li>Alert Dispatch</li>
+<li>Storage & Index Update</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "engine_id": "string",
+  "processed_items": "int",
+  "watchlist_hits": "int",
+  "alerts_fired": "int",
+  "avg_latency_ms": "int",
+  "queue_depth": "int",
+  "health_status": "healthy|degraded|down",
+  "timestamp": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/monitoring/engine/status</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Media Intelligence — Core Processing Component</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>پردازش ۵۰۰۰ محتوا در ساعت و شناسایی ۱۲ مورد مرتبط با Watchlist</li>
+<li>تشخیص ظرف ۸ ثانیه که Breaking News مرتبط با یک موجودیت کلیدی منتشر شد</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>داشبورد رسانه‌ای موتور رصد نیست؛ داشبورد نتایج را نمایش می‌دهد، موتور رصد آن‌ها را تولید می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>موتور رصد امکان پایش ۲۴/۷ بدون نیروی انسانی را فراهم می‌کند. بدون آن، هر تحلیل نیازمند دخالت دستی انسان است که در مقیاس و سرعت مورد نیاز امروز ناممکن است.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>24/7 Media Monitoring</li>
+<li>Crisis Early Warning</li>
+<li>Watchlist Entity Tracking</li>
+<li>Competitor Monitoring</li>
+<li>Campaign Tracking</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Rule-based Engine (Drools/Esper)</li>
+<li>ML-based Classifier</li>
+<li>Hybrid (Rules + ML)</li>
+<li>LLM-augmented Matching</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>جریان محتوای Pipeline</li>
+<li>Watchlist موجودیت‌ها</li>
+<li>Rule Library</li>
+<li>Threshold Configuration</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Monitoring Engine
+ ├── consumes → Media Data Pipeline
+ ├── uses → Alert Threshold
+ ├── checks → Watchlist
+ ├── fires → Early Warning
+ ├── feeds → Dashboard
+ └── uses → NLP Pipeline
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>Uptime هدف: ۹۹.۹٪. False Negative Rate (هشدار از دست رفته) هدف: زیر ۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>قوانین را versioned نگه‌دار (امکان rollback)</li>
+<li>برای هر بحران، پروفایل monitoring جداگانه تعریف کن</li>
+<li>Explain کردن چرایی هشدار را در طراحی لحاظ کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Monitoring Coverage Rate</li>
+<li>Alert Precision / Recall</li>
+<li>Engine Uptime</li>
+<li>Processing Latency</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Monitoring_Score =
+(Coverage × 0.30) +
+(Alert_Precision × 0.30) +
+(Latency_Score × 0.25) +
+(Uptime × 0.15)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Monitoring Engine Control Panel</p>
+<ul style="margin-right:20px">
+<li>وضعیت سلامت موتور</li>
+<li>تعداد hits به تفکیک Watchlist</li>
+<li>نرخ هشدار در ساعت</li>
+<li>فهرست قوانین فعال</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>فعال‌سازی خودکار War Room</li>
+<li>ارسال هشدار به مسئولان</li>
+<li>شروع ضبط Timeline بحران</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Watchlist Sources</li>
+<li>Rule Library Management</li>
+<li>Alert Channel Configuration</li>
+<li>Processing Priority (breaking vs. regular)</li>
+<li>Monitoring Profile (crisis mode / normal mode)</li>
+</ul>
+</div>`
 }
         ]
       },
@@ -9726,6 +10468,335 @@ Boundary Intelligence Center
 ├── Incident (Emerging)
 ├── Crisis (Full)
 └── Recovery (Post)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>شناسایی دقیق مراحل و پاسخ مناسب.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stage Detection Accuracy</li><li>Response Effectiveness</li><li>Recovery Speed</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Lifecycle Management = (Stage Detection × Response Effectiveness) ÷ Crisis Impact</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Crisis Lifecycle Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مدیریت چرخه عمر بحران.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>مراحل</li><li>پاسخ‌ها</li><li>انتقال مراحل</li></ul></div>`
+},
+{
+  term: "ردیابی روایت (Narrative Tracking)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>ردیابی روایت فرآیند پیگیری سیر یک روایت در طول زمان است: چگونه شکل می‌گیرد، گسترش می‌یابد، تغییر می‌کند، رقبا پیدا می‌کند یا فروکش می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Narrative Tracking روایت را به‌عنوان یک موجود زنده در نظر می‌گیرد که سیکل حیات دارد. سیستم با ردیابی پیوسته، امکان تشخیص لحظه ورود روایت رقیب، تضعیف روایت مسلط، یا شکل‌گیری روایت بحران را پیش از آنکه غیرقابل کنترل شود، فراهم می‌کند. این ابزار برای مدیریت ادراک و ارتباطات استراتژیک حیاتی است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Narrative Identification (NLP)</li>
+<li>Semantic Similarity Clustering</li>
+<li>Temporal Volume Tracking</li>
+<li>Source Attribution</li>
+<li>Narrative Evolution Detection</li>
+<li>Counter-Narrative Detection</li>
+<li>Diffusion Path Mapping</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "narrative_id": "uuid",
+  "label": "string",
+  "core_claim": "string",
+  "first_detected": "datetime",
+  "volume_timeline": [{"timestamp":"datetime","count":"int"}],
+  "peak_volume": "int",
+  "dominant_sources": ["array"],
+  "sentiment": "float",
+  "competing_narratives": ["array"],
+  "status": "emerging|growing|dominant|declining|extinct",
+  "strength_score": "float"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/narratives/{id}/timeline</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Media Intelligence — Narrative Lifecycle Management</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>ردیابی روایت «ناکارآمدی دولت» از یک شایعه تا هدلاین رسانه‌های خارجی</li>
+<li>رصد تضعیف روایت رسمی در مقابل روایت رقیب</li>
+<li>تشخیص لحظه‌ای که روایت بحران وارد مرحله Viral شد</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>شمردن تعداد خبرهای مرتبط با یک موضوع Narrative Tracking نیست؛ Narrative Tracking معنا، جهت‌گیری و سیر تکاملی روایت را می‌سنجد، نه صرفاً حجم.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>روایت‌ها ذهنیت عمومی را می‌سازند. ردیابی آن‌ها امکان مداخله به‌موقع (پیش از تثبیت روایت منفی)، تقویت روایت مطلوب و طراحی ضدروایت مؤثر را می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Reputation Management</li>
+<li>Crisis Communication</li>
+<li>Strategic Communication</li>
+<li>Counter-Narrative Design</li>
+<li>Campaign Effectiveness Monitoring</li>
+<li>Political Risk Assessment</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Semantic Similarity (Cosine on Embeddings)</li>
+<li>LLM Narrative Labeling</li>
+<li>Temporal Clustering</li>
+<li>Cross-source Attribution Analysis</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>آرشیو کامل محتوای رسانه‌ای</li>
+<li>پست‌های شبکه اجتماعی</li>
+<li>بیانیه‌های رسمی</li>
+<li>مصاحبه‌های رسانه‌ای</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Narrative Tracking
+ ├── tracks → Narrative
+ ├── detects → Counter Narrative
+ ├── measures → Narrative Strength
+ ├── feeds → Narrative Twin
+ ├── enables → Crisis Response
+ └── supports → Strategic Communication
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>شناسایی روایت کلی: ۸۰-۹۰٪. تشخیص جهت‌گیری و تمایز روایت‌های مشابه: ۷۰-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Narrative Identity را با چند ویژگی تعریف کن (Claim، Source، Frame)</li>
+<li>threshold تمایز دو روایت را قابل تنظیم کن</li>
+<li>روایت‌های منسوخ را آرشیو کن، حذف نکن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Narrative Strength Score</li>
+<li>Time-to-Detect New Narrative</li>
+<li>Narrative Penetration Rate</li>
+<li>Counter-Narrative Effectiveness</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Narrative_Strength =
+(Volume × 0.30) +
+(Reach × 0.25) +
+(Sentiment_Alignment × 0.25) +
+(Source_Authority × 0.20)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Narrative Intelligence Board</p>
+<ul style="margin-right:20px">
+<li>نقشه روایت‌های فعال و قدرت هر یک</li>
+<li>Timeline رقابت روایت‌ها</li>
+<li>منابع اصلی هر روایت</li>
+<li>هشدار ورود ضدروایت</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار زمان ورود روایت رقیب</li>
+<li>پیشنهاد ضدروایت بر اساس شکاف‌های روایی</li>
+<li>ارزیابی اثربخشی کمپین روایی</li>
+<li>پیش‌بینی مسیر روایت در ۴۸ ساعت آینده</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Similarity Threshold for Narrative Grouping</li>
+<li>Minimum Volume for Recognition</li>
+<li>Tracking Window (7d/30d/custom)</li>
+<li>Alert Triggers (strength/speed)</li>
+</ul>
+</div>`
+},
+{
+  term: "اتاق عملیات رسانه‌ای (Media Operations Center)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>اتاق عملیات رسانه‌ای مرکز یکپارچه‌ای است که در آن تیم رسانه‌ای همه فعالیت‌های رصد، تحلیل، تولید محتوا، پاسخ به بحران و ارزیابی را از یک نقطه هماهنگ و اجرا می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Media Operations Center نقش «اتاق جنگ» دیجیتال رسانه را دارد. در AI Media OS، این مرکز ترکیبی از فضای فیزیکی (یا مجازی)، داشبوردهای یکپارچه، ابزارهای تصمیم‌سازی هوشمند، و Copilotهای تخصصی است. برخلاف اتاق خبر سنتی که واکنشی است، Media Ops Center پیشگیرانه و داده‌محور عمل می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Unified Dashboard (all cores integrated)</li>
+<li>Real-time Alert Feed</li>
+<li>Multi-role Access (editor/analyst/strategist)</li>
+<li>Collaborative Annotation Tools</li>
+<li>Task Assignment & Tracking</li>
+<li>Incident Management (Crisis Mode)</li>
+<li>Knowledge Base Access</li>
+<li>AI Copilot Integration</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "ops_center_id": "string",
+  "active_missions": "int",
+  "active_alerts": "int",
+  "team_online": "int",
+  "crisis_mode": "boolean",
+  "top_priorities": ["array"],
+  "recent_actions": ["array"],
+  "system_health": {"pipeline":"ok","nlp":"ok","alerts":"ok"}
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/ops/status</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Operational Infrastructure — Media Command Center</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>تیم ۵ نفره که از یک داشبورد واحد، ۱۵ کمپین همزمان را رصد می‌کند</li>
+<li>فعال‌سازی Crisis Mode و جمع شدن تمام اعضا در یک فضای مشترک دیجیتال</li>
+<li>تخصیص خودکار وظایف در بحران بر اساس نقش هر عضو</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>اتاق خبر سنتی با تلویزیون و تلفن Media Operations Center نیست؛ MOC داده‌محور، هوشمند و یکپارچه با سیستم‌های AI است.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>MOC امکان می‌دهد تیم کوچک با کارایی بالا عمل کند. بدون آن، هر تحلیلگر جداگانه کار می‌کند و هماهنگی در بحران ناممکن می‌شود.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Crisis Management</li>
+<li>Campaign Operations</li>
+<li>24/7 Media Monitoring Coordination</li>
+<li>Multi-team Collaboration</li>
+<li>Strategic Decision Support</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Unified Dashboard Platform</li>
+<li>Role-based Access Control (RBAC)</li>
+<li>Real-time Collaboration Tools</li>
+<li>Incident Management System</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>خروجی کل سیستم AI Media OS</li>
+<li>Playbook‌ها و Operation Templates</li>
+<li>تاریخچه بحران‌ها و تصمیمات</li>
+<li>وضعیت تیم و وظایف</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Media Operations Center
+ ├── integrates → Monitoring Engine
+ ├── integrates → Dashboard
+ ├── integrates → AI Copilot
+ ├── manages → War Room
+ ├── uses → Playbook
+ └── coordinates → Editorial Team
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>Uptime هدف: ۹۹.۹٪ (به‌ویژه در بحران). زمان فعال‌سازی Crisis Mode: زیر ۲ دقیقه.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Crisis Mode را جدا از حالت عادی طراحی کن</li>
+<li>نقش‌ها و مسئولیت‌ها را در سیستم تعریف کن (نه فقط روی کاغذ)</li>
+<li>Mobile-ready باشد (بحران همیشه در ساعت کاری نیست)</li>
+<li>Offline fallback برای سناریوهای قطع اینترنت داشته باش</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Mean Time to Response (MTTR)</li>
+<li>Team Coordination Score</li>
+<li>Crisis Activation Time</li>
+<li>Tasks Completed per Shift</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Ops_Efficiency =
+(Actions_Completed / Actions_Required) × (1 / MTTR_hours)
+
+Crisis_Readiness =
+(Playbook_Coverage × 0.40) +
+(Team_Training_Score × 0.30) +
+(System_Uptime × 0.30)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Ops Center Command Screen</p>
+<ul style="margin-right:20px">
+<li>وضعیت کلی سیستم (سبز/زرد/قرمز)</li>
+<li>هشدارهای فعال به تفکیک اولویت</li>
+<li>وضعیت مأموریت‌ها</li>
+<li>تیم آنلاین و وظایف فعال</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>فعال‌سازی Crisis Mode خودکار</li>
+<li>تخصیص خودکار وظایف بر اساس نقش</li>
+<li>Briefing لحظه‌ای به مدیران ارشد</li>
+<li>ثبت خودکار Timeline بحران</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Role & Permission Configuration</li>
+<li>Crisis Mode Triggers</li>
+<li>Notification Routing per Role</li>
+<li>Dashboard Layout per User</li>
+<li>Shift Schedule Configuration</li>
+</ul>
+</div>`
 }
         ]
       }
@@ -9749,52 +10820,6 @@ Boundary Intelligence Center
 └── Advocacy (Advocacy Stage)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعریف مراحل معنادار و قابل اندازه‌گیری</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stage Conversion Rates</li><li>Overall Conversion</li><li>Drop-off Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Funnel Efficiency = (Final Stage Users ÷ Initial Stage Users) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Funnel Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و بهینه‌سازی bottlenecks</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>stage definitions</li><li>conversion criteria</li><li>time windows</li></ul></div>`
 },
 {
-  term: "مرحله آگاهی (Awareness Stage)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>اولین مرحله در قیف فروش که در آن مشتری برای اولین بار با برند یا محصول آشنا می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>در مرحله Awareness، هدف اصلی ایجاد آگاهی از وجود برند یا محصول است. مشتری هنوز نیاز خود را کاملاً شناسایی نکرده و فقط در حال کشف است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Brand Awareness Measurement 2. Reach Tracking 3. Impression Analysis 4. Awareness Campaign Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"stage_id": "uuid", "stage_name": "awareness", "reach": "int", "impressions": "int", "brand_awareness_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/funnel/awareness</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Journey Stage Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>کاربری که برای اولین بار تبلیغ برند شما را در اینستاگرام می‌بیند</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>کاربری که قبلاً با برند آشنا شده و در مرحله Consideration است</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>پایه تمام مراحل بعدی قیف فروش</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Brand Awareness Campaigns</li><li>Content Marketing</li><li>Social Media Marketing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Reach Metrics</li><li>Impression Tracking</li><li>Brand Recall Surveys</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>reach data</li><li>impression data</li><li>brand awareness surveys</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Journey
-├── Awareness (First contact)
-├── Consideration (Evaluation)
-├── Conversion (Purchase)
-├── Retention (Loyalty)
-└── Advocacy (Referral)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر reach و brand awareness</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Reach</li><li>Impressions</li><li>Brand Awareness Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Awareness Rate = (Aware Users ÷ Total Target Audience) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Awareness Stage Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی کمپین‌های آگاهی</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>target audience</li><li>channels</li><li>budget allocation</li></ul></div>`
-},
-{
-  term: "مرحله بررسی (Consideration Stage)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مرحله‌ای در قیف فروش که در آن مشتری گزینه‌های مختلف را ارزیابی و مقایسه می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>در مرحله Consideration، مشتری نیاز خود را شناسایی کرده و در حال بررسی راه‌حل‌های مختلف است. هدف: ارائه اطلاعات کافی برای تمایز از رقبا</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Consideration Tracking 2. Comparison Analysis 3. Content Engagement 4. Lead Nurturing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"stage_id": "uuid", "stage_name": "consideration", "leads": "int", "content_engagement": "float", "comparison_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/funnel/consideration</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Journey Stage Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>کاربری که در حال مقایسه ویژگی‌های محصولات مختلف است</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>کاربری که هنوز در مرحله Awareness است</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مرحله کلیدی برای تمایز از رقبا</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Content Marketing</li><li>Lead Nurturing</li><li>Comparison Content</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Content Engagement</li><li>Comparison Behavior</li><li>Lead Quality</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>content engagement data</li><li>comparison behavior</li><li>lead data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Journey
-├── Awareness (First contact)
-├── Consideration (Evaluation)
-├── Conversion (Purchase)
-├── Retention (Loyalty)
-└── Advocacy (Referral)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ارائه محتوای مقایسه‌ای و آموزشی</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Lead Quality</li><li>Content Engagement</li><li>Comparison Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Consideration Rate = (Leads in Consideration ÷ Total Leads) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Consideration Stage Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی محتوای مقایسه‌ای</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>content types</li><li>lead nurturing workflows</li><li>comparison criteria</li></ul></div>`
-},
-{
-  term: "تبدیل (Conversion)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>لحظه‌ای که کاربر اقدام مورد نظر را انجام می‌دهد (خرید، ثبت‌نام، دانلود و غیره).</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Conversion مهم‌ترین مرحله در قیف فروش است. این لحظه تعیین می‌کند آیا کاربر به مشتری تبدیل می‌شود یا خیر.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Conversion Event Tracking 2. Conversion Rate Calculation 3. Attribution Analysis 4. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"conversion_id": "uuid", "conversion_type": "purchase|signup|download", "conversions": "int", "conversion_rate": "float", "revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/conversion/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Journey Stage & Conversion Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>کاربری که محصول را خریداری می‌کند یا فرم ثبت‌نام را پر می‌کند</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>کاربری که فقط مرور می‌کند اما اقدامی نمی‌کند</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>هدف نهایی تمام مراحل قبلی قیف</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Conversion Optimization</li><li>Revenue Tracking</li><li>Marketing ROI</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Conversion Event Tracking</li><li>Conversion Rate Analysis</li><li>Attribution Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>conversion events</li><li>revenue data</li><li>attribution data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Journey
-├── Awareness (First contact)
-├── Consideration (Evaluation)
-├── Conversion (Purchase)
-├── Retention (Loyalty)
-└── Advocacy (Referral)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعریف واضح conversion events</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Conversion Rate</li><li>Conversion Volume</li><li>Revenue per Conversion</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Conversion Rate = (Conversions ÷ Total Visitors) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Conversion Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی نرخ تبدیل</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>conversion definitions</li><li>tracking events</li><li>attribution model</li></ul></div>`
-},
-{
-  term: "حفظ مشتری (Retention)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>توانایی کسب‌وکار در حفظ مشتریان در طول زمان و جلوگیری از churn.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Retention مهم‌تر از acquisition است. هزینه حفظ مشتری ۵-۲۵ برابر کمتر از جذب مشتری جدید است. Retention بالا نشان‌دهنده product-market fit و رضایت مشتری است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Cohort Definition 2. Retention Curve Analysis 3. Churn Analysis 4. Intervention Design 5. Impact Measurement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"retention_id": "uuid", "product_id": "uuid", "cohort": "string", "day_1_retention": "float", "day_7_retention": "float", "day_30_retention": "float", "churn_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/retention/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Success & Growth Metric Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اپلیکیشنی با ۴۰٪ retention در روز ۳۰</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Churn بالا که نشان‌دهنده مشکل محصول است</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>پایه رشد پایدار و سودآوری</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Improvement</li><li>Customer Success</li><li>Growth Strategy</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cohort Analysis</li><li>Retention Curves</li><li>Churn Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user activity</li><li>churn events</li><li>cohort data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Lifecycle
-├── Acquisition</li><li>├── Activation</li><li>├── Retention (Key focus)</li><li>├── Revenue</li><li>└── Referral</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر "aha moment" و value realization</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Day 1/7/30 Retention</li><li>Churn Rate</li><li>Net Revenue Retention</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Retention Rate = (Users at End ÷ Users at Start) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Retention Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و بهبود نقاط ضعف retention</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>cohort definitions</li><li>retention periods</li><li>intervention triggers</li></ul></div>`
-},
-{
-  term: "طرفداری (Advocacy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مرحله‌ای در قیف فروش که در آن مشتریان راضی به تبلیغ‌کنندگان داوطلبانه برند تبدیل می‌شوند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Advocacy بالاترین مرحله در قیف فروش است. مشتریان راضی به صورت داوطلبانه برند را به دیگران توصیه می‌کنند و باعث رشد ارگانیک می‌شوند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Advocacy Identification 2. Referral Tracking 3. NPS Measurement 4. Advocacy Program Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"advocacy_id": "uuid", "advocates": "int", "referrals_generated": "int", "nps_score": "float", "advocacy_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/advocacy/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Journey Stage & Growth Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>مشتریانی که دوستان خود را به محصول معرفی می‌کنند</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مشتریانی که راضی هستند اما توصیه نمی‌کنند</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>قوی‌ترین موتور رشد ارگانیک</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Referral Programs</li><li>Customer Advocacy</li><li>Viral Growth</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>NPS Score</li><li>Referral Tracking</li><li>Advocacy Behavior</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>referral data</li><li>NPS surveys</li><li>advocacy behavior</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Journey
-├── Awareness (First contact)
-├── Consideration (Evaluation)
-├── Conversion (Purchase)
-├── Retention (Loyalty)
-└── Advocacy (Referral)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ایجاد انگیزه برای advocacy</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>NPS Score</li><li>Referral Rate</li><li>Advocacy Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Advocacy Rate = (Advocates ÷ Total Customers) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Advocacy Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی برنامه‌های advocacy</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>advocacy programs</li><li>referral incentives</li><li>NPS targets</li></ul></div>`
-},
-{
-  term: "سفر مشتری (Customer Journey)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مجموعه تمام تعاملات و تجربه‌هایی که یک مشتری با برند از اولین آشنایی تا پس از خرید تجربه می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Customer Journey نقشه کاملی از تجربه مشتری است. درک این سفر برای بهینه‌سازی تجربه مشتری و افزایش conversion حیاتی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Journey Mapping 2. Touchpoint Identification 3. Behavior Tracking 4. Pain Point Analysis 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"journey_id": "uuid", "customer_id": "uuid", "stages": ["string"], "touchpoints": ["string"], "pain_points": ["string"], "journey_duration": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/customer-journey/{customer_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Experience & Journey Mapping Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>نقشه سفر مشتری: Awareness → Consideration → Purchase → Onboarding → Retention</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نگاه به تعاملات مجزا بدون درک سفر کامل</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>درک کامل تجربه مشتری و شناسایی نقاط بهبود</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Customer Experience</li><li>Journey Optimization</li><li>Pain Point Identification</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Journey Mapping</li><li>Touchpoint Analysis</li><li>Pain Point Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>customer interactions</li><li>touchpoint data</li><li>behavioral data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Customer Experience
-├── Customer Journey (Full journey)</li><li>├── Touchpoints (Individual interactions)</li><li>└── Pain Points (Problem areas)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>نقشه‌برداری جامع از تمام touchpoints</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Journey Completion Rate</li><li>Touchpoint Satisfaction</li><li>Pain Point Resolution</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Journey Health = (Touchpoint Satisfaction × Completion Rate) ÷ Pain Points</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Customer Journey Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و بهبود pain points</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>journey stages</li><li>touchpoint definitions</li><li>pain point criteria</li></ul></div>`
-},
-{
   term: "بخش‌بندی (Segmentation)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند تقسیم مشتریان یا کاربران به گروه‌های مجزا بر اساس ویژگی‌ها، رفتارها یا نیازهای مشترک.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Segmentation برای شخصی‌سازی تجربه، بهینه‌سازی بازاریابی و افزایش conversion حیاتی است. سگمنت‌های رایج: جمعیت‌شناختی، رفتاری، جغرافیایی و روانشناختی.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Data Collection 2. Feature Selection 3. Clustering Algorithm 4. Segment Definition 5. Validation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"segmentation_id": "uuid", "segment_type": "demographic|behavioral|geographic|psychographic", "segments": [{"name": "string", "size": "int", "characteristics": ["string"], "value": "float"}]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/segmentation/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Analytics & Personalization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تقسیم کاربران به "power users"، "casual users" و "at-risk"</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>درمان همه کاربران یکسان</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شخصی‌سازی و بهینه‌سازی منابع</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Targeted Marketing</li><li>Personalization</li><li>Product Strategy</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cluster Analysis</li><li>Segment Validation</li><li>Behavioral Patterns</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user attributes</li><li>behavioral data</li><li>demographic data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Analysis Techniques
 ├── Segmentation (Attribute-based)</li><li>├── Cohort Analysis (Group-based)</li><li>└── Funnel Analysis (Journey-based)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سگمنت‌ها باید actionable و measurable باشند</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Segment Size</li><li>Segment Value</li><li>Segment Performance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Segment Value = (Segment Size × ARPU × Retention) ÷ Cost to Serve</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Customer Segmentation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی سگمنت‌های ارزشمند و طراحی استراتژی</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>segmentation criteria</li><li>segment definitions</li><li>personalization rules</li></ul></div>`
@@ -9805,16 +10830,6 @@ Boundary Intelligence Center
 ├── Persona (Individual profile)</li><li>├── Segmentation (Group-based)</li><li>└── User Research (Data source)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>پرسوناها باید بر اساس داده‌های واقعی باشند</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Persona Accuracy</li><li>Persona Adoption</li><li>Campaign Resonance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Persona Value = (Data Quality × Relevance × Actionability) ÷ Complexity</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Persona Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی پیام‌ها و محصولات بر اساس پرسونا</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>persona count</li><li>data sources</li><li>update frequency</li></ul></div>`
 },
 {
-  term: "تولید لید (Lead Generation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند جذب و جمع‌آوری اطلاعات تماس افراد علاقه‌مند به محصول یا خدمات برای تبدیل آن‌ها به مشتری.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Lead Generation اولین مرحله در قیف فروش B2B است. هدف: جذب افراد علاقه‌مند و تبدیل آن‌ها به lead برای تیم فروش</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Lead Capture 2. Lead Qualification 3. Lead Scoring 4. Lead Nurturing 5. Handoff to Sales</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"lead_gen_id": "uuid", "leads_generated": "int", "qualified_leads": "int", "lead_sources": ["string"], "conversion_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/lead-generation/{campaign_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Marketing & Sales Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>جذب lead از طریق white paper، webinar یا landing page</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>بازاریابی بدون جمع‌آوری lead</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>پایه قیف فروش B2B</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>B2B Marketing</li><li>Sales Pipeline</li><li>Content Marketing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Lead Capture Rate</li><li>Lead Quality</li><li>Conversion Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>lead data</li><li>conversion data</li><li>source data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Sales Process
-├── Lead Generation (Capture)</li><li>├── Lead Qualification (Qualify)</li><li>├── Lead Nurturing (Nurture)</li><li>└── Sales Conversion (Close)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر کیفیت lead نه فقط کمیت</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Leads Generated</li><li>Lead Quality Score</li><li>Conversion Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Lead Gen Efficiency = (Qualified Leads ÷ Total Leads) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Lead Generation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی کمپین‌های lead generation</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>lead sources</li><li>qualification criteria</li><li>nurturing workflows</li></ul></div>`
-},
-{
-  term: "صفحه فرود (Landing Page)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>صفحه وب مستقلی که کاربر پس از کلیک روی تبلیغ یا لینک به آن هدایت می‌شود و برای یک هدف خاص طراحی شده است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Landing Page ابزار اصلی برای تبدیل بازدیدکننده به lead یا مشتری است. این صفحه باید متمرکز، واضح و با CTA قوی باشد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Page Design 2. A/B Testing 3. Conversion Optimization 4. Performance Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"landing_page_id": "uuid", "url": "string", "conversion_rate": "float", "bounce_rate": "float", "avg_time_on_page": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/landing-page/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Conversion Optimization & Web Design Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>صفحه‌ای برای ثبت‌نام در webinar یا دانلود ebook</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>صفحه اصلی سایت با اهداف متعدد</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ابزار اصلی conversion</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Lead Generation</li><li>Product Launch</li><li>Campaign Landing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Conversion Rate</li><li>Bounce Rate</li><li>A/B Testing</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>conversion data</li><li>user behavior</li><li>A/B test results</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Conversion Tools
-├── Landing Page (Conversion focus)</li><li>├── CTA (Call to action)</li><li>└── Form (Data capture)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر یک هدف و CTA واضح</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Conversion Rate</li><li>Bounce Rate</li><li>Time on Page</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Landing Page Score = (Conversion Rate × Quality Score) ÷ Bounce Rate</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Landing Page Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی صفحه برای conversion</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>page design</li><li>CTA placement</li><li>A/B test variants</li></ul></div>`
-},
-{
   term: "بهینه‌سازی موتور جستجو (SEO)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند بهینه‌سازی وب‌سایت و محتوا برای کسب رتبه بالاتر در نتایج ارگانیک موتورهای جستجو.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>SEO سرمایه‌گذاری بلندمدت است که ترافیک ارگانیک و رایگان ایجاد می‌کند. برخلاف SEM که با توقف بودجه متوقف می‌شود، SEO نتایج پایدار دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Keyword Research 2. On-page Optimization 3. Technical SEO 4. Off-page SEO 5. Performance Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"seo_id": "uuid", "keywords": ["string"], "organic_traffic": "int", "domain_authority": "float", "backlinks": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/seo/{website_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Digital Marketing & Search Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بهینه‌سازی مقاله برای کلمه کلیدی "بهترین لپ‌تاپ ۲۰۲۴"</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>SEM (تبلیغات پولی)</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ترافیک ارگانیک و پایدار</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Organic Traffic</li><li>Brand Awareness</li><li>Lead Generation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Keyword Rankings</li><li>Organic Traffic</li><li>Domain Authority</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>keyword data</li><li>traffic data</li><li>backlink data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Search Marketing
 ├── SEO (Organic)</li><li>└── SEM (Paid)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر کیفیت محتوا و تجربه کاربری</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Organic Traffic</li><li>Keyword Rankings</li><li>Domain Authority</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">SEO ROI = (Organic Traffic Value - SEO Cost) ÷ SEO Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>SEO Performance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی استراتژی SEO</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>target keywords</li><li>optimization priorities</li><li>content strategy</li></ul></div>`
@@ -9823,21 +10838,6 @@ Boundary Intelligence Center
   term: "بازاریابی محتوایی (Content Marketing)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی بازاریابی که بر تولید و توزیع محتوای ارزشمند، مرتبط و مستمر برای جذب و حفظ مخاطب هدف تمرکز دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Content Marketing برخلاف تبلیغات مستقیم، با ارائه ارزش واقعی اعتماد می‌سازد و در بلندمدت منجر به فروش می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Content Strategy 2. Content Creation 3. Distribution 4. Engagement Tracking 5. Lead Nurturing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"content_marketing_id": "uuid", "content_pieces": "int", "engagement_rate": "float", "leads_generated": "int", "conversion_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/content-marketing/{campaign_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Digital Marketing & Content Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>وبلاگ، ebook، webinar و ویدیوهای آموزشی</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>تبلیغات مستقیم و تبلیغاتی</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ساخت اعتماد و ایجاد lead</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Brand Awareness</li><li>Lead Generation</li><li>Customer Education</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Content Engagement</li><li>Lead Generation</li><li>Conversion Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>content performance</li><li>engagement data</li><li>lead data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Marketing Strategies
 ├── Content Marketing (Value-based)</li><li>├── SEO (Search-based)</li><li>└── Paid Advertising (Budget-based)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر کیفیت و ارزش محتوا</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Content Engagement</li><li>Lead Generation</li><li>Conversion Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Content ROI = (Revenue from Content - Content Cost) ÷ Content Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Content Marketing Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی استراتژی محتوا</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>content types</li><li>distribution channels</li><li>content calendar</li></ul></div>`
-},
-{
-  term: "بازاریابی ایمیلی (Email Marketing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استفاده از ایمیل برای ارسال پیام‌های تجاری، تبلیغاتی یا اطلاعاتی به گروهی از مخاطبان با هدف ایجاد ارتباط و فروش.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Email Marketing یکی از قدیمی‌ترین و همچنان مؤثرترین کانال‌های دیجیتال است. با بالاترین نرخ بازگشت سرمایه در میان کانال‌های دیجیتال، ابزاری حیاتی برای نگهداری مشتری است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. List Segmentation 2. Email Design 3. A/B Testing 4. Delivery Optimization 5. Performance Analytics</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"email_campaign_id": "uuid", "list_size": "int", "open_rate": "float", "click_rate": "float", "bounce_rate": "float", "unsubscribe_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/email-marketing/{campaign_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Digital Marketing & Email Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>خبرنامه هفتگی با پیشنهادات ویژه برای اعضای وفادار</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ارسال ایمیل انبوه بدون شخصی‌سازی (Spam)</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کانال مستقیم و شخصی با ROI بالا</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Newsletter</li><li>Lead Nurturing</li><li>Customer Retention</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Open Rate</li><li>Click-Through Rate</li><li>Conversion Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>email performance</li><li>subscriber data</li><li>conversion data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Digital Marketing
-├── Email Marketing (Direct)</li><li>├── Social Media (Social)</li><li>└── SEO (Organic)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>رعایت قوانین GDPR و CAN-SPAM</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Open Rate</li><li>Click-Through Rate</li><li>Conversion Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Email ROI = (Revenue from Email - Email Cost) ÷ Email Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Email Marketing Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی زمان ارسال و موضوع ایمیل</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>list segmentation</li><li>email templates</li><li>send timing</li></ul></div>`
-},
-{
-  term: "اتوماسیون بازاریابی (Marketing Automation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استفاده از نرم‌افزار برای خودکارسازی وظایف تکراری بازاریابی مانند ارسال ایمیل، انتشار پست‌های اجتماعی و مدیریت کمپین‌ها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Marketing Automation به تیم‌ها اجازه می‌دهد با منابع کمتر، کمپین‌های پیچیده و شخصی‌سازی‌شده را در مقیاس بزرگ اجرا کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Workflow Design 2. Trigger Setup 3. Action Execution 4. Performance Tracking 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"automation_id": "uuid", "workflows": "int", "emails_sent": "int", "conversions": "int", "automation_roi": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/marketing-automation/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Marketing Technology & Automation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>ارسال خودکار ایمیل‌های خوش‌آمدگویی پس از ثبت‌نام</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>انجام دستی تمام وظایف بازاریابی</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش کارایی و شخصی‌سازی در مقیاس</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Email Automation</li><li>Lead Nurturing</li><li>Campaign Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Workflow Efficiency</li><li>Automation Rate</li><li>ROI</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>workflow data</li><li>automation metrics</li><li>performance data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Marketing Technology
-├── Marketing Automation (Workflow)</li><li>├── CRM (Customer data)</li><li>└── Analytics (Performance)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>طراحی workflowهای معنادار و قابل اندازه‌گیری</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Automation Rate</li><li>Time Saved</li><li>Conversion Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Automation ROI = (Time Saved × Conversion Rate) ÷ Automation Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Marketing Automation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی workflowها و triggers</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>workflow design</li><li>trigger conditions</li><li>action sequences</li></ul></div>`
-},
-{
-  term: "هک رشد (Growth Hacking)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>رویکردی خلاقانه و داده‌محور برای رشد سریع کسب‌وکار با استفاده از آزمایش‌های سریع و بهینه‌سازی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Growth Hacking توسط Sean Ellis معرفی شد. این رویکرد بر رشد مقیاس‌پذیر با هزینه کم تمرکز دارد و از ترکیب بازاریابی، محصول و داده استفاده می‌کند. چرخه اصلی: تحلیل، ایده‌پردازی، اولویت‌بندی، آزمایش و تحلیل.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Data Analysis 2. Hypothesis Generation 3. Experiment Design 4. A/B Testing 5. Result Analysis 6. Scaling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"growth_experiment_id": "uuid", "hypothesis": "string", "test_type": "ab_test|multivariate", "metric_impact": "float", "statistical_significance": "float", "status": "running|successful|failed"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/growth-hacking/{experiment_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Strategy & Experimentation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Dropbox با referral program که رشد ۳۹۰۰٪ داشت</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>بازاریابی سنتی با بودجه‌های بزرگ</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>رشد سریع با هزینه کم برای استارتاپ‌ها</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>User Acquisition</li><li>Activation</li><li>Retention</li><li>Revenue</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Experiment Velocity</li><li>Success Rate</li><li>Growth Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>experiment results</li><li>user behavior</li><li>growth metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Hacking Cycle
-├── Analyze (Data)</li><li>├── Ideate (Hypotheses)</li><li>├── Prioritize (ICE/RICE)</li><li>├── Test (Experiments)</li><li>└── Scale (Winners)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>آزمایش‌های سریع و یادگیری مستمر</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Experiment Velocity</li><li>Success Rate</li><li>Growth Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Growth Hacking Value = (Experiments × Success Rate × Impact) ÷ Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Growth Experiment Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی آزمایش‌ها و scaling winners</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>experiment cadence</li><li>success criteria</li><li>scaling thresholds</li></ul></div>`
 },
 {
   term: "هزینه جذب مشتری (CAC)",
@@ -9958,6 +10958,165 @@ Boundary Intelligence Center
   term: "امتیاز محتوا (Content Score)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>امتیاز کلی کیفیت یک محتوا بر اساس ترکیب معیارهای مختلف.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Content Score امتیاز نهایی کیفیت محتوا است که بر اساس ترکیب معیارهای مختلف مانند وضوح، دقت، کامل بودن، اعتبار و جذابیت محاسبه می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Criteria Scoring 2. Weight Assignment 3. Score Calculation 4. Content Score Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"content_score_id": "uuid", "content_id": "uuid", "clarity_score": "float", "accuracy_score": "float", "completeness_score": "float", "credibility_score": "float", "engagement_score": "float", "content_score": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/content-score/{content_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Content Quality Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>محتوای با امتیاز ۸۵ از ۱۰۰</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محتوای با امتیاز پایین</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ارزیابی کلی کیفیت محتوا</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Content Evaluation</li><li>Content Optimization</li><li>Quality Assurance</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Criteria Scoring</li><li>Weight Assignment</li><li>Score Calculation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>criteria scores</li><li>weights</li><li>content data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Content Quality
 ├── Clarity (Clarity)</li><li>├── Accuracy (Accuracy)</li><li>├── Completeness (Completeness)</li><li>├── Credibility (Credibility)</li><li>└── Engagement (Engagement)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ترکیب معیارهای مختلف</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Content Score</li><li>Criteria Scores</li><li>Quality Improvement Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Content Score = (Clarity × Accuracy × Completeness × Credibility × Engagement) ÷ 5</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Content Score Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهبود کیفیت محتوا</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>criteria weights</li><li>scoring criteria</li><li>quality threshold</li></ul></div>`
+},
+{
+  term: "امتیازدهی محتوای رسانه‌ای (Media Content Scoring)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>امتیازدهی محتوای رسانه‌ای فرآیند تخصیص یک عدد یا مجموعه اعداد به هر محتوا بر اساس معیارهایی چون اهمیت، کیفیت، ریسک، و تطابق با اهداف استراتژیک است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Content Scoring اولویت‌بندی اطلاعات را خودکار می‌کند. از میان هزاران محتوای ورودی، سیستم باید تشخیص دهد کدام یک نیازمند توجه فوری، کدام برای آرشیو و کدام نادیدنی است. این امتیاز از ترکیب عوامل متعدد (احساسات، دسترسی، نوع منبع، ارتباط با Watchlist، ریسک) محاسبه می‌شود.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Feature Extraction (NLP results)</li>
+<li>Source Authority Scoring</li>
+<li>Relevance Scoring (Watchlist match)</li>
+<li>Risk Scoring (sentiment × reach)</li>
+<li>Novelty Scoring</li>
+<li>Composite Score Calculation (weighted)</li>
+<li>Priority Tier Assignment</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "content_id": "uuid",
+  "relevance_score": "float",
+  "importance_score": "float",
+  "risk_score": "float",
+  "quality_score": "float",
+  "novelty_score": "float",
+  "composite_score": "float",
+  "priority_tier": "critical|high|medium|low",
+  "explanation": ["array of contributing factors"]
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/scoring/content</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Media Intelligence — Automated Prioritization</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>امتیاز ۹۲/۱۰۰ به خبری که در ۳ رسانه بین‌المللی همزمان منتشر شد و با Watchlist مطابقت دارد</li>
+<li>فیلتر خودکار ۸۰٪ محتوای بی‌ربط با امتیاز زیر ۲۰</li>
+<li>ارسال فوری محتوای با امتیاز بالای ۸۵ به تحلیلگر</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>لایک یا View count به تنهایی Content Score نیست؛ Scoring ترکیب چندین عامل متنی و زمینه‌ای است.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>در سیستم‌هایی که هزاران محتوا در روز دریافت می‌کنند، بدون Scoring هیچ تحلیلگری نمی‌تواند مهم‌ترین موارد را به‌موقع شناسایی کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Content Triage and Prioritization</li>
+<li>Alert Engine Input</li>
+<li>Dashboard Ranking</li>
+<li>Analyst Workload Management</li>
+<li>Content Quality Assurance</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Weighted Feature Combination</li>
+<li>Learning-to-Rank (LTR)</li>
+<li>LLM-based Importance Assessment</li>
+<li>Rule-based Tier Assignment</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>خروجی NLP Pipeline</li>
+<li>Metadata منبع (authority score)</li>
+<li>Watchlist matches</li>
+<li>تاریخچه تعاملات کاربران با محتوا</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Content Scoring
+ ├── uses → Sentiment Score
+ ├── uses → Relevance Score
+ ├── uses → Source Authority
+ ├── feeds → Alert Engine
+ ├── feeds → Dashboard Ranking
+ └── enables → Content Triage
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>همبستگی با قضاوت انسانی (هدف): بالای ۰.۷۵ (Spearman correlation).</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Explainability: تحلیلگر باید بداند چرا این امتیاز داده شد</li>
+<li>وزن‌ها را قابل تنظیم برای هر کاربر/سازمان بگذار</li>
+<li>Feedback loop از تحلیلگران برای بهبود مدل</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Analyst Agreement Rate</li>
+<li>Critical Content Miss Rate</li>
+<li>Triage Efficiency (time saved)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Content_Score =
+(Relevance × 0.30) +
+(Risk × 0.25) +
+(Source_Authority × 0.20) +
+(Novelty × 0.15) +
+(Reach × 0.10)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Content Priority Feed</p>
+<ul style="margin-right:20px">
+<li>فهرست محتوای اولویت Critical (لحظه‌ای)</li>
+<li>توزیع امتیاز محتوای امروز</li>
+<li>محتوای بازبینی‌شده در مقابل کل</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>ارسال فوری محتوای Critical به تحلیلگر</li>
+<li>فیلتر خودکار محتوای کم‌ارزش</li>
+<li>تغذیه موتور تصمیم با محتوای High-priority</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Weight Configuration per Factor</li>
+<li>Tier Boundaries (critical/high/medium/low)</li>
+<li>Auto-alert Threshold</li>
+<li>Feedback Collection Mode</li>
+</ul>
+</div>`
 }
         ]
       },
@@ -10457,6 +11616,1967 @@ Boundary Intelligence Center
 ├── Case Library
 ├── Lessons Learned
 └── Best Practices</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>جستجوی قوی و دسته‌بندی مناسب.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Repository Size</li><li>Search Success</li><li>Usage Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Repository Value = (Knowledge × Quality × Usage) ÷ Maintenance Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Knowledge Repository Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مدیریت و به‌روزرسانی مخزن دانش.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>knowledge categories</li><li>access controls</li><li>search configuration</li></ul></div>`
+},
+{
+  term: "پردازش زبان طبیعی (Natural Language Processing/NLP)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>پردازش زبان طبیعی شاخه‌ای از هوش مصنوعی است که به رایانه توانایی فهمیدن، تفسیر، تولید و تحلیل زبان انسانی (متن و گفتار) را می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>NLP مجموعه‌ای از روش‌های محاسباتی است که زبان طبیعی را به ساختارهای قابل پردازش ماشینی تبدیل می‌کند. در سیستم‌عامل رسانه‌ای، NLP ستون فقرات همه لایه‌های تحلیل است: از استخراج موجودیت و روابط تا تشخیص احساسات، خوشه‌بندی موضوع و تولید خلاصه. بدون NLP، پردازش حجم انبوه محتوای رسانه‌ای در مقیاس لحظه‌ای ناممکن است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Tokenization</li>
+<li>Sentence Segmentation</li>
+<li>Part-of-Speech Tagging</li>
+<li>Named Entity Recognition</li>
+<li>Dependency Parsing</li>
+<li>Coreference Resolution</li>
+<li>Semantic Role Labeling</li>
+<li>Sentiment Classification</li>
+<li>Topic Modeling</li>
+<li>Text Embedding Generation</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "nlp_result_id": "uuid",
+  "source_text": "string",
+  "language": "string",
+  "tokens": ["array"],
+  "sentences": ["array"],
+  "entities": [{"text":"string","label":"PER|ORG|LOC|DATE|EVENT"}],
+  "sentiment": {"label":"POS|NEG|NEU","score":"float"},
+  "topics": ["array"],
+  "embedding": ["float_array"],
+  "relations": [{"subject":"string","predicate":"string","object":"string"}],
+  "processing_time_ms": "int"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/nlp/analyze</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>AI Processing Methodology</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>تشخیص نام وزیر خارجه در متن خبر</li>
+<li>تحلیل احساسات توییت‌های مربوط به یک رویداد</li>
+<li>خوشه‌بندی ۱۰۰۰ خبر برای یافتن موضوعات مشترک</li>
+<li>خلاصه‌سازی خودکار گزارش ۵۰ صفحه‌ای</li>
+<li>تشخیص زبان مقاله منتشرشده</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>پردازش متن با regex یا جستجوی کلیدواژه NLP نیست؛ NLP معنا و ساختار زبان را درک می‌کند، نه فقط الگوهای رشته‌ای.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>NLP امکان پردازش هزاران محتوای رسانه‌ای در ثانیه را فراهم می‌کند. بدون آن رصد لحظه‌ای رسانه، تشخیص روایت و هشدار بحران عملاً ناممکن است. هر لایه دیگر سیستم (گراف دانش، دوقلوی دیجیتال، موتور تصمیم) از خروجی NLP تغذیه می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Media Monitoring</li>
+<li>Sentiment Analysis at Scale</li>
+<li>Event Detection</li>
+<li>Narrative Tracking</li>
+<li>Misinformation Detection</li>
+<li>Crisis Signal Extraction</li>
+<li>Knowledge Graph Population</li>
+<li>Automated Summarization</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Transformer Models (BERT, RoBERTa, XLM-R)</li>
+<li>LLM-based Pipelines (GPT, Claude)</li>
+<li>Multilingual Models</li>
+<li>Fine-tuned Domain Models</li>
+<li>spaCy / NLTK Pipelines</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>متون خبری</li>
+<li>پست‌های شبکه اجتماعی</li>
+<li>اسناد رسمی</li>
+<li>رونوشت ویدئو و پادکست</li>
+<li>گفتگوهای آنلاین</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+NLP
+ ├── enables → Named Entity Recognition
+ ├── enables → Sentiment Analysis
+ ├── enables → Topic Extraction
+ ├── enables → Relation Extraction
+ ├── feeds → Knowledge Graph
+ ├── feeds → Event Detection
+ └── uses → Embedding
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>۷۵٪ تا ۹۵٪ (وابسته به زبان، دامنه و مدل). مدل‌های fine-tuned روی داده رسانه فارسی دقت بالاتری دارند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Pipeline مدولار طراحی کن تا هر مرحله قابل جایگزینی باشد</li>
+<li>برای فارسی از مدل‌های چندزبانه یا fine-tuned استفاده کن</li>
+<li>Latency و Throughput را از ابتدا benchmark کن</li>
+<li>خروجی را با Confidence Score همراه کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Precision / Recall / F1 per task</li>
+<li>Processing Throughput (docs/sec)</li>
+<li>Average Latency (ms)</li>
+<li>Language Coverage Rate</li>
+<li>Model Drift Score</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+Pipeline Efficiency =
+(Correct_Extractions / Total_Inputs) × (1 / Avg_Latency_ms)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>NLP Engine Health Monitor</p>
+<ul style="margin-right:20px">
+<li>تعداد متن پردازش‌شده در ثانیه</li>
+<li>دقت مدل‌های فعال</li>
+<li>توزیع زبانی محتوای ورودی</li>
+<li>نمودار خطاها و Fallback‌ها</li>
+<li>وضعیت مدل‌های در صف Update</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>تغذیه موتور رصد با موجودیت‌های استخراج‌شده</li>
+<li>فعال‌سازی هشدار بحران بر اساس clustering احساسات</li>
+<li>اولویت‌بندی خودکار محتوای پرخطر</li>
+<li>تشکیل خودکار پرونده موضوعی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Model Selection per Language</li>
+<li>Confidence Threshold per Task</li>
+<li>Batch Size</li>
+<li>Pipeline Stage Toggle</li>
+<li>Entity Type Filter</li>
+<li>Custom Vocabulary / Domain Terms</li>
+</ul>
+</div>`
+},
+{
+  term: "تشخیص موجودیت نام‌دار (Named Entity Recognition/NER)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>NER فرآیندی است که در آن هوش مصنوعی، اسامی خاص (اشخاص، سازمان‌ها، مکان‌ها، تاریخ‌ها، رویدادها) را در متن شناسایی و برچسب‌گذاری می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>NER اولین گام تبدیل متن ساختارنیافته به اطلاعات ساختاریافته است. در سیستم رسانه‌ای، NER موجودیت‌های کلیدی (بازیگر، مکان، سازمان، رویداد) را استخراج می‌کند و این موجودیت‌ها نقاط گره‌ای گراف دانش را تشکیل می‌دهند. دقت NER مستقیماً بر کیفیت تمام لایه‌های بعدی تحلیل اثر می‌گذارد.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Tokenization</li>
+<li>Sequence Labeling (BIO/BIOES)</li>
+<li>Transformer Encoding</li>
+<li>Entity Span Detection</li>
+<li>Entity Type Classification</li>
+<li>Entity Linking (to Knowledge Base)</li>
+<li>Coreference Resolution</li>
+<li>Entity Normalization</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "document_id": "uuid",
+  "entities": [
+    {
+      "text": "string",
+      "label": "PER|ORG|LOC|DATE|EVENT|PRODUCT|LAW",
+      "start_char": "int",
+      "end_char": "int",
+      "confidence": "float",
+      "kb_id": "string",
+      "canonical_name": "string"
+    }
+  ],
+  "entity_count": "int"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/nlp/ner</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>NLP Subtask — Information Extraction</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>«علی خامنه‌ای» → PER (شخص)</li>
+<li>«سازمان ملل» → ORG (سازمان)</li>
+<li>«تهران» → LOC (مکان)</li>
+<li>«انتخابات ۱۴۰۳» → EVENT (رویداد)</li>
+<li>«۱۵ فروردین ۱۴۰۴» → DATE (تاریخ)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>جستجوی کلیدواژه «تهران» با regex NER نیست؛ NER «تهران» را در جمله «تهران پایتخت ایران است» به‌عنوان LOC و در «پرونده تهران» به‌عنوان REF (مرجع رویداد) متمایز می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>بدون NER، گراف دانش قابل ساخت نیست. NER امکان ردیابی بازیگران، مکان‌ها و رویدادها در طول زمان و در میان هزاران منبع را به‌صورت خودکار فراهم می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Knowledge Graph Population</li>
+<li>Actor Tracking</li>
+<li>Event Detection</li>
+<li>Influence Network Mapping</li>
+<li>Media Monitoring Alert</li>
+<li>Misinformation Source Identification</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>BERT-based NER (e.g., XLM-RoBERTa)</li>
+<li>spaCy NER Pipeline</li>
+<li>LLM Few-shot NER</li>
+<li>Fine-tuned Persian NER models</li>
+<li>Gazetteer-augmented Models</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>متن خبری فارسی/عربی/انگلیسی</li>
+<li>پست‌های شبکه اجتماعی</li>
+<li>اسناد رسمی و بیانیه‌ها</li>
+<li>پایگاه داده موجودیت‌های شناخته‌شده (KB)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+NER
+ ├── part_of → NLP Pipeline
+ ├── populates → Knowledge Graph
+ ├── enables → Actor Tracking
+ ├── enables → Entity Tracking
+ ├── feeds → Relation Extraction
+ └── linked_to → Event Detection
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>۸۰٪ تا ۹۴٪ برای زبان‌های پرمنبع. برای فارسی با مدل fine-tuned: ۸۵٪+. Entity Linking معمولاً ۱۰٪ کمتر از NER span detection است.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Label schema را با دقت طراحی کن (حداقل: PER, ORG, LOC, DATE, EVENT)</li>
+<li>Entity Linking به KB داخلی پروژه را از ابتدا پیش‌بینی کن</li>
+<li>برای موجودیت‌های جدید (شخصیت‌های ناشناس) Fallback تعریف کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Entity F1 Score per type</li>
+<li>Entity Linking Accuracy</li>
+<li>New Entity Discovery Rate</li>
+<li>False Positive Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+NER_F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+Entity Coverage =
+Unique_Entities_Extracted / Known_Entities_in_Domain
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Entity Extraction Monitor</p>
+<ul style="margin-right:20px">
+<li>نمودار توزیع نوع موجودیت‌های روزانه</li>
+<li>پرتکرارترین موجودیت‌ها</li>
+<li>موجودیت‌های جدید کشف‌شده</li>
+<li>دقت مدل در زبان‌های مختلف</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار زمان اول ذکر موجودیت در Watchlist</li>
+<li>تغذیه خودکار پرونده بازیگران</li>
+<li>کشف روابط جدید بین موجودیت‌ها</li>
+<li>شناسایی بازیگران ناشناس در شبکه‌های هماهنگ</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Entity Types to Extract</li>
+<li>Confidence Threshold</li>
+<li>Knowledge Base Link Mode</li>
+<li>Language Model Selection</li>
+<li>Custom Entity List (Watchlist)</li>
+</ul>
+</div>`
+},
+{
+  term: "تحلیل احساسات (Sentiment Analysis)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>تحلیل احساسات فرآیند تشخیص خودکار جهت‌گیری عاطفی (مثبت، منفی، خنثی) یا احساس غالب (خشم، ترس، شادی، غم) در متن توسط هوش مصنوعی است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Sentiment Analysis را باید از Sentiment (احساس غالب جمعی) تفکیک کرد: اولی یک تکنیک پردازشی است، دومی یک شاخص اجتماعی. در سیستم رسانه‌ای، Sentiment Analysis در لحظه روی هزاران پست و خبر اجرا می‌شود تا جهت‌گیری افکار عمومی، بحران در حال شکل‌گیری، و واکنش به رویدادها را به‌صورت برخط رصد کند.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Text Preprocessing</li>
+<li>Aspect Extraction (Aspect-based SA)</li>
+<li>Sentiment Classification (Positive/Negative/Neutral)</li>
+<li>Emotion Detection (Anger/Fear/Joy/Sadness/Surprise/Disgust)</li>
+<li>Intensity Scoring</li>
+<li>Temporal Aggregation</li>
+<li>Entity-level Sentiment Attribution</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "document_id": "uuid",
+  "overall_sentiment": "positive|negative|neutral",
+  "sentiment_score": "float (-1 to +1)",
+  "emotions": {
+    "anger": "float",
+    "fear": "float",
+    "joy": "float",
+    "sadness": "float"
+  },
+  "aspects": [
+    {"aspect": "string", "sentiment": "string", "score": "float"}
+  ],
+  "confidence": "float"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/nlp/sentiment</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>NLP Subtask — Opinion Mining</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>تشخیص احساس ترس در ۷۰٪ توییت‌های مرتبط با زلزله</li>
+<li>کاهش ناگهانی امتیاز مثبت یک مقام دولتی پس از بیانیه</li>
+<li>رصد احساسات منفی نسبت به یک محصول پس از انتشار خبر</li>
+<li>شناسایی موج خشم در شبکه‌های اجتماعی ۲ ساعت قبل از اعتراض</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>«احساس عمومی جامعه نسبت به دولت منفی است» گزاره تفسیری است؛ Sentiment Analysis به طور خودکار و لحظه‌ای این گزاره را از مجموع محتواها استخراج می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>Sentiment Analysis سریع‌ترین سیگنال تغییر فضای عمومی را فراهم می‌کند و اغلب ساعت‌ها پیش از تبدیل به بحران رسانه‌ای قابل رصد است. در مدیریت بحران، این تفاوت زمانی حیاتی است.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Crisis Early Warning</li>
+<li>Brand/Reputation Monitoring</li>
+<li>Campaign Effectiveness Measurement</li>
+<li>Public Opinion Tracking</li>
+<li>Narrative Sentiment Monitoring</li>
+<li>Political Risk Assessment</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Fine-tuned BERT (ParsBERT for Persian)</li>
+<li>Zero-shot LLM Classification</li>
+<li>Lexicon-based Methods (for speed)</li>
+<li>Ensemble (Lexicon + Neural)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>پست‌های شبکه اجتماعی</li>
+<li>نظرات کاربران</li>
+<li>متون خبری</li>
+<li>رونوشت مصاحبه‌ها</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Sentiment Analysis
+ ├── part_of → NLP Pipeline
+ ├── measures → Public Mood
+ ├── feeds → Crisis Signal
+ ├── feeds → Reputation Score
+ ├── feeds → Trust Score
+ └── applied_to → Narrative / Topic / Actor
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>۷۵٪ تا ۹۲٪ برای سه‌کلاسه (مثبت/منفی/خنثی). دقت برای فارسی محاوره‌ای و متون طنزآلود پایین‌تر است. Aspect-based SA معمولاً ۷۰-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>برای فارسی حتماً مدل fine-tuned استفاده کن</li>
+<li>طنز، کنایه و سارکاسم را به‌عنوان چالش اصلی در نظر بگیر</li>
+<li>نتایج را در سطح هشتگ، موجودیت و موضوع Aggregate کن</li>
+<li>تغییر سریع امتیاز را به‌عنوان سیگنال بحران تعریف کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Sentiment Accuracy (3-class F1)</li>
+<li>Sentiment Shift Detection Time</li>
+<li>False Crisis Alert Rate</li>
+<li>Positive/Negative Ratio per Entity</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Aggregate_Sentiment =
+Σ(sentiment_score_i × source_weight_i × reach_i) / Σ(reach_i)
+
+Crisis_Signal = Δ(Negative_Sentiment) / Δt > Threshold
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Sentiment Intelligence Center</p>
+<ul style="margin-right:20px">
+<li>نمودار خطی تغییر احساسات در ۲۴ ساعت</li>
+<li>Heatmap احساسات به تفکیک موضوع</li>
+<li>امتیاز احساسات برای موجودیت‌های Watchlist</li>
+<li>هشدار تغییر ناگهانی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار اتوماتیک زمان افت امتیاز احساسات</li>
+<li>ورودی به موتور بحران</li>
+<li>پیشنهاد واکنش ارتباطی بر اساس احساس غالب</li>
+<li>ارزیابی اثربخشی کمپین بر اساس تغییر احساسات</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Sentiment Model Selection</li>
+<li>Granularity (Document/Sentence/Aspect)</li>
+<li>Alert Threshold (Negative Spike)</li>
+<li>Aggregation Window (1h/6h/24h)</li>
+<li>Entity Filter for Attribution</li>
+</ul>
+</div>`
+},
+{
+  term: "استخراج موضوع (Topic Extraction)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>استخراج موضوع فرآیند خودکار شناسایی موضوع‌ها و مضامین اصلی در مجموعه‌ای از متون است، بدون اینکه از پیش تعریفی برای آن‌ها داشته باشیم.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>برخلاف دسته‌بندی (Classification) که موضوعات از پیش تعریف‌شده هستند، Topic Extraction موضوعات را از خودِ داده استخراج می‌کند. در سیستم رسانه‌ای، این توانایی برای کشف موضوعات نوظهور که هنوز در Watchlist نیستند، اساسی است. Topic Extraction پایه‌ی Topic Discovery و Knowledge Graph Population است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Text Preprocessing & Normalization</li>
+<li>Embedding Generation</li>
+<li>Dimensionality Reduction (UMAP)</li>
+<li>Clustering (HDBSCAN/K-Means)</li>
+<li>Topic Label Generation (LLM)</li>
+<li>Topic Hierarchy Construction</li>
+<li>Topic Trend Tracking</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "extraction_id": "uuid",
+  "topics": [
+    {
+      "topic_id": "string",
+      "label": "string",
+      "keywords": ["array"],
+      "document_count": "int",
+      "probability": "float",
+      "trend": "rising|stable|declining",
+      "parent_topic": "string|null"
+    }
+  ],
+  "total_documents": "int",
+  "coverage": "float"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/topics/extract</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>NLP Subtask — Unsupervised Information Extraction</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>استخراج خودکار ۱۵ موضوع از ۵۰۰۰ خبر روزانه</li>
+<li>کشف موضوع نوظهور «آلودگی آب» از پست‌های توییتر</li>
+<li>دسته‌بندی اخبار انتخاباتی به موضوعات فرعی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>برچسب‌زدن دستی موضوع به هر خبر Topic Extraction نیست؛ Topic Extraction خودکار و بدون نظارت انسانی مستقیم عمل می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>بدون Topic Extraction، رصد موضوعات نوظهور ممکن نیست. این ابزار اجازه می‌دهد سیستم از حوزه‌های ناشناخته نیز هشدار بدهد، نه فقط موضوعات از پیش تعریف‌شده در Watchlist.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Emerging Topic Discovery</li>
+<li>News Categorization</li>
+<li>Knowledge Graph Population</li>
+<li>Content Recommendation</li>
+<li>Watchlist Auto-expansion</li>
+<li>Media Coverage Analysis</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>BERTopic (State-of-the-art)</li>
+<li>LDA (Latent Dirichlet Allocation)</li>
+<li>NMF (Non-negative Matrix Factorization)</li>
+<li>LLM-based Topic Labeling</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>مجموعه‌های بزرگ متن خبری</li>
+<li>پست‌های شبکه‌های اجتماعی</li>
+<li>آرشیو محتوای رسانه‌ای</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Topic Extraction
+ ├── part_of → NLP Pipeline
+ ├── produces → Topic
+ ├── enables → Topic Discovery
+ ├── feeds → Knowledge Graph
+ ├── feeds → Watchlist (auto-expand)
+ └── uses → Embedding
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>Topic coherence score: ۰.۴ تا ۰.۷ (بالاتر بهتر). دقت label‌های تولیدشده با LLM: ۸۰-۹۰٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>تعداد موضوعات را dynamic نگه‌دار (نه ثابت)</li>
+<li>موضوعات خیلی عمومی (مثل «سیاست») را با زیرموضوع‌ها تکمیل کن</li>
+<li>Topic Drift را در طول زمان Monitor کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Topic Coherence Score</li>
+<li>Topic Coverage Rate</li>
+<li>New Topic Discovery Rate (per day)</li>
+<li>Human Agreement Rate on Labels</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Topic_Coherence = (1/N) × Σ log P(w_i, w_j) / P(w_i)
+
+Emerging_Topic_Score =
+(Current_Volume - Baseline_Volume) / Baseline_Volume × Velocity
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Topic Landscape Map</p>
+<ul style="margin-right:20px">
+<li>نقشه حبابی موضوعات (اندازه = حجم)</li>
+<li>موضوعات در حال رشد (Rising Topics)</li>
+<li>موضوعات جدید کشف‌شده امروز</li>
+<li>Timeline تغییر سهم موضوعات</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>اضافه خودکار موضوعات جدید به Watchlist</li>
+<li>هشدار رشد ناگهانی یک موضوع</li>
+<li>پیشنهاد انتساب موضوع به کمپین فعال</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Min Topic Size</li>
+<li>Embedding Model</li>
+<li>Clustering Algorithm</li>
+<li>Label Generation Model</li>
+<li>Update Frequency (hourly/daily)</li>
+</ul>
+</div>`
+},
+{
+  term: "مدل زبانی بزرگ (Large Language Model/LLM)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>مدل زبانی بزرگ یک سیستم هوش مصنوعی است که روی حجم عظیمی از متون آموزش دیده و می‌تواند متن بفهمد، تولید کند، ترجمه کند، خلاصه کند و وظایف زبانی پیچیده را انجام دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>LLMها بر پایه معماری Transformer و پیش‌آموزش روی corpus میلیاردی ساخته می‌شوند. در سیستم رسانه‌ای، LLM می‌تواند هم به‌عنوان موتور NLP (برای تحلیل محتوا) و هم به‌عنوان عامل تولید محتوا (برای پیشنهاد پاسخ، خلاصه‌سازی، تولید گزارش) استفاده شود. تفاوت کلیدی LLM از مدل‌های NLP قدیمی، توانایی Zero-shot و Few-shot reasoning است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Tokenization (BPE/SentencePiece)</li>
+<li>Transformer Encoding (Self-Attention)</li>
+<li>Context Window Processing</li>
+<li>Decoding (Greedy/Beam/Sampling)</li>
+<li>Prompt Engineering / RAG Integration</li>
+<li>Output Parsing & Structured Extraction</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "request_id": "uuid",
+  "model": "claude-sonnet|gpt-4|llama-3",
+  "prompt_tokens": "int",
+  "completion_tokens": "int",
+  "output": "string",
+  "structured_output": {"key": "value"},
+  "finish_reason": "stop|max_tokens",
+  "latency_ms": "int"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/llm/generate</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>AI Foundation Model — Generative</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>خلاصه‌سازی خودکار ۱۰۰ خبر به یک Briefing</li>
+<li>تشخیص ادعای اصلی در متن دیپ‌فیک</li>
+<li>تولید پیشنهاد پاسخ رسانه‌ای به بحران</li>
+<li>استخراج ساختار روایت از یک مصاحبه</li>
+<li>ترجمه و تحلیل همزمان محتوای چندزبانه</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>یک مدل sentiment classifier که فقط positive/negative تشخیص می‌دهد LLM نیست؛ LLM وظایف متنوع را بدون آموزش مجدد انجام می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>LLM لایه‌ای است که سیستم رسانه‌ای را از ابزار تحلیل به دستیار هوشمند تبدیل می‌کند. خلاصه‌سازی، تفسیر، تولید پیشنهاد و ارتباط با کاربر غیرفنی، همه از طریق LLM میسر می‌شود.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Automated Summarization</li>
+<li>Narrative Analysis</li>
+<li>Claim Verification Assistance</li>
+<li>Report Generation</li>
+<li>AI Copilot for Analysts</li>
+<li>Structured Data Extraction</li>
+<li>Multi-lingual Processing</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>API-based (Claude, GPT-4, Gemini)</li>
+<li>Local Deployment (LLaMA, Mistral)</li>
+<li>RAG (Retrieval-Augmented Generation)</li>
+<li>Fine-tuning on Domain Data</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>متون خام برای پردازش</li>
+<li>Prompt Templates</li>
+<li>Knowledge Base برای RAG</li>
+<li>Few-shot Examples</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+LLM
+ ├── powers → AI Copilot
+ ├── powers → Automated Summarization
+ ├── powers → Narrative Analysis
+ ├── integrates_with → RAG
+ ├── integrates_with → Knowledge Graph
+ └── enables → Structured Extraction
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>وابسته به وظیفه: خلاصه‌سازی ۸۵-۹۵٪، استخراج ساختاریافته با Prompt خوب ۸۰-۹۵٪. Hallucination یک ریسک واقعی است و باید با Verification Pipeline کنترل شود.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>هرگز LLM را به‌تنهایی برای تصمیمات حیاتی استفاده نکن</li>
+<li>خروجی LLM را با منابع اولیه Cross-check کن</li>
+<li>Context Window را مدیریت کن (چکیده‌سازی اسناد بلند)</li>
+<li>برای فارسی مدل‌های چندزبانه قوی انتخاب کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Task Accuracy per Use Case</li>
+<li>Hallucination Rate</li>
+<li>Average Tokens per Request</li>
+<li>Cost per 1000 Requests</li>
+<li>Latency P99</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+LLM_Value_Score =
+(Task_Accuracy × 0.40) +
+(Speed_Score × 0.25) +
+(Cost_Efficiency × 0.20) +
+(Multilingual_Coverage × 0.15)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>LLM Usage Monitor</p>
+<ul style="margin-right:20px">
+<li>تعداد درخواست‌ها به تفکیک وظیفه</li>
+<li>میانگین latency</li>
+<li>نرخ خطا و fallback</li>
+<li>هزینه روزانه API</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>تولید خودکار Briefing روزانه</li>
+<li>پیشنهاد پاسخ رسانه‌ای به بحران</li>
+<li>توضیح خودکار علت هشدار به تحلیلگر</li>
+<li>تولید گزارش از داده‌های داشبورد</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Model Provider (API / Local)</li>
+<li>Temperature / Top-p</li>
+<li>Max Tokens</li>
+<li>System Prompt Template</li>
+<li>RAG Integration Toggle</li>
+<li>Output Format (JSON / Text)</li>
+</ul>
+</div>`
+},
+{
+  term: "استخراج رابطه (Relation Extraction)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>استخراج رابطه فرآیند خودکار شناسایی روابط معنایی بین موجودیت‌ها در متن است؛ مثلاً «X رئیس Y است» یا «A با B مخالفت کرد».</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Relation Extraction مکمل NER است: NER موجودیت‌ها را شناسایی می‌کند، RE روابط بین آن‌ها را. این روابط یال‌های گراف دانش را می‌سازند. در سیستم رسانه‌ای، RE امکان می‌دهد از هزاران خبر و پست، شبکه روابط قدرت، تعارض منافع، ائتلاف‌ها و تضادها را به‌صورت خودکار استخراج کرد.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Entity Pair Extraction</li>
+<li>Sentence Encoding (Transformer)</li>
+<li>Relation Type Classification</li>
+<li>Argument Role Detection</li>
+<li>Confidence Scoring</li>
+<li>Knowledge Graph Triple Construction</li>
+<li>Temporal Tagging (when did relation hold?)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "relation_id": "uuid",
+  "subject": {"id":"string","name":"string","type":"string"},
+  "predicate": "opposes|supports|leads|member_of|accuses",
+  "object": {"id":"string","name":"string","type":"string"},
+  "confidence": "float",
+  "source_text": "string",
+  "source_doc_id": "string",
+  "valid_from": "datetime",
+  "valid_to": "datetime|null"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/nlp/relations</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>NLP Subtask — Information Extraction / Knowledge Graph Construction</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>استخراج «وزیر X با طرح Y مخالفت کرد» → (وزیر X) — opposes → (طرح Y)</li>
+<li>ساخت خودکار نقشه ائتلاف‌های سیاسی از خبرها</li>
+<li>تشخیص زمانی که رابطه «همکاری» به «تعارض» تبدیل شد</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>ذکر همزمان دو نام در یک خبر رابطه نیست؛ Relation Extraction نوع و جهت رابطه را تشخیص می‌دهد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>بدون RE، گراف دانش فقط گره (موجودیت) دارد و نه یال (رابطه). RE اطلاعات بیان‌شده در زبان طبیعی را به ساختار ماشین‌خوان تبدیل می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Knowledge Graph Construction</li>
+<li>Political Alliance Mapping</li>
+<li>Conflict Network Analysis</li>
+<li>Supply Chain Intelligence</li>
+<li>Entity Co-occurrence Analysis</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>BERT-based RE (SpanBERT)</li>
+<li>LLM Zero-shot RE</li>
+<li>OpenIE (Open Information Extraction)</li>
+<li>Dependency Parsing-based RE</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>متون خبری پردازش‌شده با NER</li>
+<li>پایگاه موجودیت‌های شناخته‌شده</li>
+<li>Ontology روابط مجاز (relation schema)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Relation Extraction
+ ├── depends_on → NER
+ ├── part_of → NLP Pipeline
+ ├── populates → Knowledge Graph (edges)
+ ├── enables → Influence Map
+ └── enables → Alliance/Conflict Analysis
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>۶۵٪ تا ۸۵٪ برای روابط از پیش تعریف‌شده. برای روابط باز (Open RE): ۵۵-۷۵٪. برای زبان فارسی با مدل fine-tuned: ۷۰-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Relation Schema را با سلسله‌مراتب تعریف کن</li>
+<li>روابط را Temporal نگه‌دار (از چه تاریخ تا چه تاریخ)</li>
+<li>برای روابط با confidence پایین، human-in-the-loop داشته باش</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Relation F1 per type</li>
+<li>Knowledge Graph Edge Growth Rate</li>
+<li>Temporal Accuracy Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+RE_F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+Graph_Density = Edges / (Nodes × (Nodes-1))
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Knowledge Graph Builder Monitor</p>
+<ul style="margin-right:20px">
+<li>تعداد روابط استخراج‌شده امروز</li>
+<li>توزیع نوع روابط</li>
+<li>روابط با confidence پایین (برای بازبینی)</li>
+<li>رشد گراف در طول زمان</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار تغییر رابطه کلیدی (مثلاً «همکار» به «رقیب»)</li>
+<li>کشف رابطه جدید بین موجودیت‌های Watchlist</li>
+<li>تغذیه مدل ریسک با روابط استخراج‌شده</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Relation Schema Definition</li>
+<li>Confidence Threshold</li>
+<li>RE Model Selection</li>
+<li>Auto-add to Graph Toggle</li>
+<li>Human Review Queue Threshold</li>
+</ul>
+</div>`
+},
+{
+  term: "تحلیل موضعی (Stance Detection)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>تحلیل موضعی تشخیص خودکار موضع یک نویسنده یا رسانه نسبت به یک موضوع، ادعا، یا موجودیت خاص است: موافق، مخالف، یا بی‌طرف.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Stance Detection از Sentiment Analysis پیچیده‌تر است: یک متن ممکن است احساس مثبت داشته باشد ولی موضع مخالف بگیرد (مثلاً «بسیار جالب است که دولت چنین تصمیم احمقانه‌ای گرفت»). در سیستم رسانه‌ای، Stance Detection برای تشخیص هم‌راستایی یا تعارض رسانه‌ها با یک روایت، نقشه جبهه‌بندی ایدئولوژیک، و کشف چرخش موضع ضروری است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Target Identification (موضوع هدف)</li>
+<li>Contextual Encoding (BERT)</li>
+<li>Stance Classification (favor/against/neutral/unrelated)</li>
+<li>Evidence Span Extraction</li>
+<li>Aggregation across Documents</li>
+<li>Temporal Stance Tracking</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "doc_id": "uuid",
+  "target": "string",
+  "stance": "favor|against|neutral|unrelated",
+  "confidence": "float",
+  "evidence_spans": ["array"],
+  "author": "string",
+  "source": "string",
+  "published_at": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/nlp/stance</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>NLP Subtask — Opinion Mining / Political Framing Analysis</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>تشخیص اینکه ۶۰٪ رسانه‌های داخلی نسبت به یک لایحه موضع موافق دارند</li>
+<li>کشف اینکه یک رسانه در ۳ ماه موضعش نسبت به یک مقام عوض شد</li>
+<li>نقشه جبهه‌بندی رسانه‌ها نسبت به یک موضوع سیاسی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>Sentiment Analysis می‌گوید «احساس منفی»؛ Stance Detection می‌گوید «مخالف طرح X». اولی عاطفه، دومی موضع را می‌سنجد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>Stance Detection جبهه‌بندی واقعی فضای رسانه‌ای را آشکار می‌کند. برای استراتژی ارتباطی دانستن موضع هر رسانه نسبت به هر موضوع، همان‌قدر مهم است که خود محتوا.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Media Alignment Analysis</li>
+<li>Narrative Framing Map</li>
+<li>Policy Public Opinion Analysis</li>
+<li>Misinformation Source Profiling</li>
+<li>Debate Framing Analysis</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Cross-encoder BERT (Target-aware)</li>
+<li>LLM Zero-shot Stance</li>
+<li>Fine-tuned on SemEval Stance Datasets</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>متون خبری و تحلیلی</li>
+<li>سرمقاله‌ها و یادداشت‌ها</li>
+<li>توییت‌ها و پست‌های رسمی</li>
+<li>بیانیه‌های سازمانی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Stance Detection
+ ├── part_of → NLP Pipeline
+ ├── complements → Sentiment Analysis
+ ├── feeds → Narrative Map
+ ├── enables → Media Alignment Analysis
+ └── uses → Frame (Framing)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>۷۰٪ تا ۸۵٪ برای موضوعات روشن. برای موضوعات پیچیده یا متون کنایی: ۶۰-۷۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>هر stance نسبت به یک target مشخص تعریف می‌شود نه به‌صورت مطلق</li>
+<li>تاریخچه stance هر منبع را نگه‌دار (تشخیص چرخش)</li>
+<li>برای موضوعات فارسی، داده آموزشی بومی لازم است</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Stance Classification F1</li>
+<li>Stance Coverage per Target</li>
+<li>Stance Shift Detection Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Media_Alignment_Score =
+Σ(stance_weight × source_authority) / Σ(source_authority)
+[favor=+1, neutral=0, against=-1]
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Media Alignment Map</p>
+<ul style="margin-right:20px">
+<li>نقشه موضع رسانه‌ها نسبت به موضوعات کلیدی</li>
+<li>Timeline چرخش موضع رسانه‌های مهم</li>
+<li>توزیع موافق/مخالف/بی‌طرف</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>شناسایی رسانه‌های هم‌راستا برای ارتباط</li>
+<li>هشدار چرخش موضع رسانه کلیدی</li>
+<li>پیشنهاد استراتژی ارتباط با رسانه‌های مخالف</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Target List (موضوعات هدف)</li>
+<li>Stance Model Selection</li>
+<li>Source Filter</li>
+<li>Temporal Window for Aggregation</li>
+</ul>
+</div>`
+},
+{
+  term: "ردیابی موجودیت (Entity Tracking)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>ردیابی موجودیت پیگیری مداوم یک شخص، سازمان یا موضوع در طول زمان در میان منابع مختلف رسانه‌ای است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Entity Tracking فراتر از NER است: NER موجودیت‌ها را در یک سند شناسایی می‌کند، Entity Tracking آن‌ها را در طول زمان و در میان هزاران سند دنبال می‌کند. سیستم باید تمام نام‌های مختلف یک موجودیت (Alias Resolution)، تغییر نقش‌ها، و تحول موجودیت را مدیریت کند. این ابزار اصلی ساخت پرونده موجودیت‌های کلیدی است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Cross-document Entity Linking</li>
+<li>Alias Resolution (coreference)</li>
+<li>Mention Aggregation Timeline</li>
+<li>Sentiment per Entity over Time</li>
+<li>Co-occurrence Tracking</li>
+<li>Role/Status Change Detection</li>
+<li>Entity Profile Update</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "entity_id": "uuid",
+  "canonical_name": "string",
+  "aliases": ["array"],
+  "type": "person|org|location|event",
+  "mention_count_today": "int",
+  "mention_trend": "rising|stable|declining",
+  "sentiment_today": "float",
+  "last_mentioned_at": "datetime",
+  "top_contexts": ["array"],
+  "related_entities": ["array"]
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/entities/{id}/timeline</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Media Intelligence — Entity Intelligence</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>ردیابی میزان ذکر یک مقام دولتی در رسانه‌ها در ۶ ماه گذشته</li>
+<li>تشخیص افزایش ناگهانی ذکر یک سازمان پس از یک رویداد</li>
+<li>نقشه موجودیت‌هایی که همیشه همزمان ذکر می‌شوند</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>جستجوی یک نام در موتور جستجو Entity Tracking نیست؛ Entity Tracking جریان مستمر و زمینه‌دار اطلاعات درباره موجودیت است.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>پرونده موجودیت‌های کلیدی (بازیگران، رقبا، همکاران) بدون Entity Tracking قابل ساخت نیست. این پرونده‌ها پایه تصمیم‌های استراتژیک هستند.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Watchlist Entity Monitoring</li>
+<li>Actor Profile Building</li>
+<li>Reputation Tracking</li>
+<li>Competitor Intelligence</li>
+<li>Political Risk Monitoring</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Entity Linking to KB (Wikidata/Internal)</li>
+<li>Coreference Resolution</li>
+<li>Alias Dictionary + Fuzzy Matching</li>
+<li>Temporal Aggregation Engine</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>خروجی NER از کل Pipeline</li>
+<li>پایگاه داده موجودیت‌های شناخته‌شده</li>
+<li>فهرست Alias‌های هر موجودیت</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Entity Tracking
+ ├── builds_on → NER
+ ├── populates → Knowledge Graph
+ ├── monitors → Watchlist
+ ├── feeds → Entity Profile
+ └── feeds → Influence Map
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>Entity Linking دقت: ۸۵-۹۵٪ برای موجودیت‌های شناخته‌شده. برای موجودیت‌های جدید یا چندمعنایی: ۷۰-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Alias Dictionary را به‌روز نگه‌دار (خودکار + انسانی)</li>
+<li>برای موجودیت‌های همنام از context برای تمایز استفاده کن</li>
+<li>Timeline رسانه‌ای هر موجودیت را ذخیره کن (تاریخچه کامل)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Entity Linking Accuracy</li>
+<li>Alias Resolution Rate</li>
+<li>Entity Profile Completeness</li>
+<li>Watchlist Hit Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Entity_Salience =
+(Mention_Count × Source_Weight) / Total_Weighted_Mentions
+
+Entity_Trend =
+(Current_Period_Mentions - Previous_Period) / Previous_Period
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Entity Intelligence Center</p>
+<ul style="margin-right:20px">
+<li>پرونده موجودیت: نمودار ذکر در زمان</li>
+<li>احساسات مرتبط با موجودیت</li>
+<li>رسانه‌های اصلی ذکرکننده</li>
+<li>موجودیت‌های هم‌ظهور</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار اول ذکر موجودیت Watchlist</li>
+<li>هشدار افزایش ناگهانی ذکر</li>
+<li>شناسایی تغییر احساسات مرتبط با موجودیت</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Watchlist Entities List</li>
+<li>Alias Management</li>
+<li>Alert Trigger (first mention / volume spike)</li>
+<li>Profile Aggregation Window</li>
+</ul>
+</div>`
+},
+{
+  term: "تحلیل رسانه‌ای خودکار (Automated Media Intelligence)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>تحلیل رسانه‌ای خودکار استفاده از هوش مصنوعی برای تبدیل حجم انبوه داده‌های رسانه‌ای به اطلاعات قابل اقدام، بدون نیاز به دخالت مداوم انسان است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Automated Media Intelligence مرحله بالغ‌شده Media Monitoring است که در آن سیستم نه فقط جمع‌آوری می‌کند، بلکه تحلیل، اولویت‌بندی، خلاصه‌سازی، و پیشنهاد اقدام را هم خودکار انجام می‌دهد. در AI Media OS این سطح در Core 1 (Media Intelligence) تعریف می‌شود و پایه‌ای‌ترین ارزش پیشنهادی سیستم است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Automated Data Collection</li>
+<li>NLP Pipeline Execution</li>
+<li>Content Scoring & Triage</li>
+<li>Pattern Recognition</li>
+<li>Insight Generation (LLM)</li>
+<li>Briefing Auto-generation</li>
+<li>Recommendation Engine</li>
+<li>Human Escalation Decision</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "intelligence_id": "uuid",
+  "generated_at": "datetime",
+  "coverage_window": "string",
+  "top_stories": ["array"],
+  "emerging_topics": ["array"],
+  "active_narratives": ["array"],
+  "crisis_signals": ["array"],
+  "recommended_actions": ["array"],
+  "confidence_level": "float",
+  "human_review_required": "boolean"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/intelligence/briefing</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>AI-Powered System Capability — Media Intelligence Automation</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>گزارش هوشمند صبحگاهی که تا ۷ صبح به مدیر ارسال می‌شود بدون دخالت انسانی</li>
+<li>هشدار خودکار ظرف ۱۰ دقیقه از شروع بحران</li>
+<li>خلاصه هفتگی کامل از ۵۰۰۰ خبر، فشرده در ۲ صفحه</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>رصد دستی خبرگزاری‌ها توسط تحلیلگر Automated Intelligence نیست؛ AMI به انسان اجازه می‌دهد فقط تصمیم‌های استراتژیک بگیرد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>AMI ارزش اصلی AI Media OS را می‌سازد: تبدیل سازمان‌های رسانه‌ای از واکنش‌دهنده به پیش‌بین. این همان «تبدیل رسانه سنتی به سازمان خودآگاه» است که در معماری پروژه تعریف شده.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Daily Intelligence Briefing</li>
+<li>Automated Crisis Detection</li>
+<li>Competitor Intelligence Automation</li>
+<li>Campaign Performance Reporting</li>
+<li>Regulatory Compliance Monitoring</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>End-to-end AI Pipeline</li>
+<li>LLM-powered Summarization & Insights</li>
+<li>Autonomous Agent Orchestration</li>
+<li>Human-in-the-Loop for Critical Decisions</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>کل خروجی Media Data Pipeline</li>
+<li>Knowledge Graph</li>
+<li>تاریخچه تصمیمات</li>
+<li>Strategic Objectives تعریف‌شده</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Automated Media Intelligence
+ ├── integrates → NLP Pipeline
+ ├── integrates → Monitoring Engine
+ ├── integrates → Knowledge Graph
+ ├── produces → Intelligence Briefing
+ ├── feeds → Decision Engine
+ └── enables → Autonomous Operations
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>دقت تشخیص بحران: ۸۵-۹۵٪. کیفیت Briefing (human rating): ۷۵-۸۵٪. نرخ هشدار از دست رفته هدف: زیر ۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>Human Escalation را در حوادث بحرانی اجباری کن</li>
+<li>Explainability را در هر Insight بگنجان</li>
+<li>بازخورد انسانی را برای یادگیری مستمر ضبط کن</li>
+<li>Automation Level را قابل تنظیم برگذار (Conservative تا Autonomous)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Analyst Time Saved per Day</li>
+<li>Crisis Detection Latency</li>
+<li>Briefing Quality Score (Human Rating)</li>
+<li>False Crisis Alert Rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Automation_Value =
+(Time_Saved × Analyst_Hourly_Cost) +
+(Crises_Detected_Early × Avg_Crisis_Cost_Saved)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Intelligence Command Center</p>
+<ul style="margin-right:20px">
+<li>Briefing روزانه خودکار</li>
+<li>وضعیت کلی فضای رسانه‌ای</li>
+<li>هشدارهای خودکار فعال</li>
+<li>اقدامات پیشنهادی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>پیشنهاد اولویت‌بندی اقدامات</li>
+<li>تشخیص بحران‌های نیازمند دخالت فوری</li>
+<li>ارزیابی اثربخشی اقدامات قبلی</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Automation Level (Low/Medium/High)</li>
+<li>Briefing Schedule</li>
+<li>Crisis Alert Sensitivity</li>
+<li>Human Escalation Rules</li>
+<li>Strategic Objectives Definition</li>
+</ul>
+</div>`
+},
+{
+  term: "خط لوله داده رسانه‌ای (Media Data Pipeline)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>خط لوله داده رسانه‌ای زنجیره‌ای خودکار از مراحل است که داده‌های خام رسانه‌ای (متن، تصویر، ویدئو) را جمع‌آوری، پاک‌سازی، پردازش و آماده تحلیل می‌کند.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Pipeline رسانه‌ای ستون فقرات زیرساختی هر سیستم Media Intelligence است. داده از منابع متنوع (API، RSS، Scraper، Stream) وارد می‌شود، در مراحل مختلف تمیز، نرمال‌سازی، و غنی‌سازی (Enrichment) می‌شود، و در نهایت برای تحلیل NLP، ذخیره در گراف دانش، یا نمایش در داشبورد آماده می‌گردد. کیفیت و سرعت کل سیستم وابسته به طراحی این Pipeline است.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Data Ingestion (API/RSS/Scraper/Stream)</li>
+<li>Deduplication</li>
+<li>Language Detection</li>
+<li>Text Normalization</li>
+<li>NLP Enrichment (NER, Sentiment, Topics)</li>
+<li>Media Metadata Extraction</li>
+<li>Storage Routing (Hot/Warm/Cold)</li>
+<li>Index Update (Search / Graph)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "pipeline_run_id": "uuid",
+  "source": "string",
+  "documents_ingested": "int",
+  "documents_processed": "int",
+  "duplicates_removed": "int",
+  "enrichment_success_rate": "float",
+  "avg_latency_ms": "int",
+  "errors": ["array"],
+  "timestamp": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/pipeline/status</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Data Engineering — ETL/ELT Infrastructure</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>Pipeline‌ای که هر ۵ دقیقه ۵۰۰ خبر از ۲۰۰ خبرگزاری جمع‌آوری و تحلیل می‌کند</li>
+<li>جریان لحظه‌ای توییت‌ها که هم‌زمان NER و Sentiment می‌گیرند</li>
+<li>Pipeline چندرسانه‌ای که ویدئو را رونوشت می‌کند و متن را تحلیل می‌کند</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>دانلود دستی و تحلیل هر خبر Pipeline نیست؛ Pipeline جریان خودکار و مداوم داده است.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>بدون Pipeline کارآمد، تحلیل لحظه‌ای ممکن نیست. Pipeline سرعت واکنش سیستم را تعیین می‌کند؛ در بحران‌های رسانه‌ای هر دقیقه تأخیر هزینه دارد.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Real-time Media Monitoring</li>
+<li>Knowledge Graph Population</li>
+<li>Dashboard Data Feed</li>
+<li>Alert Engine Input</li>
+<li>Digital Twin Data Sync</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Apache Kafka (Stream)</li>
+<li>Apache Airflow (Batch)</li>
+<li>Custom Python ETL</li>
+<li>Message Queue (RabbitMQ/Redis)</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>API خبرگزاری‌ها</li>
+<li>RSS Feeds</li>
+<li>Social Media Streams</li>
+<li>Web Crawlers</li>
+<li>Podcast/Video Transcripts</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Media Data Pipeline
+ ├── ingests_from → Media Crawling
+ ├── feeds → NLP Pipeline
+ ├── feeds → Knowledge Graph
+ ├── feeds → Monitoring Engine
+ ├── feeds → Dashboard
+ └── uses → Stream Processing
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>Uptime هدف: ۹۹.۵٪+. نرخ از دست رفتن داده: کمتر از ۰.۱٪. تأخیر End-to-End: زیر ۳۰ ثانیه برای Breaking News.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>هر مرحله را مستقل و قابل retry طراحی کن</li>
+<li>Dead Letter Queue برای داده‌های ناموفق داشته باش</li>
+<li>Backpressure را مدیریت کن (در اوج بحران ترافیک ۱۰x می‌شود)</li>
+<li>Schema evolution را از اول پیش‌بینی کن</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>End-to-End Latency</li>
+<li>Documents per Second</li>
+<li>Error Rate</li>
+<li>Deduplication Rate</li>
+<li>Pipeline Uptime</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Pipeline_Health =
+(Uptime × 0.35) +
+(Throughput_Score × 0.30) +
+(Data_Quality × 0.20) +
+(Latency_Score × 0.15)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Pipeline Operations Monitor</p>
+<ul style="margin-right:20px">
+<li>نمودار جریان داده لحظه‌ای</li>
+<li>وضعیت هر مرحله Pipeline</li>
+<li>نرخ خطا به تفکیک منبع</li>
+<li>تأخیر End-to-End</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار قطع منبع داده کلیدی</li>
+<li>تشخیص افت کیفیت داده (Drift)</li>
+<li>مقیاس‌گذاری خودکار در اوج بار</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Source Priority Weighting</li>
+<li>Dedup Window</li>
+<li>NLP Pipeline Toggle</li>
+<li>Storage Tier Rules</li>
+<li>Alert Thresholds (latency/error)</li>
+</ul>
+</div>`
+},
+{
+  term: "خزش و جمع‌آوری رسانه‌ای (Media Crawling)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>خزش رسانه‌ای فرآیند جمع‌آوری خودکار محتوا از منابع رسانه‌ای (سایت‌های خبری، شبکه‌های اجتماعی، فروم‌ها، کانال‌ها) است.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>Crawling اولین حلقه زنجیره Media Intelligence است. بدون جمع‌آوری داده هیچ تحلیلی ممکن نیست. Crawling رسانه‌ای با Crawling عمومی وب متفاوت است: باید با نرخ تازه‌سازی بالا (برخی منابع هر چند دقیقه)، احترام به robots.txt، مدیریت CAPTCHAها و تنوع فرمت (HTML، JSON API، RSS، Telegram، Twitter) کار کند.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>URL Discovery (RSS/Sitemap/API)</li>
+<li>HTTP Fetching (Rate-limited)</li>
+<li>HTML Parsing & Content Extraction</li>
+<li>Metadata Extraction (author, date, source)</li>
+<li>Media Asset Download (images/video)</li>
+<li>Deduplication Check</li>
+<li>Queue Injection (to Pipeline)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "crawl_id": "uuid",
+  "source_url": "string",
+  "source_type": "news|social|forum|official",
+  "title": "string",
+  "body": "string",
+  "author": "string",
+  "published_at": "datetime",
+  "language": "string",
+  "media_assets": ["array"],
+  "crawled_at": "datetime"
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">POST /api/crawl/submit</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Data Collection — Web Intelligence</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>خزش هر ۵ دقیقه از ۵۰۰ سایت خبری فارسی</li>
+<li>جمع‌آوری توییت‌های مرتبط با کلیدواژه از Twitter API</li>
+<li>خواندن پیام‌های کانال‌های تلگرامی رسانه‌ای</li>
+<li>دانلود و رونوشت ویدئوهای خبری یوتیوب</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>کپی دستی متن خبر Media Crawling نیست؛ Crawling خودکار، مداوم و در مقیاس بزرگ است.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>کیفیت و پوشش Crawling مستقیماً روی کیفیت هر تحلیلی اثر می‌گذارد. رسانه‌ای که در Crawl نیست، در تحلیل نیست. پوشش ناقص = تحلیل ناقص = تصمیم ناقص.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Real-time Media Monitoring</li>
+<li>Content Aggregation</li>
+<li>OSINT Data Collection</li>
+<li>Competitive Intelligence</li>
+<li>Crisis Signal Detection</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Scrapy Framework</li>
+<li>Playwright / Puppeteer (JS-rendered)</li>
+<li>RSS/Atom Feed Parsers</li>
+<li>Official APIs (Twitter/Instagram/YouTube)</li>
+<li>Telegram Bot API</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>فهرست URLهای منابع هدف</li>
+<li>API Keys منابع رسمی</li>
+<li>تنظیمات نرخ crawl هر منبع</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Media Crawling
+ ├── feeds → Media Data Pipeline
+ ├── collects_from → News Source
+ ├── collects_from → Social Media
+ ├── collects_from → Official Channels
+ └── enables → Real-time Monitoring
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>نرخ موفقیت Crawl هدف: ۹۵٪+. برای منابع با ساختار پیچیده یا Anti-bot: ۷۵-۸۵٪.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>نرخ Crawl را برای هر منبع جداگانه تنظیم کن</li>
+<li>برای Breaking News منابع، فاصله زمانی را کاهش بده</li>
+<li>User-Agent Rotation برای جلوگیری از Block</li>
+<li>Proxy Pool برای منابع محدودشده</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>Source Coverage Rate</li>
+<li>Crawl Success Rate</li>
+<li>Average Freshness Lag (minutes)</li>
+<li>Blocked Sources Count</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Coverage_Score =
+(Active_Sources / Total_Target_Sources) × Success_Rate
+
+Freshness_Score = 1 / (1 + Avg_Lag_Minutes / 30)
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Crawler Status Board</p>
+<ul style="margin-right:20px">
+<li>وضعیت هر منبع (فعال/مسدود/خطا)</li>
+<li>تعداد محتوای جمع‌آوری‌شده امروز</li>
+<li>تأخیر میانگین به تفکیک منبع</li>
+<li>منابع با کمترین freshness</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>هشدار قطع منبع خبری کلیدی</li>
+<li>پیشنهاد افزودن منابع جدید</li>
+<li>شناسایی موج خبری از افزایش ناگهانی Crawl rate</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Crawl Frequency per Source</li>
+<li>Source Priority List</li>
+<li>Content Filters (language/keyword)</li>
+<li>Proxy Configuration</li>
+<li>Retry Policy</li>
+</ul>
+</div>`
+},
+{
+  term: "پردازش جریان زمان‌واقعی (Real-time Stream Processing)",
+  meaning: `<div class="dict-section">
+<h4>۳. تعریف ساده</h4>
+<p>پردازش جریان زمان‌واقعی روش پردازش پیوسته داده‌ها در همان لحظه ورودشان است، بدون انتظار برای جمع‌شدن حجم بزرگ‌تر.</p>
+</div>
+<div class="dict-section">
+<h4>۴. تعریف تحلیلی</h4>
+<p>در سیستم رسانه‌ای، تمایز بین Batch Processing (پردازش دسته‌ای با تأخیر) و Stream Processing (پردازش لحظه‌ای) تعیین‌کننده است. برای هشدار بحران، باید تک‌تک محتواها در کسری از ثانیه پردازش شوند. Stream Processing با معماری‌هایی مثل Kafka + Flink یا Spark Streaming این امکان را فراهم می‌کند و تأخیر End-to-End را از دقیقه به ثانیه می‌رساند.</p>
+</div>
+<div class="dict-section">
+<h4>۵. تعریف فنی (سطح ۲)</h4>
+<div class="tech-block">
+<strong>⚙️ پردازش:</strong>
+<ol style="margin-right:20px">
+<li>Event Ingestion (Kafka Topic)</li>
+<li>Stream Partitioning</li>
+<li>Windowed Aggregation (Tumbling/Sliding)</li>
+<li>Per-event NLP Processing</li>
+<li>Real-time Deduplication</li>
+<li>Alert Rule Evaluation</li>
+<li>Downstream Routing (Dashboard/Alert/Storage)</li>
+</ol>
+</div>
+<strong>📤 خروجی (JSON):</strong>
+<div class="json-code">
+{
+  "stream_event_id": "uuid",
+  "source": "string",
+  "content_id": "string",
+  "processed_at": "datetime",
+  "ingestion_lag_ms": "int",
+  "nlp_result": {"sentiment":"string","entities":["array"],"topics":["array"]},
+  "alert_triggered": "boolean",
+  "routed_to": ["array"]
+}
+</div>
+<strong>🔌 API:</strong>
+<span class="api-endpoint">GET /api/stream/metrics</span>
+</div>
+<div class="dict-section">
+<h4>۶. نوع اصطلاح</h4>
+<p>Data Engineering — Event-Driven Architecture</p>
+</div>
+<div class="dict-section">
+<h4>۷. مثال واقعی</h4>
+<ul style="margin-right:20px">
+<li>پردازش ۱۰۰۰ توییت در ثانیه و اعلام هشدار ظرف ۵ ثانیه از انتشار</li>
+<li>تشخیص لحظه‌ای خبر Breaking با confidence بالا از میان جریان ورودی</li>
+<li>محاسبه لحظه‌ای Trending Hashtag در پنجره زمانی ۵ دقیقه‌ای</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۸. مثال متضاد</h4>
+<p>اجرای تحلیل ساعتی روی آرشیو Stream Processing نیست؛ Stream Processing تأخیر زیر ۳۰ ثانیه دارد.</p>
+</div>
+<div class="dict-section">
+<h4>۹. اهمیت</h4>
+<p>در مدیریت بحران رسانه‌ای، تفاوت ۵ دقیقه‌ای در تشخیص می‌تواند مسیر بحران را کاملاً تغییر دهد. Stream Processing این تفاوت را ممکن می‌سازد.</p>
+</div>
+<div class="dict-section">
+<h4>۱۰. موارد استفاده</h4>
+<ul style="margin-right:20px">
+<li>Real-time Crisis Alert</li>
+<li>Breaking News Detection</li>
+<li>Live Sentiment Monitoring</li>
+<li>Trending Topic Detection</li>
+<li>Real-time Dashboard Update</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۱. روش تشخیص</h4>
+<ul style="margin-right:20px">
+<li>Apache Kafka (Message Bus)</li>
+<li>Apache Flink (Stream Processor)</li>
+<li>Apache Spark Streaming</li>
+<li>Redis Streams</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۲. داده‌ها</h4>
+<ul style="margin-right:20px">
+<li>جریان لحظه‌ای شبکه اجتماعی</li>
+<li>Webhook خبرگزاری‌ها</li>
+<li>پیام‌های Telegram/RSS</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۳. ارتباط</h4>
+<div class="tree-diagram">
+Stream Processing
+ ├── part_of → Media Data Pipeline
+ ├── enables → Real-time Alert
+ ├── enables → Breaking News Detection
+ ├── feeds → Dashboard (live)
+ └── triggers → Monitoring Engine
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۴. اطمینان</h4>
+<p>تأخیر هدف: زیر ۱۰ ثانیه End-to-End. At-Least-Once delivery: ۹۹.۹٪+.</p>
+</div>
+<div class="dict-section">
+<h4>۱۵. نکات طراحی</h4>
+<ul style="margin-right:20px">
+<li>برای NLP سنگین از Async Worker Pool استفاده کن</li>
+<li>Backpressure handling برای پیک بحران ضروری است</li>
+<li>Idempotent Processing برای جلوگیری از پردازش دوباره</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۶. KPIها</h4>
+<ul style="margin-right:20px">
+<li>End-to-End Latency (P50/P99)</li>
+<li>Events per Second</li>
+<li>Alert Latency</li>
+<li>Consumer Lag</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۷. فرمول</h4>
+<div class="formula-box">
+Stream_Health =
+(1 - Consumer_Lag/Max_Acceptable_Lag) × (1 - Error_Rate)
+
+Alert_Latency = Ingest_Time + Processing_Time + Routing_Time
+</div>
+</div>
+<div class="dict-section">
+<h4>۱۸. داشبورد</h4>
+<p>Stream Processing Monitor</p>
+<ul style="margin-right:20px">
+<li>نمودار events/sec لحظه‌ای</li>
+<li>Consumer Lag به تفکیک Topic</li>
+<li>تأخیر End-to-End</li>
+<li>نرخ خطا</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۱۹. تصمیم‌یار</h4>
+<ul style="margin-right:20px">
+<li>ارسال فوری هشدار بحران</li>
+<li>به‌روزرسانی لحظه‌ای داشبورد مدیریت</li>
+<li>فعال‌سازی خودکار War Room در سطح بحران بالا</li>
+</ul>
+</div>
+<div class="dict-section">
+<h4>۲۰. تنظیمات</h4>
+<ul style="margin-right:20px">
+<li>Window Size (tumbling/sliding)</li>
+<li>Alert Rule Configuration</li>
+<li>Partition Count</li>
+<li>Consumer Group Configuration</li>
+<li>Dead Letter Queue Policy</li>
+</ul>
+</div>`
 }
         ]
       },
@@ -10535,42 +13655,12 @@ Boundary Intelligence Center
   term: "رمزنگاری (Encryption)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند تبدیل اطلاعات قابل خواندن (plaintext) به فرمت کدگذاری‌شده (ciphertext) که فقط با کلید رمزگشایی قابل خواندن است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>رمزنگاری ستون فقرات امنیت دیجیتال است. از محافظت داده‌ها در حال انتقال (TLS) تا داده‌های در حال ذخیره (AES) و ارتباطات امن (End-to-End Encryption)، رمزنگاری حریم خصوصی و یکپارچگی اطلاعات را تضمین می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Key Generation 2. Algorithm Selection (AES, RSA, ECC) 3. Encryption Operation 4. Key Management 5. Decryption 6. Integrity Verification</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"encryption_id": "uuid", "algorithm": "AES-256|RSA-2048|ECC", "mode": "symmetric|asymmetric", "key_length": "int", "data_status": "encrypted|decrypted", "integrity_hash": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/crypto/encrypt</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cryptography & Information Security Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>رمزنگاری End-to-End در WhatsApp که حتی خود شرکت نمی‌تواند پیام‌ها را بخواند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ذخیره داده‌ها به صورت plaintext بدون هیچ رمزنگاری.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>محافظت از محرمانگی، یکپارچگی و اصالت داده‌ها در برابر دسترسی غیرمجاز.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Data Protection</li><li>Secure Communication</li><li>Digital Signatures</li><li>Blockchain</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cryptographic Strength Analysis</li><li>Key Management Audit</li><li>Algorithm Review</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>کلیدهای رمزنگاری</li><li>الگوریتم‌های مورد استفاده</li><li>گواهی‌های دیجیتال</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cryptography
   ├── Symmetric Encryption (AES)</li><li>  ├── Asymmetric Encryption (RSA, ECC)</li><li>  ├── Hashing (SHA-256)</li><li>  └── Digital Signatures</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹۹٪ (با الگوریتم‌های استاندارد)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت امن کلیدها به اندازه خود الگوریتم مهم است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Encryption Coverage</li><li>Key Rotation Compliance</li><li>Decryption Performance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Security Strength = Algorithm Strength × Key Length × Implementation Quality</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Encryption Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب الگوریتم مناسب بر اساس نوع داده و الزامات عملکردی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>الگوریتم رمزنگاری</li><li>طول کلید</li><li>دوره چرخش کلید</li></ul></div>`
-},
-{
-  term: "بلاکچین (Blockchain)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>یک دفتر کل توزیع‌شده و غیرمتمرکز که تراکنش‌ها را در بلوک‌های به هم پیوسته و غیرقابل تغییر ذخیره می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>بلاکچین انقلابی در اعتماد دیجیتال ایجاد کرده است. بدون نیاز به واسطه مرکزی، امکان تراکنش‌های شفاف، غیرقابل تغییر و قابل تأیید را فراهم می‌کند. پایه ارزهای دیجیتال، NFTها، قراردادهای هوشمند و Web3 است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Transaction Creation 2. Block Formation 3. Consensus Mechanism (PoW, PoS) 4. Block Validation 5. Chain Addition 6. Immutable Storage</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"block_id": "uuid", "blockchain_network": "string", "transactions": ["uuid"], "previous_hash": "string", "timestamp": "timestamp", "nonce": "int", "miner": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/blockchain/block/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Distributed Ledger & Decentralized Technology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بیت‌کوین برای تراکنش‌های مالی یا Ethereum برای قراردادهای هوشمند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>پایگاه داده متمرکز سنتی با کنترل یک نهاد مرکزی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد اعتماد بدون واسطه، شفافیت کامل و عدم امکان دستکاری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Cryptocurrencies</li><li>Smart Contracts</li><li>Supply Chain Tracking</li><li>Digital Identity</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Blockchain Explorer</li><li>Consensus Verification</li><li>Hash Validation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>بلوک‌ها و تراکنش‌ها</li><li>مکانیزم اجماع</li><li>کلیدهای عمومی/خصوصی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Distributed Ledger Technology
-  ├── Public Blockchain (Bitcoin, Ethereum)</li><li>  ├── Private Blockchain (Hyperledger)</li><li>  └── Hybrid Blockchain</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹.۹۹٪ (برای immutability)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین غیرمتمرکز بودن، امنیت و مقیاس‌پذیری (Blockchain Trilemma).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Transaction Throughput (TPS)</li><li>Confirmation Time</li><li>Network Hash Rate</li><li>Decentralization Index</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Blockchain Value = (Decentralization × Security × Transparency) ÷ (Cost + Energy Consumption)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Blockchain Network Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب نوع بلاکچین (عمومی/خصوصی) بر اساس نیاز کسب‌وکار.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع شبکه</li><li>مکانیزم اجماع</li><li>مقررات حاکمیتی</li></ul></div>`
-},
-{
-  term: "قراردادهای هوشمند (Smart Contracts)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>برنامه‌های کامپیوتری خوداجرایی که روی بلاکچین اجرا می‌شوند و شرایط توافق را به صورت خودکار اجرا می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>قراردادهای هوشمند واسطه‌های انسانی را حذف می‌کنند. وقتی شرایط از پیش تعریف‌شده برآورده شود، قرارداد به صورت خودکار اجرا می‌شود. این فناوری پایه DeFi، NFTها و DAOها است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Contract Code Writing (Solidity, Vyper) 2. Deployment to Blockchain 3. Condition Monitoring 4. Automatic Execution 5. State Update 6. Event Emission</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"contract_id": "uuid", "contract_address": "string", "blockchain": "string", "status": "deployed|active|executed|terminated", "conditions": ["object"], "execution_history": ["timestamp"]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/smart-contract/{address}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Blockchain Automation & Decentralized Applications Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>قرارداد بیمه پرواز که در صورت تأخیر پرواز، به صورت خودکار غرامت پرداخت می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قراردادهای کاغذی سنتی که نیاز به واسطه و اجرا دستی دارند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حذف واسطه‌ها، کاهش هزینه‌ها، افزایش سرعت و اطمینان از اجرای دقیق.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>DeFi Protocols</li><li>NFT Marketplaces</li><li>Supply Chain Automation</li><li>DAO Governance</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Code Audit</li><li>Formal Verification</li><li>Gas Optimization Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>کد قرارداد</li><li>شرایط اجرا</li><li>تراکنش‌های مرتبط</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Blockchain Applications
-  ├── Smart Contracts</li><li>  ├── dApps (Decentralized Apps)</li><li>  └── DAOs (Decentralized Autonomous Organizations)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪ (بسته به کیفیت کد)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ممیزی امنیتی قبل از استقرار حیاتی است (bugs غیرقابل برگشت هستند).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Execution Success Rate</li><li>Gas Cost Efficiency</li><li>Audit Findings</li><li>Security Incidents</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Smart Contract Value = (Automation Gain × Trust Improvement) ÷ (Development Cost + Audit Cost)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Smart Contract Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب پلتفرم بلاکچین مناسب برای استقرار قرارداد.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>زبان برنامه‌نویسی</li><li>شبکه بلاکچین</li><li>مکانیزم ارتقا</li></ul></div>`
-},
-{
-  term: "هویت غیرمتمرکز (Decentralized Identity)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدلی از مدیریت هویت که در آن افراد کنترل کامل هویت دیجیتال خود را دارند، بدون وابستگی به یک مرجع مرکزی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>هویت غیرمتمرکز (DID) انقلابی در مدیریت هویت است. به جای اینکه گوگل یا فیسبوک هویت شما را کنترل کنند، شما با کیف پول دیجیتال خود، اعتبارنامه‌های تأییدشده (Verifiable Credentials) را مدیریت می‌کنید.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. DID Creation 2. Verifiable Credential Issuance 3. Cryptographic Signing 4. Selective Disclosure 5. Verification 6. Revocation Handling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"did": "string", "controller": "string", "public_keys": ["object"], "services": ["object"], "verifiable_credentials": ["uuid"], "revocation_status": "active|revoked"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/did/{did}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Self-Sovereign Identity & Web3 Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استفاده از DID برای ورود به سایت‌ها بدون نیاز به رمز عبور، فقط با امضای دیجیتال.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>هویت‌های متمرکز مانند Google Account یا Facebook Login.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حفظ حریم خصوصی، کاهش سرقت هویت و کنترل واقعی بر داده‌های شخصی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Passwordless Authentication</li><li>Cross-platform Identity</li><li>Privacy-preserving KYC</li><li>Academic Credentials</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>DID Resolution</li><li>Credential Verification</li><li>Revocation Check</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>DID Documents</li><li>Verifiable Credentials</li><li>Cryptographic Keys</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Identity Models
-  ├── Centralized Identity (OAuth)</li><li>  ├── Federated Identity (SSO)</li><li>  └── Decentralized Identity (DID)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>پشتیبانی از استانداردهای W3C DID و Verifiable Credentials.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Adoption Rate</li><li>Verification Success Rate</li><li>User Control Score</li><li>Privacy Protection Level</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DID Value = (User Control × Privacy × Interoperability) ÷ (Adoption Friction + Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Decentralized Identity Wallet</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب ارائه‌دهندگان اعتبارنامه قابل اعتماد.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>DID Method</li><li>Credential Types</li><li>Privacy Settings</li></ul></div>`
-},
-{
-  term: "وب ۳ (Web3)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نسل سوم وب که بر غیرمتمرکز بودن، مالکیت کاربر و اقتصاد توکن‌محور تأکید دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Web3 تکامل وب است: Web1 (فقط خواندنی) → Web2 (خواندنی/نوشتنی اما متمرکز) → Web3 (خواندنی/نوشتنی/مالکیت). با استفاده از بلاکچین، کاربران واقعاً مالک داده‌ها، محتوا و دارایی‌های دیجیتال خود هستند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. dApp Development 2. Smart Contract Integration 3. Wallet Connection 4. Token Economics 5. Governance Mechanism 6. Interoperability Layer</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"dapp_id": "uuid", "name": "string", "blockchain": "string", "tokens": ["string"], "user_ownership": "boolean", "governance_model": "token-based|reputation-based"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/web3/dapp/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Decentralized Internet & Next-Gen Web Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>پلتفرم‌هایی مانند OpenSea (NFT)، Uniswap (DeFi)، یا Lens Protocol (Social Media).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Web2 متمرکز مانند Facebook یا Google که کاربران مالک داده‌های خود نیستند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>بازتوزیع قدرت از پلتفرم‌ها به کاربران و ایجاد اقتصاد جدید.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>DeFi</li><li>NFTs & Digital Ownership</li><li>DAOs</li><li>Decentralized Social Media</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Decentralization Score</li><li>User Ownership Verification</li><li>Token Economics Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>Smart Contracts</li><li>Token Holdings</li><li>Governance Proposals</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Web Evolution
-  ├── Web1 (Read-only)</li><li>  ├── Web2 (Read/Write - Centralized)</li><li>  └── Web3 (Read/Write/Own - Decentralized)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۶۰٪ تا ۸۰٪ (فناوری هنوز در حال تکامل است)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین غیرمتمرکز بودن و تجربه کاربری.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Active Wallets</li><li>Transaction Volume</li><li>TVL (Total Value Locked)</li><li>User Retention</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Web3 Value = (User Ownership × Decentralization × Network Effects) ÷ (UX Friction + Gas Costs)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Web3 Ecosystem Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی میزان واقعی غیرمتمرکز بودن یک پروژه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بلاکچین پایه</li><li>مدل توکنومیک</li><li>مکانیزم حاکمیتی</li></ul></div>`
-},
-{
-  term: "متاورس (Metaverse)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فضای مجازی سه‌بعدی و فراگیر که کاربران می‌توانند در آن با آواتارهای دیجیتال تعامل کنند، کار کنند، بازی کنند و تجارت کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>متاورس تکامل اینترنت به یک تجربه غوطه‌ور است. ترکیبی از VR، AR، بلاکچین و شبکه‌های اجتماعی که مرز بین دنیای فیزیکی و دیجیتال را محو می‌کند. هنوز در مراحل اولیه است اما پتانسیل تحول صنایع مختلف را دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. 3D Environment Rendering 2. Avatar Creation 3. Real-time Interaction 4. Asset Tokenization (NFTs) 5. Cross-platform Interoperability 6. Economy Integration</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"metaverse_id": "uuid", "platform": "string", "user_avatar": "uuid", "virtual_assets": ["uuid"], "social_connections": ["uuid"], "economic_transactions": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/metaverse/{platform}/user/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Immersive Digital Experience & Virtual World Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>پلتفرم‌هایی مانند Decentraland، The Sandbox، یا Meta Horizon Worlds.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>بازی‌های آنلاین سنتی بدون اقتصاد واقعی یا interoperability.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد فرصت‌های جدید برای تعامل اجتماعی، کار و تجارت در فضای دیجیتال.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Virtual Commerce</li><li>Remote Collaboration</li><li>Digital Events</li><li>Gaming & Entertainment</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Immersion Level Assessment</li><li>Interoperability Testing</li><li>Economy Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>دارایی‌های مجازی (NFTs)</li><li>تعاملات اجتماعی</li><li>تراکنش‌های اقتصادی</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Immersive Technologies
-  ├── Metaverse (Persistent Virtual World)</li><li>  ├── VR (Virtual Reality)</li><li>  └── AR (Augmented Reality)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۵۰٪ تا ۷۰٪ (فناوری هنوز نابالغ است)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعامل‌پذیری بین پلتفرم‌ها چالش اصلی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Daily Active Users</li><li>Time Spent in Metaverse</li><li>Virtual Economy Volume</li><li>Cross-platform Interoperability</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Metaverse Value = (Immersion × User Base × Economy Size) ÷ (Hardware Barrier + Friction)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Metaverse Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی فرصت‌های سرمایه‌گذاری در دارایی‌های مجازی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>پلتفرم متاورس</li><li>نوع دارایی‌های مجازی</li><li>سطح تعامل</li></ul></div>`
-},
-{
-  term: "اقتصاد غیرمتمرکز (Decentralized Economy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سیستم اقتصادی که در آن تراکنش‌ها، مالکیت و حاکمیت بدون واسطه‌های مرکزی مانند بانک‌ها یا پلتفرم‌های بزرگ انجام می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اقتصاد غیرمتمرکز (DeFi و فراتر از آن) انقلابی در سیستم مالی است. با استفاده از بلاکچین و قراردادهای هوشمند، امکان وام‌دهی، borrowing، trading و yield farming بدون بانک ممکن شده است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Smart Contract Deployment 2. Liquidity Pool Creation 3. Automated Market Making 4. Yield Farming 5. Governance Voting 6. Risk Management</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"protocol_id": "uuid", "name": "string", "blockchain": "string", "tvl": "float", "apy": "float", "governance_token": "string", "risk_level": "low|medium|high"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/defi/protocol/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>DeFi & Decentralized Finance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>پروتکل‌هایی مانند Aave (وام‌دهی)، Uniswap (صرافی) یا MakerDAO (stablecoin).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سیستم مالی سنتی متمرکز با بانک‌ها و واسطه‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>دسترسی مالی جهانی، شفافیت کامل و حذف واسطه‌های پرهزینه.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Decentralized Lending</li><li>Automated Market Making</li><li>Yield Farming</li><li>Stablecoins</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>TVL Analysis</li><li>Smart Contract Audit</li><li>Risk Assessment</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>Liquidity Pools</li><li>Transaction History</li><li>Governance Proposals</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Decentralized Economy
-  ├── DeFi (Financial Services)</li><li>  ├── DAOs (Governance)</li><li>  └── Token Economy (Value Exchange)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۸۵٪ (بسته به پروتکل)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت ریسک حیاتی است - smart contract bugs می‌توانند منجر به از دست رفتن کامل سرمایه شوند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>TVL (Total Value Locked)</li><li>APY (Annual Percentage Yield)</li><li>Protocol Revenue</li><li>Security Incidents</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DeFi Value = (TVL × Yield × Accessibility) ÷ (Risk + Smart Contract Vulnerability)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>DeFi Protocol Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی ریسک-بازده پروتکل‌های DeFi برای سرمایه‌گذاری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع پروتکل</li><li>سطح ریسک‌پذیری</li><li>استراتژی yield</li></ul></div>`
 }
         ]
       },
       {
         id: 5,
-        title: "فصل ۵: مدل‌های کسب‌وکار دیجیتال",
+        title: "فصل ۵: مدل‌های کسب‌وکار، زیرساخت فنی و فناوری‌های نوظهور",
         words: [
 {
   term: "مدل کسب‌وکار (Business Model)",
@@ -10588,24 +13678,9 @@ Boundary Intelligence Center
   ├── Value Proposition (Promise)</li><li>  ├── Product-Market Fit (Delivery)</li><li>  └── Customer Satisfaction (Experience)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ارزش پیشنهادی باید با Customer Profile هم‌راستا باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Customer Acquisition Rate</li><li>Conversion Rate</li><li>Customer Satisfaction</li><li>Net Promoter Score</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Value Proposition Strength = (Pain Relief × Gain Creation × Uniqueness) ÷ Competition</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Value Proposition Canvas</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی پیام‌رسانی بر اساس بازخورد مشتری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بخش مشتریان</li><li>نوع ارزش (عملکردی/احساسی/اجتماعی)</li><li>مزیت رقابتی</li></ul></div>`
 },
 {
-  term: "مدل فریمیوم (مدل Freemium)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل کسب‌وکاری که در آن خدمات پایه رایگان ارائه می‌شود، اما ویژگی‌های پیشرفته یا اضافی نیاز به پرداخت دارند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Freemium ترکیب "Free" و "Premium" است. هدف جذب کاربران زیاد با نسخه رایگان و تبدیل درصدی از آن‌ها به مشتریان پرداخت‌کننده است. این مدل در نرم‌افزارها، بازی‌ها و سرویس‌های دیجیتال رایج است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Feature Segmentation 2. Free Tier Design 3. Premium Features Definition 4. Conversion Funnel Optimization 5. Revenue Maximization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"model_id": "uuid", "free_users": "int", "premium_users": "int", "conversion_rate": "float", "arpu": "float", "revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/freemium/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Digital Business Model & Monetization Strategy</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Spotify (رایگان با تبلیغ، پریمیوم بدون تبلیغ)، Dropbox (فضای محدود رایگان).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مدل کاملاً پولی یا کاملاً رایگان بدون راه درآمدزایی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش مانع ورود، جذب کاربران زیاد و ایجاد قیف تبدیل.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>SaaS Products</li><li>Mobile Apps</li><li>Online Games</li><li>Productivity Tools</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Conversion Rate Analysis</li><li>Feature Usage Tracking</li><li>Revenue per User</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد کاربران رایگان/پولی</li><li>نرخ تبدیل</li><li>ویژگی‌های استفاده‌شده</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Monetization Models
-  ├── Freemium (Free + Premium)</li><li>  ├── Subscription (All Paid)</li><li>  └── Ad-Supported (Free with Ads)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین ارزش نسخه رایگان (جذاب) و انگیزه ارتقا (کافی).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Conversion Rate</li><li>Free to Paid Ratio</li><li>ARPU (Average Revenue Per User)</li><li>Churn Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Freemium Revenue = Free Users × Conversion Rate × ARPU</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Freemium Conversion Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی ویژگی‌های رایگان vs پولی برای حداکثر تبدیل.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ویژگی‌های رایگان</li><li>قیمت‌گذاری پریمیوم</li><li>محدودیت‌های نسخه رایگان</li></ul></div>`
-},
-{
   term: "مدل اشتراکی (Subscription Model)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل کسب‌وکاری که در آن مشتریان به جای خرید یک‌باره، مبلغی منظم (ماهانه/سالانه) برای دسترسی به محصول یا خدمات پرداخت می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>مدل اشتراکی درآمد پایدار و قابل پیش‌بینی ایجاد می‌کند. این مدل بر حفظ مشتری و کاهش churn تمرکز دارد. در عصر دیجیتال، از Netflix تا SaaS، این مدل غالب شده است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Subscription Tier Design 2. Pricing Strategy 3. Recurring Billing 4. Retention Optimization 5. Churn Prevention</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"subscription_id": "uuid", "plan": "string", "billing_cycle": "monthly|yearly", "mrr": "float", "arr": "float", "churn_rate": "float", "ltv": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/subscription/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Recurring Revenue & SaaS Business Model</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Netflix، Adobe Creative Cloud، Microsoft 365.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فروش لایسنس یک‌باره (Perpetual License).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>درآمد پایدار، پیش‌بینی‌پذیری مالی و رابطه بلندمدت با مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>SaaS Platforms</li><li>Streaming Services</li><li>Membership Sites</li><li>Box Subscription</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>MRR/ARR Tracking</li><li>Churn Analysis</li><li>LTV Calculation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد مشترکین</li><li>MRR/ARR</li><li>نرخ churn</li><li>LTV</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Models
   ├── Subscription (Recurring)</li><li>  ├── One-time Purchase</li><li>  └── Usage-based</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر retention به اندازه acquisition مهم است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>MRR (Monthly Recurring Revenue)</li><li>ARR (Annual Recurring Revenue)</li><li>Churn Rate</li><li>LTV:CAC Ratio</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">LTV = ARPU × Gross Margin ÷ Churn Rate</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Subscription Metrics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی قیمت‌گذاری و کاهش churn.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>سطوح اشتراک</li><li>دوره billing</li><li>تخفیف‌های سالانه</li></ul></div>`
-},
-{
-  term: "مدل بازار چندطرفه (Multi-sided Platform)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>پلتفرمی که دو یا چند گروه کاربر مجزا را به هم متصل می‌کند و با تسهیل تعامل بین آن‌ها ارزش ایجاد می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>بازارهای چندطرفه (مانند Uber، Airbnb، eBay) با ایجاد network effects رشد می‌کنند. هر چه کاربران بیشتری در یک طرف باشند، ارزش برای طرف دیگر بیشتر می‌شود. این مدل بر تعامل و تطبیق تمرکز دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Side Definition 2. Matching Algorithm 3. Trust & Safety 4. Pricing Strategy 5. Network Effects Amplification</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"platform_id": "uuid", "sides": [{"name": "string", "user_count": "int", "value_generated": "float"}], "transactions": "int", "take_rate": "float", "network_effect_score": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/multi-sided-platform/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Platform Business Model & Marketplace Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Uber (رانندگان + مسافران)، Airbnb (میزبانان + مهمانان).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مدل خطی تولید-فروش بدون تسهیل تعامل.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد network effects، مقیاس‌پذیری بالا و ایجاد اکوسیستم.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Marketplaces</li><li>Sharing Economy</li><li>Gig Economy Platforms</li><li>Social Networks</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Network Effects Measurement</li><li>Matching Efficiency</li><li>Liquidity Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد کاربران هر طرف</li><li>تعداد تراکنش‌ها</li><li>نرخ تطبیق</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Platform Models
-  ├── Multi-sided Platform</li><li>  ├── Single-sided Platform</li><li>  └── Linear Business</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ایجاد تعادل بین طرف‌ها (chicken-and-egg problem).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>GMV (Gross Merchandise Value)</li><li>Take Rate</li><li>Matching Rate</li><li>Network Effect Strength</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Platform Value = (Side A Users × Side B Users × Interaction Frequency) ÷ Friction</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Multi-sided Platform Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی الگوریتم تطبیق و کاهش اصطکاک.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>تعداد طرف‌ها</li><li>مکانیزم تطبیق</li><li>ساختار کارمزد</li></ul></div>`
-},
-{
-  term: "مدل اقتصاد اشتراکی (Sharing Economy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل کسب‌وکاری که در آن افراد دارایی‌ها یا خدمات خود را به صورت موقت با دیگران به اشتراک می‌گذارند، معمولاً از طریق پلتفرم‌های دیجیتال.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اقتصاد اشتراکی بر دسترسی به جای مالکیت تأکید دارد. با استفاده از فناوری، منابع بدون استفاده (اتاق خالی، خودروی پارک‌شده) را به درآمد تبدیل می‌کند. این مدل پایداری و کارایی منابع را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Asset Listing 2. Availability Matching 3. Trust Verification 4. Transaction Facilitation 5. Review System</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"platform_id": "uuid", "asset_type": "string", "total_assets": "int", "utilization_rate": "float", "transactions": "int", "revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/sharing-economy/{platform_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Collaborative Consumption & Platform Economy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Airbnb (اتاق‌های خالی)، Uber (خودروهای شخصی)، TaskRabbit (مهارت‌ها).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مالکیت شخصی و استفاده انحصاری از دارایی‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش کارایی منابع، کاهش هزینه‌ها و ایجاد درآمد اضافی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Accommodation Sharing</li><li>Ride Sharing</li><li>Tool & Equipment Sharing</li><li>Skill Sharing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Asset Utilization Rate</li><li>Trust Score Analysis</li><li>Community Engagement</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد دارایی‌های به اشتراک گذاشته‌شده</li><li>نرخ استفاده</li><li>رضایت کاربران</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Economic Models
-  ├── Sharing Economy (Access over Ownership)</li><li>  ├── Traditional Ownership</li><li>  └── Rental Economy</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سیستم اعتماد و ایمنی حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Asset Utilization Rate</li><li>User Trust Score</li><li>Transaction Volume</li><li>Community Growth</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Sharing Value = (Idle Asset Value × Utilization Rate × Network Size) ÷ Transaction Friction</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Sharing Economy Platform Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی تطبیق و افزایش اعتماد.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع دارایی</li><li>مکانیزم اعتماد</li><li>ساختار کارمزد</li></ul></div>`
 },
 {
   term: "مدل اقتصاد توجه (Attention Economy)",
@@ -10628,81 +13703,10 @@ Boundary Intelligence Center
   ├── API Economy (Capabilities as Product)</li><li>  ├── Marketplace Economy (Transactions)</li><li>  └── Content Economy (Information)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مستندات عالی و تجربه توسعه‌دهنده حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>API Calls Volume</li><li>Developer Adoption</li><li>Revenue per API</li><li>API Uptime</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">API Value = (Developers × Calls per Developer × Price per Call) ÷ Integration Friction</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>API Economy Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی pricing و بهبود تجربه توسعه‌دهنده.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>مدل pricing</li><li>Rate limits</li><li>سطوح دسترسی</li></ul></div>`
 },
 {
-  term: "مدل دم‌بلند (مدل Long Tail)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی کسب‌وکاری که بر فروش تعداد زیاد محصولات کم‌فروش (niche) به جای تمرکز بر تعداد کم محصولات پرفروش تمرکز دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Long Tail مفهوم Chris Anderson است. در دنیای دیجیتال با هزینه انبارداری نزدیک به صفر، می‌توان میلیون‌ها محصول niche ارائه داد. مجموع فروش این محصولات کم‌فروش می‌تواند از فروش محصولات blockbuster بیشتر شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Product Catalog Expansion 2. Recommendation Engine 3. Search Optimization 4. Inventory Management 5. Demand Aggregation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"catalog_id": "uuid", "total_products": "int", "blockbusters": "int", "niche_products": "int", "blockbuster_revenue": "float", "niche_revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/long-tail/{catalog_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>E-commerce & Digital Distribution Strategy</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Amazon با میلیون‌ها کتاب niche، Netflix با هزاران فیلم کم‌بیننده.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فروشگاه فیزیکی با محدودیت فضا که فقط محصولات پرفروش را نگه می‌دارد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>دسترسی به بازارهای niche، تنوع محصول و کاهش ریسک.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>E-commerce</li><li>Streaming Services</li><li>Digital Music</li><li>Self-Publishing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Sales Distribution Analysis</li><li>Revenue Concentration</li><li>Product Diversity</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد محصولات</li><li>توزیع فروش</li><li>درآمد هر محصول</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Sales Strategies
-  ├── Long Tail (Many Niche Products)</li><li>  ├── Blockbuster (Few Hit Products)</li><li>  └── Hybrid Approach</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سیستم recommendation و search قوی حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Niche Revenue Percentage</li><li>Product Catalog Size</li><li>Average Revenue per Product</li><li>Customer Discovery Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Long Tail Value = (Niche Products × Average Niche Sales) ÷ (Inventory Cost + Discovery Friction)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Long Tail Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی کاتالوگ و بهبود کشف محصولات niche.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>اندازه کاتالوگ</li><li>استراتژی recommendation</li><li>مدیریت موجودی</li></ul></div>`
-},
-{
-  term: "مدل تیغ و دسته (مدل Razor and Blades)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی کسب‌وکاری که در آن محصول اصلی با قیمت پایین (یا حتی ضرر) فروخته می‌شود، اما از فروش محصولات مکمل مصرفی سود کسب می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>این مدل کلاسیک از Gillette (تیغ رایگان، تیغ یدکی پولی) می‌آید. در دنیای دیجیتال، printerها با قیمت پایین و cartridgeهای گران، یا کنسول‌های بازی با قیمت پایین و بازی‌های گران نمونه‌های مدرن هستند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Base Product Pricing 2. Consumable Design 3. Lock-in Mechanism 4. Recurring Revenue 5. Customer Lifetime Value Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"model_id": "uuid", "base_product_price": "float", "consumable_price": "float", "consumption_rate": "float", "customer_ltv": "float", "profit_margin": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/razor-blades/{model_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Pricing Strategy & Lock-in Business Model</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>HP (printer ارزان، cartridge گران)، Nespresso (دستگاه ارزان، کپسول گران).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فروش محصول با حاشیه سود بالا بدون محصولات مکمل.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد درآمد پایدار و lock-in مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Printers & Ink</li><li>Gaming Consoles & Games</li><li>Coffee Machines & Pods</li><li>Razors & Blades</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Consumable Sales Ratio</li><li>Customer Lock-in Rate</li><li>Lifetime Value</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>فروش محصول اصلی</li><li>فروش محصولات مصرفی</li><li>نرخ مصرف</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Models
-  ├── Razor and Blades (Loss Leader + Consumables)</li><li>  ├── Freemium (Free + Premium)</li><li>  └── Subscription (Recurring)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>اطمینان از compatibility و جلوگیری از third-party consumables.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Consumable Attachment Rate</li><li>Customer LTV</li><li>Repeat Purchase Rate</li><li>Lock-in Strength</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Model Profit = (Base Product Sales × Loss per Unit) + (Consumable Sales × Profit per Unit)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Razor and Blades Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی قیمت محصول اصلی vs consumables.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>قیمت محصول اصلی</li><li>قیمت consumables</li><li>مکانیزم lock-in</li></ul></div>`
-},
-{
-  term: "مدل بازارگاه (مدل Marketplace)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>پلتفرمی که خریداران و فروشندگان را در یک بازار آنلاین گرد هم می‌آورد و از تسهیل تراکنش‌ها کارمزد کسب می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Marketplaceها (مانند Amazon، eBay، Etsy) بدون داشتن موجودی، با اتصال عرضه و تقاضا ارزش ایجاد می‌کنند. این مدل بر network effects، trust و liquidity تمرکز دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Seller Onboarding 2. Product Listing 3. Buyer Discovery 4. Transaction Facilitation 5. Payment Processing 6. Review System</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"marketplace_id": "uuid", "sellers": "int", "buyers": "int", "products_listed": "int", "transactions": "int", "gmv": "float", "take_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/marketplace/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>E-commerce Platform & Multi-sided Market Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Amazon (B2C)، eBay (C2C)، Alibaba (B2B).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فروشگاه آنلاین سنتی که خود فروشنده است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مقیاس‌پذیری بالا، تنوع محصول و ایجاد اکوسیستم.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>B2C Marketplaces</li><li>B2B Marketplaces</li><li>C2C Platforms</li><li>Service Marketplaces</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>GMV Analysis</li><li>Liquidity Metrics</li><li>Take Rate Optimization</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد فروشندگان/خریداران</li><li>GMV</li><li>take rate</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">E-commerce Models
-  ├── Marketplace (Platform)</li><li>  ├── Direct Sales (Retailer)</li><li>  └── Dropshipping</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ایجاد trust و کاهش friction در تراکنش.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>GMV (Gross Merchandise Value)</li><li>Take Rate</li><li>Buyer/Seller Ratio</li><li>Repeat Purchase Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Marketplace Value = GMV × Take Rate × Network Effects Multiplier</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Marketplace Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی take rate و بهبود liquidity.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ساختار کارمزد</li><li>سیاست‌های فروشنده</li><li>مکانیزم trust</li></ul></div>`
-},
-{
-  term: "مدل تجمیع‌کننده (مدل Aggregator)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>پلتفرمی که ارائه‌دهندگان متعدد یک خدمت را در یک رابط واحد جمع‌آوری کرده و به کاربران ارائه می‌دهد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Aggregatorها (مانند Uber، Airbnb، Booking.com) بدون ارائه مستقیم خدمت، با جمع‌آوری و سازماندهی ارائه‌دهندگان، تجربه کاربری یکپارچه ایجاد می‌کنند. آن‌ها بر برند، تجربه کاربر و داده‌ها کنترل دارند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Provider Aggregation 2. Standardization 3. User Interface 4. Matching Algorithm 5. Quality Control</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"aggregator_id": "uuid", "providers": "int", "services": "int", "users": "int", "transactions": "int", "commission_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/aggregator/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Platform Business & Service Aggregation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Uber (رانندگان)، Booking.com (هتل‌ها)، Expedia (پروازها).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ارائه‌دهنده مستقیم خدمت بدون aggregation.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد تجربه یکپارچه، کاهش friction و ایجاد قدرت برند.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Transportation</li><li>Hospitality</li><li>Food Delivery</li><li>Professional Services</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Provider Concentration</li><li>User Experience Score</li><li>Brand Strength</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد ارائه‌دهندگان</li><li>تعداد کاربران</li><li>حجم تراکنش‌ها</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Platform Models
-  ├── Aggregator (Service Aggregation)</li><li>  ├── Marketplace (Product Exchange)</li><li>  └── Direct Provider</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>کنترل کیفیت ارائه‌دهندگان و تجربه کاربری.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Provider Count</li><li>User Satisfaction</li><li>Transaction Volume</li><li>Commission Revenue</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Aggregator Value = (Providers × Users × Transactions per User) ÷ Provider Churn</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Aggregator Platform Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی matching algorithm و کیفیت ارائه‌دهندگان.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>معیارهای ارائه‌دهنده</li><li>ساختار کارمزد</li><li>استانداردهای کیفیت</li></ul></div>`
-},
-{
-  term: "مدل حذف واسطه (مدل Disintermediation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>حذف واسطه‌ها از زنجیره ارزش و ارتباط مستقیم تولید‌کننده با مصرف‌کننده نهایی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Disintermediation با ظهور اینترنت و e-commerce شتاب گرفت. برندها می‌توانند مستقیماً با مشتریان ارتباط برقرار کنند، هزینه‌های واسطه را حذف کنند و حاشیه سود را افزایش دهند. مثال: فروش مستقیم Dell به مشتریان.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Value Chain Analysis 2. Intermediary Identification 3. Direct Channel Creation 4. Cost-Benefit Analysis 5. Implementation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"model_id": "uuid", "intermediaries_removed": ["string"], "cost_savings": "float", "margin_improvement": "float", "customer_relationship": "direct"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/disintermediation/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Supply Chain & Distribution Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Dell (فروش مستقیم کامپیوتر)، Tesla (فروش مستقیم خودرو).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مدل سنتی با چندین لایه واسطه (تولیدکننده → عمده‌فروش → خرده‌فروش → مشتری).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش حاشیه سود، کنترل بیشتر بر برند و ارتباط مستقیم با مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Direct-to-Consumer (D2C)</li><li>Manufacturer Sales</li><li>Service Providers</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Value Chain Mapping</li><li>Cost Structure Analysis</li><li>Customer Relationship Quality</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد واسطه‌ها</li><li>هزینه‌های حذف‌شده</li><li>حاشیه سود</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Distribution Models
-  ├── Disintermediation (Direct)</li><li>  ├── Traditional (Multi-layer)</li><li>  └── Reintermediation (New Intermediaries)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ایجاد capabilityهای لازم برای فروش و توزیع مستقیم.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Gross Margin Improvement</li><li>Customer Acquisition Cost</li><li>Direct Sales Percentage</li><li>Customer Lifetime Value</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Disintermediation Value = (Cost Savings + Margin Improvement) ÷ (Investment + Operational Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Direct-to-Consumer Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی امکان‌پذیری حذف واسطه‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع واسطه‌ها</li><li>کانال‌های مستقیم</li><li>استراتژی انتقال</li></ul></div>`
-},
-{
-  term: "مدل بازگشت واسطه (مدل Reintermediation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ایجاد واسطه‌های جدید دیجیتال در زنجیره ارزش، جایگزین واسطه‌های سنتی حذف‌شده.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Reintermediation واکنش به disintermediation است. در حالی که واسطه‌های سنتی حذف می‌شوند، واسطه‌های جدید دیجیتال (مانند Amazon، Airbnb، Uber) ایجاد می‌شوند که ارزش جدیدی ارائه می‌دهند: aggregation، convenience، trust و data.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Market Gap Identification 2. Value Proposition Design 3. Platform Development 4. Network Building 5. Monetization Strategy</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"platform_id": "uuid", "intermediary_type": "aggregator|marketplace|platform", "value_added": ["string"], "participants": "int", "transaction_volume": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/reintermediation/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Digital Intermediation & Platform Creation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Airbnb جایگزین آژانس‌های مسافرتی سنتی، Amazon جایگزین کتابفروشی‌های محلی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Disintermediation کامل بدون واسطه جدید.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد ارزش جدید از طریق aggregation، convenience و data.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Platform Creation</li><li>Market Making</li><li>Service Aggregation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Value Addition Analysis</li><li>Network Effects</li><li>Market Disruption</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>ارزش ارائه‌شده</li><li>تعداد شرکت‌کنندگان</li><li>حجم تراکنش‌ها</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Distribution Evolution
-  ├── Traditional Intermediaries</li><li>  ├── Disintermediation (Direct)</li><li>  └── Reintermediation (Digital Platforms)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ارزش پیشنهادی باید فراتر از واسطه‌های حذف‌شده باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Market Share</li><li>Network Growth</li><li>Value Creation</li><li>Disruption Index</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Reintermediation Value = (New Value Created + Efficiency Gain) ÷ (Platform Cost + Adoption Friction)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Platform Disruption Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی فرصت‌های ایجاد واسطه‌های جدید دیجیتال.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع پلتفرم</li><li>ارزش پیشنهادی</li><li>استراتژی رشد</li></ul></div>`
-},
-{
   term: "مدل اثرات شبکه‌ای (مدل Network Effects)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>پدیده‌ای که در آن ارزش یک محصول یا خدمت با افزایش تعداد کاربران آن افزایش می‌یابد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Network Effects قوی‌ترین مزیت رقابتی در اقتصاد دیجیتال است. هر چه کاربران بیشتری به یک پلتفرم بپیوندند، ارزش آن برای همه کاربران بیشتر می‌شود (مانند تلفن، فیسبوک، WhatsApp). این اثر منجر به winner-take-all markets می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Network Growth 2. Value Amplification 3. User Retention 4. Competitive Moat 5. Monetization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"network_id": "uuid", "user_count": "int", "network_value": "float", "network_effect_strength": "float", "cross_side_effects": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/network-effects/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Platform Economics & Competitive Advantage Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Facebook (هر کاربر جدید ارزش شبکه را افزایش می‌دهد)، Uber (رانندگان بیشتر = مسافران بیشتر).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محصولاتی که با افزایش کاربران ارزششان کاهش می‌یابد (congestion).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد مزیت رقابتی پایدار و barriers to entry.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Social Networks</li><li>Marketplaces</li><li>Communication Platforms</li><li>Payment Systems</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Network Growth Rate</li><li>User Value per User</li><li>Retention Correlation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد کاربران</li><li>تعاملات بین کاربران</li><li>ارزش ادراک‌شده</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Competitive Advantages
   ├── Network Effects (User-driven)</li><li>  ├── Economies of Scale (Cost-driven)</li><li>  └── Brand (Perception-driven)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر رشد اولیه برای رسیدن به critical mass.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Network Growth Rate</li><li>User Engagement per User</li><li>Retention Rate</li><li>Virality Coefficient</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Network Value = n² (Metcalfe's Law) or n × log(n) (Alternative)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Network Effects Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>استراتژی‌های رشد برای تقویت network effects.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع network effect</li><li>مکانیزم‌های تقویت</li><li>استراتژی monetization</li></ul></div>`
 },
-{
-  term: "مدل چرخ‌طیار (مدل Flywheel)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل کسب‌وکاری که در آن اجزای مختلف یکدیگر را تقویت می‌کنند و چرخه‌ای از رشد خودتقویت‌شونده ایجاد می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Flywheel مفهوم Jim Collins است. برخلاف قیف خطی، flywheel یک حلقه بازخورد مثبت است: تجربه مشتری بهتر → ترافیک بیشتر → فروشندگان بیشتر → انتخاب بیشتر → تجربه مشتری بهتر. Amazon نمونه کلاسیک است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Component Identification 2. Feedback Loop Design 3. Momentum Building 4. Friction Reduction 5. Acceleration</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"flywheel_id": "uuid", "components": ["string"], "feedback_loops": ["object"], "momentum_score": "float", "growth_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/flywheel/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Business Strategy & Growth Model Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Amazon Flywheel: قیمت پایین → مشتریان بیشتر → فروشندگان بیشتر → انتخاب بیشتر → تجربه بهتر → مشتریان بیشتر.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مدل خطی بدون حلقه‌های بازخورد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد رشد پایدار و خودتقویت‌شونده.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Platform Growth</li><li>E-commerce</li><li>Marketplace</li><li>SaaS</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Feedback Loop Analysis</li><li>Growth Momentum</li><li>Component Interdependence</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>اجزای flywheel</li><li>حلقه‌های بازخورد</li><li>نرخ رشد</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Models
-  ├── Flywheel (Self-reinforcing Loop)</li><li>  ├── Funnel (Linear)</li><li>  └── Viral (Exponential)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>شناسایی و تقویت حلقه‌های بازخورد مثبت.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Flywheel Velocity</li><li>Loop Reinforcement Rate</li><li>Growth Acceleration</li><li>Friction Points</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Flywheel Momentum = Σ(Component Strength × Feedback Loop Intensity) ÷ Friction</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Flywheel Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و رفع friction points برای شتاب‌دهی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>اجزای flywheel</li><li>حلقه‌های بازخورد</li><li>مکانیزم‌های شتاب‌دهی</li></ul></div>`
-},
-{
-  term: "مدل اثر قفل‌شدگی (مدل Lock-in Effect)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>وضعیتی که در آن هزینه تغییر از یک محصول یا پلتفرم به محصول دیگر آنقدر بالاست که کاربران عملاً مجبور به ادامه استفاده می‌شوند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Lock-in effect مزیت رقابتی قدرتمندی ایجاد می‌کند. این می‌تواند از طریق switching costs بالا، data lock-in، network effects یا compatibility issues ایجاد شود. مثال: اکوسیستم Apple، Microsoft Office.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Switching Cost Creation 2. Data Portability Restriction 3. Ecosystem Integration 4. Habit Formation 5. Dependency Building</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"lockin_id": "uuid", "switching_costs": "float", "data_lockin": "boolean", "ecosystem_integration": "float", "customer_retention": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/lockin-effect/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Competitive Strategy & Customer Retention Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Apple ecosystem (iPhone + Mac + iPad + iCloud)، Microsoft Office (Word + Excel + PowerPoint).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محصولات با switching cost پایین و قابلیت جایگزینی آسان.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد retention بالا و کاهش churn.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Software Ecosystems</li><li>Platform Services</li><li>Subscription Models</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Switching Cost Analysis</li><li>Churn Rate</li><li>Customer Lifetime Value</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>هزینه‌های تغییر</li><li>نرخ retention</li><li>یکپارچگی اکوسیستم</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Retention Strategies
-  ├── Lock-in Effect (High Switching Cost)</li><li>  ├── Value-based Retention</li><li>  └── Habit Formation</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین lock-in و customer satisfaction (lock-in بیش از حد می‌تواند backlash ایجاد کند).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Retention Rate</li><li>Switching Cost Index</li><li>Customer Lifetime Value</li><li>Ecosystem Penetration</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Lock-in Strength = (Switching Costs + Data Lock-in + Ecosystem Integration) ÷ Alternative Attractiveness</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Customer Lock-in Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ایجاد و تقویت switching costs.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع lock-in</li><li>سطح یکپارچگی</li><li>استراتژی data portability</li></ul></div>`
-},
-{
-  term: "مدل هزینه تعویض (مدل Switching Cost)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>هزینه‌هایی که مشتری هنگام تغییر از یک محصول یا خدمت به محصول رقیب متحمل می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Switching costs می‌توانند مالی (هزینه خرید جدید)، زمانی (یادگیری سیستم جدید)، روانی (از دست دادن داده‌ها) یا اجتماعی (از دست دادن network) باشند. هر چه switching costs بالاتر باشد، retention بیشتر است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Cost Identification 2. Quantification 3. Barrier Creation 4. Retention Strategy 5. Competitive Analysis</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cost_id": "uuid", "financial_cost": "float", "time_cost": "float", "psychological_cost": "float", "social_cost": "float", "total_switching_cost": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/switching-cost/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Retention & Competitive Barrier Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>هزینه انتقال داده از iPhone به Android، یا یادگیری سیستم‌عامل جدید.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محصولات با switching cost نزدیک به صفر (مانند بطری آب).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد barrier to exit و افزایش retention.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Software Products</li><li>Platform Services</li><li>Subscription Models</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cost Analysis</li><li>Churn Rate Correlation</li><li>Customer Feedback</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>انواع هزینه‌ها</li><li>نرخ churn</li><li>بازخورد مشتریان</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Retention Mechanisms
-  ├── Switching Costs (Barrier to Exit)</li><li>  ├── Value Proposition (Reason to Stay)</li><li>  └── Habit Formation (Automatic Retention)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین ایجاد barrier و حفظ customer satisfaction.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Switching Cost Index</li><li>Churn Rate</li><li>Customer Lifetime Value</li><li>Retention Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Total Switching Cost = Financial Cost + Time Cost + Psychological Cost + Social Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Switching Cost Analyzer</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ایجاد و تقویت switching costs.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع هزینه‌ها</li><li>سطح barrier</li><li>استراتژی retention</li></ul></div>`
-},
-{
-  term: "مدل فروش متقاطع (مدل Cross-selling)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فروش محصولات یا خدمات مکمل به مشتریان موجود برای افزایش ارزش هر مشتری.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Cross-selling تکنیکی است که با پیشنهاد محصولات مرتبط به مشتریانی که قبلاً خرید کرده‌اند، revenue per customer را افزایش می‌دهد. مثال: "مشتریانی که این را خریدند، این را هم خریدند" در Amazon.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Purchase Pattern Analysis 2. Product Affinity Mapping 3. Recommendation Engine 4. Timing Optimization 5. Conversion Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cross_sell_id": "uuid", "original_product": "uuid", "recommended_products": ["uuid"], "conversion_rate": "float", "revenue_lift": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/cross-selling/recommend</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sales Strategy & Revenue Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Amazon ("Customers who bought this also bought"), McDonald's ("Would you like fries with that?").</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فقط فروش محصول اصلی بدون پیشنهاد محصولات مکمل.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش revenue per customer و customer lifetime value.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>E-commerce</li><li>Retail</li><li>SaaS (Add-on Features)</li><li>Banking (Financial Products)</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Product Affinity Analysis</li><li>Conversion Rate</li><li>Revenue per Customer</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>الگوهای خرید</li><li>product affinity</li><li>نرخ تبدیل</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Strategies
-  ├── Cross-selling (Complementary Products)</li><li>  ├── Up-selling (Higher-tier Product)</li><li>  └── Bundling (Product Package)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>پیشنهادات باید مرتبط و به‌موقع باشند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Cross-sell Rate</li><li>Average Order Value</li><li>Revenue per Customer</li><li>Conversion Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Cross-sell Revenue = Original Customers × Cross-sell Rate × Average Cross-sell Value</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Cross-selling Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی پیشنهادات و زمان‌بندی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>الگوریتم recommendation</li><li>زمان پیشنهاد</li><li>محصولات مکمل</li></ul></div>`
-},
-{
-  term: "مدل فروش مکمل (مدل Up-selling)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ترغیب مشتری به خرید نسخه گران‌تر یا پیشرفته‌تر از محصول مورد نظر.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Up-selling با نشان دادن ارزش افزوده نسخه بالاتر، revenue per transaction را افزایش می‌دهد. این تکنیک بر اساس درک نیازهای مشتری و ارائه گزینه‌های بهتر طراحی می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Customer Need Analysis 2. Tier Comparison 3. Value Proposition Enhancement 4. Persuasion Strategy 5. Conversion Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"upsell_id": "uuid", "original_product": "uuid", "upsell_product": "uuid", "price_difference": "float", "conversion_rate": "float", "revenue_lift": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/up-selling/recommend</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sales Strategy & Revenue Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>"آیا می‌خواهید اندازه بزرگ‌تر را با فقط ۱ دلار بیشتر امتحان کنید؟" یا ارتقا از Basic به Pro plan.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فقط فروش محصول پایه بدون پیشنهاد ارتقا.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش average order value و profit margin.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>SaaS (Plan Upgrades)</li><li>Retail (Premium Versions)</li><li>Services (Enhanced Packages)</li><li>Hospitality (Room Upgrades)</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Upgrade Rate</li><li>Revenue per Transaction</li><li>Customer Satisfaction</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تفاوت قیمت</li><li>ارزش افزوده</li><li>نرخ تبدیل</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Strategies
-  ├── Up-selling (Higher-tier Product)</li><li>  ├── Cross-selling (Complementary Products)</li><li>  └── Bundling (Product Package)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ارزش افزوده باید واضح و قابل درک باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Up-sell Rate</li><li>Average Order Value</li><li>Revenue per Transaction</li><li>Customer Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Up-sell Revenue = Original Customers × Up-sell Rate × Price Difference</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Up-selling Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی پیشنهادات ارتقا و زمان‌بندی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>سطوح محصول</li><li>تفاوت قیمت</li><li>ارزش افزوده</li></ul></div>`
-},
-{
-  term: "مدل بسته‌بندی محصول (مدل Bundling)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فروش دو یا چند محصول یا خدمت به صورت یک بسته با قیمت کمتر از مجموع تک‌تک آن‌ها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Bundling استراتژی‌ای است که با ارائه ارزش بیشتر، فروش را افزایش می‌دهد. این مدل می‌تواند pure bundling (فقط بسته) یا mixed bundling (بسته و تکی) باشد. مثال: Microsoft Office Suite، کابل TV packages.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Product Selection 2. Pricing Strategy 3. Value Proposition 4. Bundle Creation 5. Sales Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"bundle_id": "uuid", "products_included": ["uuid"], "individual_price_total": "float", "bundle_price": "float", "discount_percentage": "float", "bundle_sales": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/bundling/{bundle_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Pricing Strategy & Product Packaging Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Microsoft Office (Word + Excel + PowerPoint)، McDonald's Combo Meal.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فروش فقط محصولات تکی بدون گزینه بسته.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش average order value و فروش محصولات کم‌فروش.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Software Suites</li><li>Telecom Packages</li><li>Fast Food Combos</li><li>Streaming Services</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Bundle Adoption Rate</li><li>Revenue per Bundle</li><li>Product Mix Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>ترکیب محصولات</li><li>قیمت‌گذاری</li><li>نرخ فروش</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Strategies
-  ├── Bundling (Product Package)</li><li>  ├── Unbundling (Individual Products)</li><li>  └── Cross-selling (Add-ons)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین تخفیف جذاب و حفظ حاشیه سود.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Bundle Adoption Rate</li><li>Average Order Value</li><li>Revenue per Bundle</li><li>Product Mix Improvement</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Bundle Value = (Individual Prices Sum - Bundle Price) × Bundle Sales Volume</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Bundling Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی ترکیب محصولات و قیمت‌گذاری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ترکیب محصولات</li><li>سطح تخفیف</li><li>نوع bundling (pure/mixed)</li></ul></div>`
-},
-{
-  term: "مدل تفکیک محصول (مدل Unbundling)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>شکستن یک بسته محصول یا خدمت به اجزای جداگانه برای فروش مستقل.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Unbundling واکنش به bundling است. با ارائه محصولات به صورت تکی، مشتریان فقط برای آنچه واقعاً نیاز دارند پرداخت می‌کنند. این مدل در صنایعی که مشتریان تنوع طلب هستند مؤثر است. مثال: iTunes (فروش آهنگ‌ها به جای آلبوم کامل).</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Bundle Decomposition 2. Individual Pricing 3. Customer Segmentation 4. Sales Channel Optimization 5. Revenue Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"unbundle_id": "uuid", "original_bundle": "uuid", "individual_products": ["uuid"], "individual_prices": ["float"], "total_individual_revenue": "float", "vs_bundle_revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/unbundling/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Pricing Strategy & Product Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>iTunes (آهنگ‌های تکی)، à la carte menu، cable TV channels individually.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فقط فروش بسته‌ای بدون گزینه تکی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>انعطاف‌پذیری برای مشتری و بهینه‌سازی revenue.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Music Industry</li><li>Cable TV</li><li>Software Features</li><li>Restaurant Menus</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Individual Product Sales</li><li>Customer Preference Analysis</li><li>Revenue Comparison</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>فروش محصولات تکی</li><li>ترجیحات مشتری</li><li>مقایسه درآمد</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Product Strategies
-  ├── Unbundling (Individual Products)</li><li>  ├── Bundling (Product Package)</li><li>  └── Hybrid (Both Options)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین انعطاف‌پذیری و پیچیدگی عملیاتی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Individual Product Sales</li><li>Customer Satisfaction</li><li>Revenue per Product</li><li>Operational Complexity</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Unbundling Value = Σ(Individual Product Revenue) - Bundle Revenue - Operational Cost Increase</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Unbundling Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تصمیم‌گیری درباره unbundling بر اساس ترجیحات مشتری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>محصولات قابل unbundling</li><li>قیمت‌گذاری تکی</li><li>استراتژی hybrid</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 6,
-        title: "فصل ۶: زیرساخت فنی، ابر و معماری سرویس",
-        words: [
 {
   term: "نرم‌افزار به عنوان سرویس (SaaS)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل ارائه نرم‌افزار که در آن برنامه از طریق اینترنت و با اشتراک ماهانه/سالانه در دسترس قرار می‌گیرد، بدون نیاز به نصب محلی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>SaaS انقلابی در نحوه مصرف نرم‌افزار ایجاد کرده است. به جای خرید لایسنس یک‌باره، کاربران اشتراک می‌پردازند و ارائه‌دهنده مسئول نگهداری، به‌روزرسانی و امنیت است. این مدل درآمد پایدار (MRR/ARR) ایجاد می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Multi-tenant Architecture 2. Subscription Billing 3. Automatic Updates 4. Cloud Hosting 5. API Access</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"saas_id": "uuid", "pricing_model": "per_user|tiered", "mrr": "float", "arr": "float", "churn_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/saas/{id}/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cloud Computing & Software Delivery Model</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Salesforce، Slack، Microsoft 365، Zoom.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نرم‌افزار on-premise که روی سرورهای مشتری نصب می‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>درآمد پایدار، مقیاس‌پذیری بالا و کاهش هزینه‌های اولیه مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>CRM Systems</li><li>Productivity Tools</li><li>Collaboration Platforms</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Subscription Model Analysis</li><li>Cloud Delivery Verification</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>MRR/ARR</li><li>Churn Rate</li><li>Customer Count</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cloud Service Models
@@ -10719,20 +13723,6 @@ Boundary Intelligence Center
 └── FaaS (Function)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹.۹٪ تا ۹۹.۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>طراحی cloud-native برای بهره‌برداری کامل از مزایا.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Cloud Spend Optimization</li><li>Resource Utilization</li><li>Uptime</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Cloud Value = (Agility + Scalability) ÷ (Vendor Lock-in + Migration Cost)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Cloud Cost & Performance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی مصرف منابع و کاهش هزینه‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ارائه‌دهنده ابری</li><li>منطقه جغرافیایی</li><li>نوع سرویس</li></ul></div>`
 },
 {
-  term: "زیرساخت به عنوان سرویس (IaaS)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ارائه منابع محاسباتی پایه (سرور مجازی، ذخیره‌سازی) که کاربر سیستم‌عامل و نرم‌افزارهای خود را روی آن نصب می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>IaaS پایین‌ترین لایه خدمات ابری است و بیشترین کنترل را به کاربر می‌دهد. سازمان‌ها می‌توانند بدون خرید سخت‌افزار، زیرساخت دلخواه خود را بسازند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. VM Provisioning 2. Storage Allocation 3. Network Config 4. Security Groups 5. Auto-scaling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"iaas_id": "uuid", "instance_type": "string", "vcpus": "int", "memory_gb": "float", "monthly_cost": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/iaas/instances</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cloud Infrastructure Service Model</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>AWS EC2 برای اجرای سرورهای مجازی با سیستم‌عامل دلخواه.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>SaaS که همه چیز را مدیریت می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>انعطاف‌پذیری کامل در انتخاب سیستم‌عامل و نرم‌افزارها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Custom Applications</li><li>Legacy Migration</li><li>Dev & Testing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Infrastructure Control Level</li><li>OS Customization</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>نوع instance</li><li>مصرف منابع</li><li>هزینه‌ها</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cloud Service Models
-├── IaaS (Full Control)
-├── PaaS (Managed Platform)
-└── SaaS (Fully Managed)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹.۹٪ تا ۹۹.۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت patching و security بر عهده کاربر است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Instance Utilization</li><li>Cost per Workload</li><li>Uptime</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">IaaS Value = (Flexibility + Control) ÷ (Management Overhead + Cost)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>IaaS Resource Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب instance type مناسب برای workload.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع instance</li><li>منطقه جغرافیایی</li><li>auto-scaling rules</li></ul></div>`
-},
-{
-  term: "پلتفرم به عنوان سرویس (PaaS)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ارائه پلتفرمی شامل سیستم‌عامل، runtime و database که برنامه‌نویسان اپلیکیشن خود را بدون مدیریت زیرساخت روی آن اجرا می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>PaaS لایه میانی خدمات ابری است. توسعه‌دهندگان بر کد تمرکز می‌کنند و ارائه‌دهنده زیرساخت و OS را مدیریت می‌کند. این مدل سرعت توسعه را به شدت افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Runtime Provisioning 2. DB Management 3. CI/CD Pipeline 4. Auto-scaling 5. Service Integration</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"paas_id": "uuid", "platform": "string", "runtime": "string", "instances": "int", "monthly_cost": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/paas/apps</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cloud Platform & Developer Experience Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Heroku برای استقرار سریع اپلیکیشن‌های Node.js.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>IaaS که نیاز به مدیریت OS و runtime دارد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش سرعت توسعه و کاهش operational overhead.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Web Applications</li><li>Mobile Backends</li><li>API Services</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Managed Services Level</li><li>Deployment Speed</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>runtime environment</li><li>services managed</li><li>deployment metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cloud Service Models
-├── IaaS (Infrastructure)
-├── PaaS (Platform - Managed)
-└── SaaS (Software - Fully Managed)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹.۹٪ تا ۹۹.۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین convenience و control.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Deployment Frequency</li><li>Time to Production</li><li>Platform Uptime</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">PaaS Value = (Dev Speed + Reduced Ops) ÷ (Vendor Lock-in + Cost Premium)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>PaaS Developer Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب پلتفرم مناسب بر اساس زبان و framework.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>runtime environment</li><li>scaling rules</li><li>add-on services</li></ul></div>`
-},
-{
   term: "معماری میکروسرویس (Microservices Architecture)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سبک معماری که در آن یک برنامه بزرگ به مجموعه‌ای از سرویس‌های کوچک، مستقل و قابل استقرار جداگانه تقسیم می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>میکروسرویس‌ها در مقابل معماری monolithic هستند. هر سرویس مسئول یک قابلیت خاص است و از طریق API ارتباط برقرار می‌کند. این معماری مقیاس‌پذیری و agility را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Service Decomposition 2. API Design 3. Independent Deployment 4. Service Discovery 5. Distributed Tracing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"architecture_id": "uuid", "services_count": "int", "communication_protocol": "REST|gRPC|MQ"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/microservices/topology</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Software Architecture & Distributed Systems Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Netflix که از صدها میکروسرویس تشکیل شده است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>معماری monolithic که همه چیز در یک codebase است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>امکان توسعه مستقل تیم‌ها، استقرار سریع و مقیاس‌پذیری انتخابی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Large-scale Applications</li><li>Complex Domains</li><li>Cloud-native Apps</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Service Boundary Analysis</li><li>Deployment Independence</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد سرویس‌ها</li><li>وابستگی‌ها</li><li>الگوهای ارتباط</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Software Architectures
 ├── Monolithic (Single Unit)
@@ -10745,64 +13735,6 @@ Boundary Intelligence Center
 ├── Event-Driven (Async)
 ├── Request-Response (Sync)
 └── Publish-Subscribe</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت eventual consistency و idempotency.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Event Throughput</li><li>End-to-end Latency</li><li>Message Loss Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">EDA Value = (Scalability + Responsiveness) ÷ (Complexity + Eventual Consistency)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Event Streaming Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی event schema و انتخاب message broker.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع message broker</li><li>event schema</li><li>retention policy</li></ul></div>`
-},
-{
-  term: "معماری بدون سرور (معماری Serverless)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل اجرای کد که در آن ارائه‌دهنده ابری زیرساخت سرور را کاملاً مدیریت می‌کند و توسعه‌دهنده فقط توابع را deploy می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Serverless یعنی توسعه‌دهنده نیازی به مدیریت سرور ندارد. کد به صورت functions (FaaS) اجرا می‌شود و فقط برای زمان اجرا هزینه پرداخت می‌شود. این مدل auto-scaling کامل و هزینه بهینه ارائه می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Function Deployment 2. Event Trigger 3. Auto-scaling 4. Execution 5. Billing (per invocation)</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"function_id": "uuid", "runtime": "string", "invocations": "int", "avg_duration_ms": "float", "monthly_cost": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/serverless/functions</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cloud Computing & Function-as-a-Service Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>AWS Lambda برای پردازش تصاویر آپلود شده به S3.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اجرای دائمی سرور حتی در زمان عدم استفاده.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش هزینه (pay-per-use)، مقیاس‌پذیری خودکار و تمرکز بر کد.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Event Processing</li><li>API Backends</li><li>Data Transformation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Function Granularity</li><li>Invocation Pattern</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تعداد invocations</li><li>مدت اجرا</li><li>هزینه‌ها</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cloud Service Models
-├── IaaS (Infrastructure)
-├── PaaS (Platform)
-├── SaaS (Software)
-└── FaaS/Serverless (Function)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت cold start و vendor lock-in.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Invocation Count</li><li>Average Duration</li><li>Cold Start Time</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Serverless Value = (Cost Savings + Agility) ÷ (Cold Start Latency + Vendor Lock-in)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Serverless Functions Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب workloads مناسب برای serverless.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>memory allocation</li><li>timeout</li><li>concurrency limits</li></ul></div>`
-},
-{
-  term: "کانتینر (Container)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>واحد استاندارد بسته‌بندی نرم‌افزار که شامل کد، runtime و کتابخانه‌هاست و در هر محیطی به صورت یکسان اجرا می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>کانتینرها انقلابی در deployment ایجاد کرده‌اند. برخلاف VMها که سیستم‌عامل کامل دارند، کانتینرها kernel مشترک را به اشتراک می‌گذارند و بسیار سبک‌تر و سریع‌تر هستند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Image Creation 2. Container Runtime 3. Resource Isolation 4. Networking 5. Volume Management</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"container_id": "uuid", "image": "string", "status": "running|stopped", "cpu_usage": "float", "memory_usage_mb": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/containers/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Containerization & DevOps Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Docker container برای اجرای یک اپلیکیشن Node.js در هر محیطی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نصب مستقیم نرم‌افزار روی سرور بدون ایزوله‌سازی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>Consistency بین محیط‌ها، portability و سرعت deployment.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Microservices Deployment</li><li>CI/CD Pipelines</li><li>Dev Environments</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Container Runtime Check</li><li>Image Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>container images</li><li>resource usage</li><li>network config</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Virtualization
-├── VMs (Full OS)
-├── Containers (Shared OS)
-└── Serverless (No OS Mgmt)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Image size optimization و security scanning.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Container Density</li><li>Startup Time</li><li>Image Size</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Container Value = (Portability + Density) ÷ (Orchestration Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Container Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی image و resource allocation.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>base image</li><li>resource limits</li><li>network config</li></ul></div>`
-},
-{
-  term: "داکر (Docker)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>پلتفرم open-source برای ساخت، اجرا و مدیریت کانتینرها که استاندارد صنعتی containerization شده است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Docker محبوب‌ترین ابزار containerization است. با Dockerfile می‌توان image ساخت و با Docker Compose چندین کانتینر را orchestrate کرد. Docker اکوسیستم کاملی برای container lifecycle management ارائه می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Dockerfile Creation 2. Image Build 3. Container Run 4. Volume Mounting 5. Registry Push/Pull</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"docker_id": "uuid", "image_name": "string", "tag": "string", "container_id": "string", "status": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/docker/containers</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Container Platform & DevOps Tool</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استفاده از Docker برای استقرار یک اپلیکیشن web با database.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اجرای مستقیم نرم‌افزار بدون containerization.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>استاندارد صنعتی برای containerization و base برای Kubernetes.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Application Packaging</li><li>Dev Environments</li><li>CI/CD Integration</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Docker Version Check</li><li>Image Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>Dockerfile</li><li>docker-compose.yml</li><li>container logs</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Container Ecosystem
-├── Docker (Runtime)
-├── Kubernetes (Orchestration)
-└── Docker Hub (Registry)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Multi-stage builds برای کاهش image size.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Build Time</li><li>Image Size</li><li>Security Vulnerabilities</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Docker Efficiency = (Build Speed × Image Size Reduction) ÷ Complexity</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Docker Container Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی Dockerfile و image layers.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>base image</li><li>build args</li><li>network mode</li></ul></div>`
-},
-{
-  term: "کوبرنتیز (Kubernetes)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سیستم open-source برای orchestration، automation، scaling و مدیریت کانتینرها در محیط‌های production.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Kubernetes (K8s) استاندارد صنعتی برای container orchestration است. این سیستم deployment، scaling و self-healing کانتینرها را خودکار می‌کند. با K8s می‌توان هزاران کانتینر را در یک cluster مدیریت کرد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Pod Scheduling 2. Service Discovery 3. Load Balancing 4. Auto-scaling 5. Self-healing 6. Rolling Updates</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cluster_id": "uuid", "nodes": "int", "pods": "int", "cpu_utilization": "float", "memory_utilization": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/kubernetes/cluster/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Container Orchestration & Cloud-Native Platform</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اجرای صدها میکروسرویس در یک K8s cluster با auto-scaling خودکار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مدیریت دستی کانتینرها بدون orchestration.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>استاندارد de facto برای production container workloads.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Microservices Orchestration</li><li>Hybrid Cloud</li><li>GitOps Workflows</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cluster Health Check</li><li>Pod Status Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>YAML manifests</li><li>pod logs</li><li>metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Container Ecosystem
-├── Docker (Runtime)
-├── Kubernetes (Orchestration)
-└── Helm (Package Manager)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>پیچیدگی بالا - نیاز به تخصص خاص.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Cluster Uptime</li><li>Pod Restart Count</li><li>Resource Efficiency</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">K8s Value = (Automation + Scalability) ÷ (Complexity + Operational Cost)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Kubernetes Cluster Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی cluster architecture و resource allocation.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>node pool size</li><li>auto-scaling rules</li><li>network policies</li></ul></div>`
-},
-{
-  term: "دواپس (DevOps)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرهنگ و مجموعه‌ای از شیوه‌ها که قابلیت تحویل نرم‌افزار با سرعت بالا را از طریق یکپارچه‌سازی توسعه (Dev) و عملیات (Ops) افزایش می‌دهد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>DevOps شکاف بین تیم‌های توسعه و عملیات را از بین می‌برد. با اتوماسیون، CI/CD و monitoring، سازمان‌ها نرم‌افزار را سریع‌تر و با کیفیت بالاتر تحویل می‌دهند. DevOps یک فرهنگ است، نه فقط ابزار.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. CI/CD Pipeline 2. Infrastructure as Code 3. Config Management 4. Monitoring 5. Automated Testing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"devops_id": "uuid", "deployment_frequency": "string", "lead_time": "string", "mttr": "string", "change_failure_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/devops/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Software Development & Operations Culture</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استفاده از GitHub Actions برای اتوماسیون build، test و deployment.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>تیم‌های جداگانه Dev و Ops با فرآیندهای دستی و کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش سرعت تحویل، کاهش ریسک و بهبود کیفیت نرم‌افزار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Continuous Delivery</li><li>Infrastructure Automation</li><li>Observability</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>DORA Metrics</li><li>Pipeline Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>deployment frequency</li><li>lead time</li><li>MTTR</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">DevOps Practices
-├── CI/CD (Automation)
-├── IaC (Infrastructure)
-├── Monitoring (Observability)
-└── Culture (Collaboration)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>DevOps یک سفر است، نه مقصد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Deployment Frequency</li><li>Lead Time for Changes</li><li>MTTR</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DevOps Maturity = (Automation × Collaboration × Speed) ÷ (Silos + Manual Processes)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>DevOps Metrics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی bottleneckها در pipeline.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>CI/CD tools</li><li>monitoring stack</li><li>automation scripts</li></ul></div>`
-},
-{
-  term: "CI/CD (Continuous Integration/Deployment)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>شیوه‌هایی که توسعه‌دهندگان را قادر می‌سازد تغییرات کد را به صورت مکرر و خودکار build، test و deploy کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>CI/CD ستون فقرات DevOps مدرن است. CI تغییرات را به صورت خودکار merge و test می‌کند. CD آن را به صورت خودکار به production می‌برد. این فرآیند ریسک را کاهش و سرعت را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Code Commit 2. Automated Build 3. Automated Testing 4. Artifact Creation 5. Deployment to Prod</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"pipeline_id": "uuid", "status": "success|failed", "build_time": "int", "test_coverage": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/cicd/pipeline/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>DevOps & Software Delivery Automation</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>GitHub Actions که با هر commit، tests را اجرا و به staging deploy می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فرآیند دستی build و deployment که هفته‌ها طول می‌کشد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش سرعت تحویل، کاهش ریسک و بهبود کیفیت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Automated Testing</li><li>Continuous Deployment</li><li>Release Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Pipeline Analysis</li><li>Build Success Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>pipeline config</li><li>test results</li><li>deployment logs</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Software Delivery
-├── CI (Continuous Integration)
-├── CD (Continuous Delivery)
-└── CD (Continuous Deployment)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Fast feedback loops و fail-fast principle.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Build Success Rate</li><li>Pipeline Duration</li><li>Test Coverage</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">CI/CD Value = (Deployment Speed × Quality) ÷ (Pipeline Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>CI/CD Pipeline Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی pipeline و کاهش build time.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>trigger conditions</li><li>test suites</li><li>deployment targets</li></ul></div>`
-},
-{
-  term: "Infrastructure as Code (IaC)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدیریت و provision زیرساخت از طریق فایل‌های پیکربندی قابل خواندن توسط ماشین، به جای فرآیندهای دستی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>IaC انقلابی در مدیریت زیرساخت ایجاد کرده است. با ابزارهایی مانند Terraform، زیرساخت به صورت کد تعریف می‌شود، version control می‌شود و به صورت خودکار deploy می‌شود. این رویکرد consistency و speed را فراهم می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Code Definition 2. Plan Generation 3. State Management 4. Resource Provisioning 5. Drift Detection</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"iac_id": "uuid", "tool": "Terraform|Ansible", "resources_managed": "int", "drift_detected": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/iac/state</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>DevOps & Infrastructure Automation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Terraform برای provision یک VPC در AWS با تمام subnetها.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>setup دستی سرورها از طریق CLI یا GUI.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>Consistency، version control و automation زیرساخت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Cloud Provisioning</li><li>Environment Replication</li><li>Disaster Recovery</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Code Review</li><li>State Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>IaC code</li><li>state files</li><li>resource inventory</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Infrastructure Management
-├── IaC (Code-based)
-├── Manual Configuration
-└── Config Management</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Modular design و state management مناسب.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Provisioning Time</li><li>Configuration Drift</li><li>Resource Compliance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">IaC Value = (Automation + Consistency) ÷ (Learning Curve + Tool Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>IaC State & Drift Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب ابزار و طراحی ماژول‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>tool selection</li><li>module structure</li><li>state backend</li></ul></div>`
-},
-{
-  term: "دروازه API (API Gateway)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سرویس مرکزی که به عنوان نقطه ورود واحد برای تمام APIها عمل می‌کند و درخواست‌ها را به سرویس‌های backend route می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>API Gateway در معماری میکروسرویس حیاتی است. این لایه authentication، rate limiting و logging را به صورت متمرکز مدیریت می‌کند. بدون آن، هر سرویس باید این قابلیت‌ها را جداگانه پیاده‌سازی کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Request Routing 2. Authentication 3. Rate Limiting 4. Transformation 5. Caching</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"gateway_id": "uuid", "routes": "int", "requests_per_second": "float", "cache_hit_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/gateway/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>API Management & Microservices Infrastructure</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>AWS API Gateway، Kong برای مدیریت APIها.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>دسترسی مستقیم clients به هر میکروسرویس.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>امنیت متمرکز، rate limiting و simplification برای clients.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Microservices Architecture</li><li>API Monetization</li><li>Security Enforcement</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Route Analysis</li><li>Performance Metrics</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>routing rules</li><li>rate limits</li><li>auth config</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">API Management
-├── API Gateway (Entry Point)
-├── Backend Services
-└── API Analytics</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>High availability و low latency حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Request Latency</li><li>Error Rate</li><li>Throughput</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Gateway Value = (Centralization + Security) ÷ (Latency Overhead)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>API Gateway Monitoring Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی routing rules و rate limiting policies.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>routing rules</li><li>rate limits</li><li>auth methods</li></ul></div>`
 },
 {
   term: "رست API (REST API)",
@@ -10833,20 +13765,6 @@ Boundary Intelligence Center
 └── SAML (Enterprise SSO)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>استفاده از PKCE برای mobile apps و secure token storage.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Auth Success Rate</li><li>Token Expiry Rate</li><li>Security Incidents</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">OAuth Value = (Security + UX + Interoperability) ÷ (Implementation Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>OAuth Authorization Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب OAuth flow مناسب.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>grant type</li><li>scopes</li><li>token lifetime</li></ul></div>`
 },
 {
-  term: "JWT (JSON Web Token)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استاندارد open برای ایجاد توکن‌های فشرده و self-contained که اطلاعات را به صورت JSON بین دو طرف به صورت امن منتقل می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>JWTها برای stateless authentication استفاده می‌شوند. برخلاف session-based auth، تمام اطلاعات کاربر در خود توکن (به صورت امضاشده) قرار دارد. این مقیاس‌پذیری را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Token Creation 2. Payload Encoding 3. Signature Generation 4. Token Transmission 5. Signature Verification</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"jwt_id": "uuid", "header": {"alg": "string"}, "payload": {"sub": "string", "exp": "int"}, "verified": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/auth/verify-jwt</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Authentication Token & Security Standard</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>توکن JWT که پس از login موفق به client داده می‌شود و در هر درخواست بعدی ارسال می‌شود.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Session-based authentication با cookie روی سرور.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>Stateless authentication، scalability و cross-domain support.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>API Authentication</li><li>Single Sign-On</li><li>Microservices Communication</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Token Structure Validation</li><li>Signature Verification</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>token structure</li><li>signing algorithm</li><li>claims</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Authentication Methods
-├── JWT (Token-based)
-├── Session-based (Cookie)
-└── API Keys</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Short expiration times و secure secret management.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Token Validation Success</li><li>Token Size</li><li>Signature Verification Time</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">JWT Value = (Statelessness + Scalability) ÷ (Token Size + Revocation Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>JWT Authentication Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب الگوریتم امضا و مدیریت کلیدها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>signing algorithm</li><li>expiration time</li><li>claims structure</li></ul></div>`
-},
-{
-  term: "محدودسازی نرخ (Rate Limiting)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>کنترل تعداد درخواست‌هایی که یک کاربر یا سیستم می‌تواند در یک بازه زمانی مشخص به API ارسال کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Rate limiting برای محافظت از APIها در برابر سوءاستفاده، حملات DDoS و overuse ضروری است. این مکانیزم تضمین می‌کند که منابع به صورت عادلانه توزیع شوند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Request Counting 2. Rate Limit Check 3. Token Bucket/Sliding Window 4. Allow/Deny Decision 5. Header Injection</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"rate_limit_id": "uuid", "user_id": "string", "requests_allowed": "int", "requests_remaining": "int", "reset_time": "timestamp"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/rate-limit/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>API Security & Traffic Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>GitHub API که اجازه ۵۰۰۰ درخواست در ساعت را می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>API بدون هیچ محدودیتی که می‌تواند overload شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>محافظت از منابع، جلوگیری از سوءاستفاده و تضمین fairness.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>API Protection</li><li>DDoS Prevention</li><li>Fair Usage Policy</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Request Pattern Analysis</li><li>Abuse Detection</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>request counts</li><li>user quotas</li><li>time windows</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">API Security
-├── Rate Limiting (Traffic Control)
-├── Authentication (Identity)
-└── Authorization (Permissions)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین security و user experience.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Throttled Requests</li><li>Abuse Detection Rate</li><li>API Availability</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Rate Limit Effectiveness = (Protection × Fairness) ÷ (User Friction)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Rate Limiting Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم quotaها بر اساس user tier.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>rate limits per tier</li><li>time windows</li><li>burst allowance</li></ul></div>`
-},
-{
   term: "چندمستأجری (Multi-tenancy)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>معماری نرم‌افزاری که در آن یک instance واحد از برنامه، چندین مشتری (tenant) مجزا را سرویس می‌دهد، در حالی که داده‌های هر کدام ایزوله است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Multi-tenancy پایه SaaS مدرن است. به جای اجرای یک instance برای هر مشتری، یک instance مشترک با isolation مناسب استفاده می‌شود. این رویکرد هزینه‌ها را کاهش و مقیاس‌پذیری را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Tenant Identification 2. Data Isolation 3. Resource Sharing 4. Config Management 5. Security Enforcement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"tenant_id": "uuid", "isolation_level": "shared_db|schema_per_tenant|db_per_tenant", "resource_usage": "object"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/tenants/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>SaaS Architecture & Resource Sharing Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Salesforce که هزاران شرکت را روی یک پلتفرم سرویس می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Single-tenant architecture با یک instance برای هر مشتری.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش هزینه‌ها، مقیاس‌پذیری و simplified maintenance.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>SaaS Applications</li><li>Cloud Services</li><li>Enterprise Platforms</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Isolation Level Analysis</li><li>Data Security Audit</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>tenant configurations</li><li>data isolation strategy</li><li>resource allocation</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">SaaS Architectures
 ├── Multi-tenant (Shared)
@@ -10861,41 +13779,6 @@ Boundary Intelligence Center
 └── SLI (Indicator)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Realistic targets و clear penalty structure.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>SLA Compliance Rate</li><li>Uptime Percentage</li><li>Response Time</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">SLA Compliance = (Actual Performance ÷ Target Performance) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>SLA Compliance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعریف realistic targets و monitoring strategy.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>uptime targets</li><li>response time SLAs</li><li>penalty structure</li></ul></div>`
 },
 {
-  term: "SLO (Service Level Objective)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>هدف کمی و داخلی که ارائه‌دهنده سرویس برای عملکرد سرویس خود تعیین می‌کند، معمولاً سخت‌گیرانه‌تر از SLA.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>SLO هدف داخلی تیم است، در حالی که SLA توافق با مشتری است. SLOها معمولاً بالاتر از SLA تنظیم می‌شوند تا buffer برای عدم قطعیت ایجاد کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Objective Definition 2. SLI Selection 3. Target Setting 4. Monitoring 5. Error Budget Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"slo_id": "uuid", "service": "string", "objective": "float", "current_performance": "float", "error_budget_remaining": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/slo/{id}/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Reliability Engineering & Performance Target Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>SLO داخلی 99.95% برای یک سرویس، در حالی که SLA مشتری 99.9% است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نداشتن اهداف داخلی و فقط تکیه بر SLA.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد buffer برای SLA و هدایت تصمیمات فنی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Reliability Engineering</li><li>Performance Management</li><li>Error Budget Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Performance Tracking</li><li>Error Budget Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>performance metrics</li><li>error budgets</li><li>historical data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Reliability Framework
-├── SLI (Measurement)
-├── SLO (Target)
-└── SLA (Contract)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Realistic targets و error budget management.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>SLO Achievement Rate</li><li>Error Budget Consumption</li><li>Time to Breach</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Error Budget = 1 - SLO Target</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>SLO & Error Budget Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تصمیم درباره feature releases بر اساس error budget.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>SLO targets</li><li>error budget policy</li><li>monitoring intervals</li></ul></div>`
-},
-{
-  term: "SLI (Service Level Indicator)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>معیار کمی که برای اندازه‌گیری عملکرد یک سرویس استفاده می‌شود و پایه‌ای برای SLO و SLA است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>SLI "چه چیزی را اندازه می‌گیریم" است. مثال‌ها: latency، error rate، throughput. SLIها باید measurable، relevant و actionable باشند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Metric Selection 2. Data Collection 3. Aggregation 4. Threshold Definition 5. Alerting</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"sli_id": "uuid", "metric_name": "string", "current_value": "float", "unit": "string", "threshold": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/sli/{id}/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Reliability Engineering & Performance Measurement Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>SLI برای latency: "۹۵٪ درخواست‌ها باید در کمتر از ۲۰۰ms پاسخ داده شوند".</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اندازه‌گیری معیارهای مبهم یا غیرقابل اقدام.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>پایه عینی برای تصمیم‌گیری درباره reliability.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Performance Monitoring</li><li>Reliability Engineering</li><li>Capacity Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Metric Relevance</li><li>Measurement Accuracy</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>performance metrics</li><li>thresholds</li><li>historical trends</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Reliability Framework
-├── SLI (Measurement)
-├── SLO (Target)
-└── SLA (Contract)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>User-centric metrics و appropriate percentiles.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Metric Coverage</li><li>Measurement Accuracy</li><li>Alert Precision</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">SLI = Direct Measurement of Service Performance</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>SLI Monitoring Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب appropriate metrics برای هر سرویس.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>metric definitions</li><li>aggregation windows</li><li>percentiles</li></ul></div>`
-},
-{
-  term: "زمان فعالیت (Uptime)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>درصد زمانی که یک سیستم یا سرویس در دسترس و عملیاتی است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Uptime یکی از مهم‌ترین معیارهای reliability است. معمولاً به صورت "nines" بیان می‌شود: 99% (two nines)، 99.9% (three nines)، 99.99% (four nines).</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Health Checks 2. Availability Monitoring 3. Downtime Tracking 4. Incident Classification 5. Uptime Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"service_id": "uuid", "uptime_percentage": "float", "total_downtime_minutes": "int", "incident_count": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/uptime/{service_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Reliability & Availability Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>99.99% uptime یعنی حداکثر ۵۲.۶ دقیقه downtime در سال.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Downtime مکرر و طولانی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>معیار اصلی reliability و پایه SLA.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Service Level Agreements</li><li>Reliability Engineering</li><li>Capacity Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Health Check Monitoring</li><li>Incident Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>health check logs</li><li>incident reports</li><li>downtime records</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Reliability Metrics
-├── Uptime (Availability)
-├── MTTR (Recovery)
-└── MTBF (Reliability)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Redundancy و failover mechanisms.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Uptime Percentage</li><li>Downtime Minutes</li><li>Incident Count</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Uptime % = ((Total Time - Downtime) ÷ Total Time) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Uptime & Availability Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>سرمایه‌گذاری در redundancy برای رسیدن به target uptime.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>uptime targets</li><li>monitoring intervals</li><li>incident classification</li></ul></div>`
-},
-{
-  term: "تأخیر (Latency)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>زمان تأخیر بین ارسال یک درخواست و دریافت پاسخ، معمولاً بر حسب میلی‌ثانیه (ms) اندازه‌گیری می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Latency معیار کلیدی performance است. در برنامه‌های interactive، latency پایین برای تجربه کاربری خوب ضروری است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Request Timestamp 2. Response Timestamp 3. Latency Calculation 4. Percentile Analysis (p50, p95, p99) 5. Bottleneck Identification</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"latency_id": "uuid", "service": "string", "p50_ms": "float", "p95_ms": "float", "p99_ms": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/latency/{service}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Performance Metric & User Experience Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Latency 50ms برای یک API call، یا 200ms برای page load.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Latency بالا که باعث کندی و نارضایتی کاربر می‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأثیر مستقیم بر user experience و business metrics.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Performance Monitoring</li><li>SLA Definition</li><li>Capacity Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Latency Profiling</li><li>Bottleneck Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>request/response timestamps</li><li>network traces</li><li>application logs</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Performance Metrics
-├── Latency (Speed)
-├── Throughput (Capacity)
-└── Error Rate (Quality)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Focus on percentiles (p95, p99) نه فقط average.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>p50 Latency</li><li>p95 Latency</li><li>p99 Latency</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Latency = Response Timestamp - Request Timestamp</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Latency Monitoring Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و رفع bottlenecks.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>latency targets</li><li>percentile thresholds</li><li>monitoring granularity</li></ul></div>`
-},
-{
-  term: "توان عملیاتی (Throughput)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>تعداد عملیات‌ها، درخواست‌ها یا تراکنش‌هایی که یک سیستم می‌تواند در واحد زمان پردازش کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Throughput معیار capacity سیستم است. معمولاً به صورت requests per second (RPS) یا transactions per second (TPS) بیان می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Load Testing 2. Request Counting 3. Time Window Analysis 4. Bottleneck Identification 5. Capacity Planning</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"throughput_id": "uuid", "service": "string", "rps": "float", "peak_rps": "float", "sustained_rps": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/throughput/{service}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Performance & Capacity Metric</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>سیستمی با throughput 10,000 RPS.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Throughput پایین که باعث queue buildup می‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعیین capacity و scalability سیستم.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Capacity Planning</li><li>Load Testing</li><li>Performance Benchmarking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Load Testing</li><li>Performance Profiling</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>request counts</li><li>time windows</li><li>resource utilization</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Performance Metrics
-├── Throughput (Capacity)
-├── Latency (Speed)
-└── Error Rate (Quality)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Load testing تحت شرایط realistic.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Peak RPS</li><li>Sustained RPS</li><li>Throughput per Instance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Throughput = Total Requests ÷ Time Period</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Throughput & Capacity Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تصمیم درباره scaling بر اساس throughput trends.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>throughput targets</li><li>load test scenarios</li><li>scaling triggers</li></ul></div>`
-},
-{
   term: "مقیاس‌پذیری (Scalability)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>توانایی یک سیستم برای مدیریت افزایش بار کاری با افزودن منابع، بدون کاهش عملکرد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Scalability دو نوع دارد: vertical (افزودن منابع به یک node) و horizontal (افزودن nodeهای بیشتر). Horizontal scalability معمولاً ترجیح داده می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Load Testing 2. Bottleneck Analysis 3. Architecture Review 4. Scaling Strategy 5. Auto-scaling Configuration</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"scalability_id": "uuid", "scaling_type": "vertical|horizontal", "current_capacity": "float", "max_capacity": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/scalability/{service}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>System Architecture & Performance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>افزودن سرورهای بیشتر برای مدیریت ترافیک بیشتر (horizontal scaling).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سیستمی که با افزایش بار، performance آن به شدت کاهش می‌یابد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>پشتیبانی از رشد کسب‌وکار و peak loads.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Capacity Planning</li><li>Growth Strategy</li><li>Peak Load Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Load Testing</li><li>Scaling Tests</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>load test results</li><li>resource utilization</li><li>performance metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">System Qualities
 ├── Scalability (Growth)
@@ -10903,58 +13786,11 @@ Boundary Intelligence Center
 └── Performance (Speed)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Stateless design و distributed architecture.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Scaling Efficiency</li><li>Max Capacity</li><li>Time to Scale</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Scalability = (Performance at Load X) ÷ (Performance at Baseline)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Scalability & Capacity Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب بین vertical و horizontal scaling.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>scaling strategy</li><li>auto-scaling rules</li><li>capacity limits</li></ul></div>`
 },
 {
-  term: "کشسانی (Elasticity)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>توانایی یک سیستم برای افزایش یا کاهش خودکار منابع بر اساس تقاضای فعلی، برای بهینه‌سازی هزینه و عملکرد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Elasticity ویژگی کلیدی cloud computing است. برخلاف scalability که بر توانایی رشد تمرکز دارد، elasticity بر توانایی scaling up و down به صورت خودکار و سریع تأکید دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Demand Monitoring 2. Scaling Trigger Detection 3. Resource Provisioning 4. Load Balancing 5. Cost Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"elasticity_id": "uuid", "current_instances": "int", "min_instances": "int", "max_instances": "int", "scale_up_time_sec": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/elasticity/{service}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cloud Computing & Auto-scaling Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>AWS Auto Scaling که با افزایش ترافیک، instances را اضافه و با کاهش، آن‌ها را حذف می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>منابع ثابت بدون توانایی scaling خودکار.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>بهینه‌سازی هزینه و تضمین performance در peak times.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Web Applications</li><li>Batch Processing</li><li>E-commerce (Seasonal Peaks)</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Auto-scaling Tests</li><li>Cost Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>demand patterns</li><li>scaling events</li><li>cost metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cloud Qualities
-├── Elasticity (Auto-scaling)
-├── Scalability (Growth)
-└── Flexibility (Adaptability)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Appropriate scaling triggers و cooldown periods.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Scale-up Time</li><li>Scale-down Time</li><li>Cost Savings</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Elasticity Value = (Cost Optimization + Performance) ÷ (Scaling Latency)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Elasticity & Auto-scaling Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم scaling policies و triggers.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>min/max instances</li><li>scaling triggers</li><li>cooldown periods</li></ul></div>`
-},
-{
   term: "دسترس‌پذیری بالا (High Availability)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>طراحی سیستم به گونه‌ای که حداکثر uptime را تضمین کند و در صورت خرابی اجزا، سرویس بدون وقفه ادامه یابد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>High Availability (HA) از طریق redundancy، failover mechanisms و elimination of single points of failure به دست می‌آید. هدف معمولاً رسیدن به "five nines" (99.999%) uptime است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Redundancy Design 2. Failover Configuration 3. Health Monitoring 4. Automatic Recovery 5. Data Replication</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ha_id": "uuid", "uptime_target": "float", "redundancy_level": "string", "failover_time_sec": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/ha/{service}/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Reliability Engineering & System Design Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Database cluster با primary و standby که در صورت خرابی primary، standby به صورت خودکار فعال می‌شود.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سیستم تک‌نقطه‌ای بدون redundancy.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تضمین business continuity و user satisfaction.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Critical Systems</li><li>Financial Services</li><li>Healthcare</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Redundancy Analysis</li><li>Failover Testing</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>redundancy architecture</li><li>failover logs</li><li>uptime records</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Reliability Concepts
 ├── High Availability (Uptime)
 ├── Fault Tolerance (Resilience)
 └── Disaster Recovery (Recovery)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۹۹.۹۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Elimination of single points of failure.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Uptime Percentage</li><li>Failover Time</li><li>MTBF</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">HA = 1 - (Σ(Downtime Events) ÷ Total Time)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>High Availability Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی redundancy و failover strategy.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>redundancy level</li><li>failover policies</li><li>monitoring intervals</li></ul></div>`
-},
-{
-  term: "بازیابی فاجعه (Disaster Recovery)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مجموعه‌ای از سیاست‌ها، ابزارها و رویه‌ها برای بازیابی سیستم‌ها و داده‌ها پس از یک فاجعه (طبیعی، انسانی یا فنی).</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Disaster Recovery (DR) برای business continuity ضروری است. این شامل backup strategies، replication به سایت‌های دور و recovery procedures می‌شود. دو معیار کلیدی: RPO و RTO.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Risk Assessment 2. Backup Strategy 3. Replication Setup 4. DR Site Configuration 5. Recovery Procedures 6. Regular Testing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"dr_id": "uuid", "rpo_hours": "int", "rto_hours": "int", "backup_frequency": "string", "last_test_date": "timestamp"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/dr/{service}/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Business Continuity & Risk Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Replication داده‌ها به یک منطقه جغرافیایی دیگر برای بازیابی در صورت فاجعه.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نداشتن هیچ برنامه DR و ریسک از دست دادن کامل داده‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>محافظت در برابر فاجعه و تضمین business continuity.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Data Protection</li><li>Business Continuity</li><li>Regulatory Compliance</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>DR Plan Review</li><li>Recovery Testing</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>backup logs</li><li>replication status</li><li>test results</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Business Continuity
-├── Disaster Recovery (Post-disaster)
-├── High Availability (During incident)
-└── Backup (Data protection)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Regular testing و documentation.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>RPO Achievement</li><li>RTO Achievement</li><li>Test Success Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DR Readiness = (Plan Coverage × Test Success × Recovery Speed) ÷ Risk Exposure</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Disaster Recovery Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب DR strategy (hot, warm, cold site).</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>RPO/RTO targets</li><li>backup strategy</li><li>DR site configuration</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 7,
-        title: "فصل ۷: قیمت‌گذاری و سنجه‌های مالی SaaS",
-        words: [
-{
-  term: "استراتژی قیمت‌گذاری (Pricing Strategy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>رویکردی که یک شرکت برای تعیین قیمت محصولات یا خدمات خود انتخاب می‌کند تا به اهداف کسب‌وکار دست یابد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>قیمت‌گذاری مهم‌ترین اهرم سودآوری است. یک تغییر ۱٪ در قیمت می‌تواند تأثیر بیشتری از کاهش ۱٪ هزینه داشته باشد. استراتژی قیمت‌گذاری باید با ارزش پیشنهادی، بازار هدف و اهداف کسب‌وکار هم‌راستا باشد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Market Analysis 2. Cost Structure 3. Competitor Benchmarking 4. Price Elasticity Testing 5. Tier Design 6. Launch & Monitor</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"pricing_id": "uuid", "strategy": "cost_plus|value_based|competitive|dynamic", "tiers": ["string"], "price_elasticity": "float", "margin_percentage": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/pricing/strategy/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Business Strategy & Revenue Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Apple با قیمت‌گذاری premium، Walmart با قیمت‌گذاری low-cost.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قیمت‌گذاری بدون استراتژی و صرفاً بر اساس حدس.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأثیر مستقیم بر سودآوری، positioning و رشد کسب‌وکار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Launch</li><li>Market Entry</li><li>Revenue Optimization</li><li>Competitive Positioning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Price Elasticity Testing</li><li>Competitor Analysis</li><li>Customer Willingness-to-Pay</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>هزینه‌ها</li><li>قیمت رقبا</li><li>کشش قیمتی</li><li>ارزش درک‌شده</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Strategies
-├── Cost-Plus Pricing
-├── Value-Based Pricing
-├── Competitive Pricing
-└── Dynamic Pricing</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>قیمت‌گذاری یک فرآیند مستمر است، نه یک تصمیم یک‌باره.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Gross Margin</li><li>Price Realization</li><li>Win Rate</li><li>Revenue Growth</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Price = Cost + (Value × Willingness-to-Pay) - Competitive Pressure</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Pricing Strategy Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب استراتژی قیمت‌گذاری متناسب با بازار.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع استراتژی</li><li>سطوح قیمت</li><li>تخفیف‌ها</li></ul></div>`
-},
-{
-  term: "قیمت‌گذاری مبتنی بر ارزش (Value-based Pricing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>روش قیمت‌گذاری که بر اساس ارزش درک‌شده محصول برای مشتری تعیین می‌شود، نه بر اساس هزینه تولید یا قیمت رقبا.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Value-based Pricing پیشرفته‌ترین روش قیمت‌گذاری است. به جای تمرکز بر هزینه، بر ارزشی که مشتری دریافت می‌کند تمرکز دارد. این روش برای محصولات با تمایز بالا و بازارهای niche بهترین نتیجه را می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Customer Research 2. Value Driver Identification 3. Willingness-to-Pay Analysis 4. Price Tier Design 5. Communication Strategy</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"pricing_id": "uuid", "value_drivers": ["string"], "willingness_to_pay": "float", "price_tiers": ["object"], "value_capture_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/value-pricing/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Pricing Strategy & Customer Value Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>نرم‌افزار Salesforce که بر اساس ارزشی که برای فروش ایجاد می‌کند قیمت‌گذاری می‌شود.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قیمت‌گذاری بر اساس هزینه تولید (Cost-plus).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حداکثرسازی سود از طریق capture کردن ارزش واقعی ارائه‌شده.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Differentiated Products</li><li>SaaS & Software</li><li>Professional Services</li><li>Luxury Goods</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Van Westendorp Analysis</li><li>Conjoint Analysis</li><li>Customer Interviews</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تحقیقات مشتری</li><li>ارزش درک‌شده</li><li>Willingness-to-Pay</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Methods
-├── Value-Based (Customer-centric)
-├── Cost-Plus (Cost-centric)
-└── Competitive (Market-centric)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>ارتباط مؤثر ارزش به مشتری برای توجیه قیمت.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Gross Margin</li><li>Price Realization</li><li>Customer Retention</li><li>Value Capture Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Value Price = Customer Perceived Value × Value Capture %</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Value-based Pricing Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم قیمت بر اساس ارزش درک‌شده در هر سگمنت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ارزش درک‌شده</li><li>سگمنت‌های مشتری</li><li>سطوح قیمت</li></ul></div>`
-},
-{
-  term: "قیمت‌گذاری پویا (Dynamic Pricing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی قیمت‌گذاری که در آن قیمت‌ها به صورت بلادرنگ بر اساس تقاضا، موجودی، رفتار مشتری و سایر عوامل تغییر می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Dynamic Pricing با استفاده از الگوریتم‌ها و داده‌های بلادرنگ، قیمت را بهینه می‌کند. این روش در صنایعی مانند هواپیمایی، هتل‌داری و e-commerce رایج است. می‌تواند سود را به شدت افزایش دهد اما ریسک نارضایتی مشتری را هم دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Real-time Data Collection 2. Demand Forecasting 3. Price Optimization Algorithm 4. Competitor Monitoring 5. Price Adjustment Execution</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"dynamic_price_id": "uuid", "product_id": "uuid", "current_price": "float", "demand_level": "low|medium|high", "competitor_avg_price": "float", "last_updated": "timestamp"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/dynamic-pricing/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Revenue Management & Algorithmic Pricing Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Uber surge pricing در زمان تقاضای بالا یا قیمت بلیط هواپیما که روزانه تغییر می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قیمت ثابت بدون توجه به شرایط بازار.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>بهینه‌سازی درآمد در هر لحظه و تطابق با شرایط بازار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Airlines & Hotels</li><li>Ride Sharing</li><li>E-commerce</li><li>Event Ticketing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Price Change Frequency</li><li>Algorithm Performance</li><li>Customer Perception</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>تقاضای بلادرنگ</li><li>قیمت رقبا</li><li>موجودی</li><li>رفتار مشتری</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Strategies
-├── Dynamic (Real-time)
-├── Static (Fixed)
-└── Time-Based (Scheduled)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>شفافیت و جلوگیری از perception of unfairness.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Revenue Uplift</li><li>Margin Improvement</li><li>Customer Satisfaction</li><li>Price Change Frequency</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Dynamic Price = f(Demand, Supply, Competition, Customer Behavior)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Dynamic Pricing Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم الگوریتم قیمت‌گذاری بر اساس اهداف کسب‌وکار.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>الگوریتم قیمت‌گذاری</li><li>محدوده قیمت</li><li>قوانین تغییر</li></ul></div>`
-},
-{
-  term: "قیمت‌گذاری روانی (Psychological Pricing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>تکنیک‌های قیمت‌گذاری که بر روانشناسی مشتری و نحوه ادراک قیمت تأثیر می‌گذارند، نه فقط بر ارزش واقعی محصول.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Psychological Pricing از سوگیری‌های شناختی مشتری استفاده می‌کند. مثال‌ها: قیمت‌گذاری ۹۹ تومانی (charm pricing)، قیمت‌های premium برای القای کیفیت، یا decoy pricing برای هدایت به گزینه مطلوب.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Customer Psychology Research 2. Price Point Testing 3. Anchoring Strategy 4. Decoy Design 5. A/B Testing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"psych_pricing_id": "uuid", "technique": "charm|anchor|decoy|premium", "price_point": "float", "conversion_lift": "float", "perceived_value": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/psychological-pricing/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Behavioral Economics & Pricing Psychology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>قیمت ۹.۹۹ دلار به جای ۱۰ دلار، یا گزینه "Premium" در کنار گزینه‌های استاندارد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قیمت‌گذاری بر اساس منطق خالص بدون توجه به روانشناسی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش conversion rate و perceived value بدون تغییر محصول.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Retail Pricing</li><li>SaaS Tier Design</li><li>Menu Engineering</li><li>Subscription Plans</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>A/B Testing</li><li>Conversion Rate Analysis</li><li>Customer Perception Studies</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>conversion rates</li><li>customer feedback</li><li>price sensitivity</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Pricing Techniques
-├── Charm Pricing (9.99)</li><li>├── Anchoring (High first)</li><li>├── Decoy Pricing</li><li>└── Premium Pricing</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تست مداوم و اجتناب از overuse که می‌تواند برند را تضعیف کند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Conversion Rate Lift</li><li>Average Order Value</li><li>Perceived Value</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Psych Price Impact = (Conversion Lift × AOV Increase) ÷ Brand Perception Risk</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Pricing Psychology Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب تکنیک روانی مناسب برای هر محصول و بازار.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>نوع تکنیک</li><li>price points</li><li>context of display</li></ul></div>`
 },
 {
   term: "MRR (Monthly Recurring Revenue)",
@@ -10982,66 +13818,15 @@ Boundary Intelligence Center
 ├── CAC (Acquisition Cost)</li><li>├── LTV (Lifetime Value)</li><li>└── Payback Period</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>شامل تمام هزینه‌های مرتبط (بازاریابی، فروش، پشتیبانی).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>CAC by Channel</li><li>CAC Payback Period</li><li>LTV:CAC Ratio</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">CAC = Total Acquisition Costs ÷ New Customers Acquired</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>CAC & Marketing Efficiency Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی کانال‌های جذب و بودجه بازاریابی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>تعریف هزینه‌ها</li><li>کانال‌های جذب</li></ul></div>`
 },
 {
-  term: "نسبت ارزش طول عمر مشتری به هزینه جذب مشتری (نسبت LTV:CAC)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نسبتی که ارزش طولانی‌مدت هر مشتری را با هزینه جذب او مقایسه می‌کند و نشان‌دهنده پایداری مدل کسب‌وکار است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>نسبت LTV:CAC مهم‌ترین معیار سلامت کسب‌وکارهای اشتراکی است. نسبت ۳:۱ ایده‌آل در نظر گرفته می‌شود. نسبت کمتر از ۱:۱ یعنی ضرر، و نسبت بالاتر از ۵:۱ یعنی under-investment در رشد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. LTV Calculation 2. CAC Calculation 3. Ratio Computation 4. Benchmarking 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ratio_id": "uuid", "ltv": "float", "cac": "float", "ratio": "float", "health_status": "unhealthy|healthy|over-investing", "benchmark": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/ltv-cac/ratio</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Unit Economics & Business Health Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با LTV ۳۰۰ دلار و CAC ۱۰۰ دلار، نسبت ۳:۱ است که سالم است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نسبت ۱:۱ که نشان‌دهنده عدم پایداری است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>معیار اصلی پایداری و مقیاس‌پذیری مدل کسب‌وکار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investor Evaluation</li><li>Business Health Check</li><li>Budget Allocation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>LTV and CAC Calculation</li><li>Industry Benchmarking</li><li>Trend Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>LTV</li><li>CAC</li><li>industry benchmarks</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Unit Economics
-├── LTV:CAC Ratio (Health)</li><li>├── Payback Period (Speed)</li><li>└── Magic Number (Efficiency)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>نسبت ایده‌آل ۳:۱ است. کمتر از ۱:۱ خطرناک، بیشتر از ۵:۱ یعنی under-investment.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>LTV:CAC Ratio</li><li>Ratio Trend</li><li>Industry Comparison</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">LTV:CAC = LTV ÷ CAC</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Unit Economics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم بودجه بازاریابی و استراتژی retention.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>segment definitions</li><li>benchmark targets</li></ul></div>`
-},
-{
-  term: "دوره بازگشت سرمایه (Payback Period)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدت زمانی که طول می‌کشد تا یک شرکت هزینه جذب یک مشتری را از طریق درآمد حاصل از او بازگرداند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Payback Period نشان می‌دهد چقدر طول می‌کشد تا CAC بازگردد. برای SaaS، payback period کمتر از ۱۲ ماه ایده‌آل است. این معیار برای مدیریت cash flow و رشد پایدار حیاتی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. CAC Calculation 2. Monthly Revenue per Customer 3. Payback Calculation 4. Cash Flow Impact 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"payback_id": "uuid", "cac": "float", "monthly_revenue": "float", "gross_margin": "float", "payback_months": "float", "cash_flow_impact": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/payback-period</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cash Flow Management & Unit Economics Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با CAC ۱۲۰۰ دلار و درآمد ماهانه ۱۰۰ دلار با حاشیه ۸۰٪، payback period برابر ۱۵ ماه است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Payback period بسیار طولانی که cash flow را تحت فشار قرار می‌دهد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مدیریت cash flow و پایداری رشد.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Cash Flow Planning</li><li>Growth Strategy</li><li>Investor Reporting</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>CAC Analysis</li><li>Revenue Tracking</li><li>Margin Calculation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>CAC</li><li>monthly revenue</li><li>gross margin</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Unit Economics
-├── Payback Period (Speed)</li><li>├── LTV:CAC (Health)</li><li>└── Burn Rate (Sustainability)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Payback کمتر از ۱۲ ماه برای SaaS ایده‌آل است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Payback Period (months)</li><li>Cash Flow Impact</li><li>Growth Sustainability</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Payback Period = CAC ÷ (Monthly Revenue × Gross Margin)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Payback Period & Cash Flow Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی CAC و افزایش monetization.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>gross margin assumptions</li><li>segment definitions</li></ul></div>`
-},
-{
   term: "نرخ ریزش (Churn Rate)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>درصد مشتریانی که در یک بازه زمانی مشخص اشتراک یا رابطه خود را با شرکت قطع می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Churn Rate معیار کلیدی سلامت کسب‌وکارهای اشتراکی است. Churn بالا یعنی سوراخ در سطل - هرچقدر هم بازاریابی کنید، مشتریان می‌روند. کاهش churn به اندازه جذب مشتری جدید مهم است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Customer Status Tracking 2. Churn Calculation 3. Cohort Analysis 4. Root Cause Analysis 5. Retention Strategy</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"churn_id": "uuid", "period": "monthly|quarterly|yearly", "churn_rate": "float", "customers_lost": "int", "revenue_churn": "float", "net_retention": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/churn/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Retention & Business Health Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با ۱۰,۰۰۰ مشتری و از دست دادن ۲۰۰ نفر در ماه، churn rate ماهانه ۲٪ است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Retention rate بالا که نشان‌دهنده رضایت مشتری است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأثیر مستقیم بر رشد، LTV و پایداری کسب‌وکار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Retention Strategy</li><li>Business Health Monitoring</li><li>Product Improvement</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cohort Analysis</li><li>Exit Surveys</li><li>Behavioral Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>customer status</li><li>cancellation reasons</li><li>usage patterns</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Retention Metrics
 ├── Churn Rate (Loss)</li><li>├── Retention Rate (Keep)</li><li>└── Net Revenue Retention (Growth)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تفکیک بین voluntary و involuntary churn.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Customer Churn Rate</li><li>Revenue Churn Rate</li><li>Gross vs Net Churn</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Churn Rate = (Customers Lost ÷ Customers at Start) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Churn & Retention Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی دلایل churn و طراحی استراتژی retention.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>definition of churn</li><li>segmentation</li></ul></div>`
 },
 {
-  term: "Net Revenue Retention (NRR)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>درصد درآمدی که از مشتریان موجود در یک بازه زمانی حفظ می‌شود، با احتساب upgradeها و منهای churn و downgradeها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>NRR مهم‌ترین معیار برای کسب‌وکارهای SaaS است. NRR بالای ۱۰۰٪ یعنی شرکت حتی بدون جذب مشتری جدید در حال رشد است (negative churn). شرکت‌های برتر SaaS مانند Snowflake NRR بالای ۱۵۰٪ دارند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Starting MRR 2. Expansion MRR Addition 3. Contraction MRR Subtraction 4. Churned MRR Subtraction 5. NRR Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"nrr_id": "uuid", "starting_mrr": "float", "expansion_mrr": "float", "contraction_mrr": "float", "churned_mrr": "float", "nrr_percentage": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/nrr/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>SaaS Metrics & Growth Efficiency Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با MRR شروع ۱۰۰,۰۰۰ دلار، expansion ۲۰,۰۰۰، churn ۵,۰۰۰، NRR برابر ۱۱۵٪ است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>NRR زیر ۱۰۰٪ که نشان‌دهنده از دست رفتن درآمد است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>نشان‌دهنده توانایی رشد بدون جذب مشتری جدید.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investor Evaluation</li><li>Business Health</li><li>Growth Strategy</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>MRR Movement Analysis</li><li>Cohort Tracking</li><li>Expansion vs Contraction</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>starting MRR</li><li>expansion</li><li>contraction</li><li>churn</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Retention
-├── NRR (Net - includes expansion)</li><li>├── GRR (Gross - excludes expansion)</li><li>└── Logo Retention (Customer count)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>NRR بالای ۱۰۰٪ نشانه land-and-expand موفق است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>NRR Percentage</li><li>Expansion Rate</li><li>Contraction Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">NRR = (Starting MRR + Expansion - Contraction - Churn) ÷ Starting MRR × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>NRR & Revenue Retention Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تمرکز بر expansion و کاهش contraction.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>segment definitions</li><li>expansion types</li></ul></div>`
-},
-{
-  term: "Gross Revenue Retention (GRR)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>درصد درآمدی که از مشتریان موجود حفظ می‌شود، بدون احتساب upgradeها یا expansionها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>GRR فقط churn و downgrade را اندازه می‌گیرد، نه expansion را. این معیار خالص‌ترین سنجش retention است. GRR هرگز نمی‌تواند بالای ۱۰۰٪ باشد. GRR بالای ۹۰٪ برای SaaS عالی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Starting MRR 2. Contraction MRR Subtraction 3. Churned MRR Subtraction 4. GRR Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"grr_id": "uuid", "starting_mrr": "float", "contraction_mrr": "float", "churned_mrr": "float", "grr_percentage": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/grr/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>SaaS Metrics & Retention Purity Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با MRR شروع ۱۰۰,۰۰۰ دلار، churn ۵,۰۰۰، GRR برابر ۹۵٪ است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>NRR که expansion را هم شامل می‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>سنجش خالص retention بدون اثر expansion.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Retention Analysis</li><li>Product Quality Assessment</li><li>Customer Success Evaluation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>MRR Movement Analysis</li><li>Cohort Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>starting MRR</li><li>contraction</li><li>churn</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Retention
-├── GRR (Gross - pure retention)</li><li>├── NRR (Net - includes expansion)</li><li>└── Logo Retention (Customer count)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>GRR بالای ۹۰٪ برای SaaS عالی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>GRR Percentage</li><li>Churn Rate</li><li>Contraction Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">GRR = (Starting MRR - Contraction - Churn) ÷ Starting MRR × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>GRR & Retention Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تمرکز بر کاهش churn و contraction.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>segment definitions</li><li>churn definition</li></ul></div>`
-},
-{
-  term: "قاعده ۴۰ (Rule of 40)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>قانونی در صنعت SaaS که می‌گوید مجموع نرخ رشد درآمد و حاشیه سود باید حداقل ۴۰٪ باشد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Rule of 40 توسط Brad Feld مطرح شد و معیار تعادل بین رشد و سودآوری است. شرکتی با رشد ۴۰٪ می‌تواند سود صفر داشته باشد، یا شرکتی با رشد ۲۰٪ باید حاشیه سود ۲۰٪ داشته باشد. این قانون برای ارزیابی سلامت SaaS استفاده می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Revenue Growth Rate 2. Profit Margin Calculation 3. Rule of 40 Score 4. Benchmarking 5. Strategy Adjustment</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"rule40_id": "uuid", "revenue_growth_rate": "float", "profit_margin": "float", "rule_of_40_score": "float", "status": "healthy|unhealthy"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/rule-of-40</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>SaaS Metrics & Business Health Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>شرکتی با رشد ۳۰٪ و حاشیه سود ۱۵٪، Rule of 40 برابر ۴۵ دارد که سالم است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Rule of 40 زیر ۴۰ که نشان‌دهنده عدم تعادل است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعادل بین رشد و سودآوری برای پایداری بلندمدت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investor Evaluation</li><li>Business Health Check</li><li>Strategic Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Growth Rate Calculation</li><li>Margin Analysis</li><li>Benchmarking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>revenue growth</li><li>profit margin</li><li>industry benchmarks</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">SaaS Health Metrics
-├── Rule of 40 (Growth + Profit)</li><li>├── LTV:CAC (Unit Economics)</li><li>└── Magic Number (Sales Efficiency)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Rule of 40 بالای ۴۰ عالی، بالای ۵۰ outstanding است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Rule of 40 Score</li><li>Growth Rate</li><li>Profit Margin</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Rule of 40 = Revenue Growth Rate + Profit Margin</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Rule of 40 Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین سرمایه‌گذاری در رشد و سودآوری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>بازه زمانی</li><li>margin definition</li><li>growth calculation</li></ul></div>`
-},
-{
-  term: "عدد جادویی (Magic Number)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>معیاری که کارایی فروش یک شرکت SaaS را با مقایسه رشد درآمد سه‌ماهه با هزینه فروش سه‌ماهه قبلی می‌سنجد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Magic Number نشان می‌دهد هر دلار هزینه فروش چقدر درآمد جدید ایجاد می‌کند. عدد بالای ۰.۷۵ خوب، بالای ۱ عالی است. عدد زیر ۰.۵ نشان‌دهنده ناکارآمدی فروش است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Quarterly ARR Growth 2. Previous Quarter Sales & Marketing Spend 3. Magic Number Calculation 4. Trend Analysis 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"magic_number_id": "uuid", "quarter": "string", "arr_growth": "float", "previous_sales_marketing": "float", "magic_number": "float", "efficiency_rating": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/magic-number</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sales Efficiency & SaaS Metrics Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با رشد ARR سه‌ماهه ۴ میلیون دلار و هزینه فروش سه‌ماهه قبلی ۳ میلیون دلار، Magic Number برابر ۱.۳۳ است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Magic Number زیر ۰.۵ که نشان‌دهنده ناکارآمدی است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>سنجش کارایی تیم فروش و بازاریابی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Sales Efficiency</li><li>Budget Allocation</li><li>Investor Evaluation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Quarterly Analysis</li><li>Sales Spend Tracking</li><li>Growth Correlation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>quarterly ARR growth</li><li>sales & marketing spend</li><li>historical trends</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">SaaS Efficiency Metrics
-├── Magic Number (Sales Efficiency)</li><li>├── Rule of 40 (Growth + Profit)</li><li>└── LTV:CAC (Unit Economics)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>بالای ۰.۷۵ خوب، بالای ۱ عالی، زیر ۰.۵ ناکارآمد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Magic Number</li><li>Sales Efficiency Trend</li><li>Budget ROI</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Magic Number = (Current Quarter ARR Growth × 4) ÷ Previous Quarter Sales & Marketing Spend</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Magic Number & Sales Efficiency Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی بودجه فروش و بازاریابی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>quarterly periods</li><li>spend definitions</li><li>growth calculation</li></ul></div>`
-},
-{
-  term: "نرخ سوخت سرمایه (Burn Rate)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نرخی که یک شرکت در حال ضرر، پول نقد خود را در هر ماه خرج می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Burn Rate برای استارتاپ‌ها و شرکت‌های در حال رشد حیاتی است. این معیار نشان می‌دهد شرکت چقدر سریع در حال مصرف سرمایه خود است. Burn Rate بالا بدون رشد متناسب، خطرناک است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Cash Balance Tracking 2. Monthly Expense Calculation 3. Burn Rate Calculation 4. Runway Projection 5. Funding Planning</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"burn_rate_id": "uuid", "monthly_burn": "float", "gross_burn": "float", "net_burn": "float", "cash_balance": "float", "runway_months": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/burn-rate/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Cash Flow Management & Startup Finance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استارتاپی با ۱ میلیون دلار نقدینگی و burn rate ماهانه ۱۰۰,۰۰۰ دلار، ۱۰ ماه runway دارد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>شرکت سودده که burn rate ندارد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مدیریت cash flow و برنامه‌ریزی برای fundraising.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Cash Flow Planning</li><li>Fundraising Strategy</li><li>Cost Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cash Flow Analysis</li><li>Expense Tracking</li><li>Runway Calculation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>cash balance</li><li>monthly expenses</li><li>revenue</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cash Management
-├── Burn Rate (Consumption)</li><li>├── Runway (Time left)</li><li>└── Fundraising (Replenishment)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمایز بین gross burn (کل هزینه) و net burn (هزینه منهای درآمد).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Monthly Burn Rate</li><li>Runway (months)</li><li>Burn Multiple</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Net Burn = Monthly Expenses - Monthly Revenue</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Burn Rate & Cash Flow Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مدیریت هزینه‌ها و زمان‌بندی fundraising.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>expense categories</li><li>revenue inclusion</li><li>time period</li></ul></div>`
-},
-{
-  term: "باند زمانی بقا (Runway)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدت زمانی که یک شرکت با نقدینگی فعلی خود می‌تواند به فعالیت ادامه دهد، قبل از اینکه پولش تمام شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Runway حیاتی‌ترین معیار برای استارتاپ‌هاست. این معیار نشان می‌دهد چقدر زمان برای رسیدن به سودآوری یا جذب سرمایه بعدی باقی مانده است. Runway کمتر از ۶ ماه خطرناک است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Cash Balance 2. Burn Rate Calculation 3. Runway Projection 4. Scenario Analysis 5. Fundraising Trigger</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"runway_id": "uuid", "cash_balance": "float", "monthly_burn": "float", "runway_months": "float", "risk_level": "low|medium|high|critical", "fundraising_trigger": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/runway/current</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Finance & Cash Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با ۱.۲ میلیون دلار نقدینگی و burn rate ماهانه ۱۰۰,۰۰۰ دلار، runway برابر ۱۲ ماه است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>شرکت سودده که runway بی‌نهایت دارد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مدیریت ریسک و برنامه‌ریزی برای fundraising.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Fundraising Planning</li><li>Risk Management</li><li>Operational Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cash Flow Analysis</li><li>Burn Rate Tracking</li><li>Scenario Modeling</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>cash balance</li><li>burn rate</li><li>projected revenue</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Cash Management
-├── Runway (Time left)</li><li>├── Burn Rate (Consumption)</li><li>└── Fundraising (Replenishment)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Runway بالای ۱۸ ماه ایده‌آل، زیر ۶ ماه بحرانی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Runway (months)</li><li>Risk Level</li><li>Fundraising Readiness</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Runway = Cash Balance ÷ Monthly Burn Rate</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Runway & Cash Position Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>زمان‌بندی fundraising و مدیریت هزینه‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>burn rate assumptions</li><li>scenario planning</li><li>risk thresholds</li></ul></div>`
-},
-{
-  term: "نقطه سربه‌سر (Break-even Point)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نقطه‌ای که در آن درآمد کل برابر با هزینه‌های کل می‌شود و شرکت نه سود می‌کند نه ضرر.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Break-even Point هدف مهم برای استارتاپ‌ها و کسب‌وکارهای جدید است. این نقطه نشان می‌دهد چقدر فروش لازم است تا شرکت خودکفا شود. رسیدن به break-even نشانه بلوغ کسب‌وکار است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Fixed Costs Identification 2. Variable Costs Analysis 3. Contribution Margin Calculation 4. Break-even Calculation 5. Sensitivity Analysis</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"breakeven_id": "uuid", "fixed_costs": "float", "variable_cost_per_unit": "float", "price_per_unit": "float", "breakeven_units": "int", "breakeven_revenue": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/breakeven/analysis</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Financial Analysis & Business Viability Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با هزینه ثابت ۱۰۰,۰۰۰ دلار، قیمت ۵۰ دلار و هزینه متغیر ۳۰ دلار، break-even برابر ۵,۰۰۰ واحد است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سودآوری یا ضرر خالص.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعیین حداقل فروش لازم برای پایداری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Business Planning</li><li>Pricing Strategy</li><li>Investment Evaluation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cost Structure Analysis</li><li>Revenue Projection</li><li>Sensitivity Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>fixed costs</li><li>variable costs</li><li>pricing</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Financial Analysis
-├── Break-even Point (Viability)</li><li>├── Profit Margin (Profitability)</li><li>└── ROI (Return)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تحلیل حساسیت برای درک تأثیر تغییرات.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Break-even Units</li><li>Break-even Revenue</li><li>Time to Break-even</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Break-even Units = Fixed Costs ÷ (Price - Variable Cost per Unit)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Break-even Analysis Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعیین اهداف فروش و استراتژی قیمت‌گذاری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>cost structure</li><li>pricing scenarios</li><li>time horizon</li></ul></div>`
-},
-{
   term: "کسب درآمد (Monetization)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند تبدیل فعالیت‌ها، دارایی‌ها یا کاربران به درآمد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Monetization استراتژی تبدیل value به revenue است. این شامل انتخاب مدل درآمدی (اشتراک، تبلیغات، تراکنش)، قیمت‌گذاری و بهینه‌سازی مستمر می‌شود. Monetization موفق تعادل بین درآمد و تجربه کاربر را حفظ می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Value Identification 2. Monetization Strategy Selection 3. Pricing Design 4. Implementation 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"monetization_id": "uuid", "strategy": "subscription|advertising|transaction|freemium", "revenue_streams": ["string"], "arpu": "float", "conversion_rate": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/monetization/strategy</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Revenue Strategy & Business Model Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>YouTube با monetization از طریق تبلیغات، YouTube Premium و super chats.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ارائه خدمات بدون هیچ مدل درآمدی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تبدیل value creation به value capture برای پایداری کسب‌وکار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Platform Revenue</li><li>Content Monetization</li><li>Data Monetization</li><li>Feature Monetization</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Revenue Model Analysis</li><li>User Willingness-to-Pay</li><li>Competitive Benchmarking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user behavior</li><li>revenue streams</li><li>conversion metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Revenue Strategies
 ├── Monetization (Conversion)</li><li>├── Pricing (Value Capture)</li><li>└── Business Model (Structure)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین monetization و user experience.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Revenue per User</li><li>Monetization Rate</li><li>Revenue Diversification</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Monetization Effectiveness = Revenue Generated ÷ Value Created</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Monetization Strategy Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب و بهینه‌سازی مدل‌های درآمدی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>monetization models</li><li>pricing tiers</li><li>user segments</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 8,
-        title: "فصل ۸: نوآوری، استارتاپ و سرمایه‌گذاری",
-        words: [
+},
 {
   term: "اقتصاد دیجیتال (Digital Economy)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>اقتصادی که بر پایه فناوری‌های دیجیتال، اینترنت و داده‌ها بنا شده است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اقتصاد دیجیتال شامل تمام فعالیت‌های اقتصادی است که بر پایه فناوری دیجیتال انجام می‌شوند. این شامل e-commerce، fintech، platform economy و تمام کسب‌وکارهای دیجیتال می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Digital Activity Measurement 2. GDP Contribution 3. Employment Analysis 4. Innovation Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"economy_id": "uuid", "gdp_contribution": "float", "employment": "int", "growth_rate": "float", "key_sectors": ["string"]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/digital-economy/metrics</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Macroeconomics & Digital Business Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اقتصاد دیجیتال که ۱۵٪ از GDP جهانی را تشکیل می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اقتصاد سنتی مبتنی بر تولید فیزیکی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>محرک اصلی رشد اقتصادی در قرن ۲۱.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Economic Policy</li><li>Investment Strategy</li><li>Business Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>GDP Analysis</li><li>Sector Growth Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>digital GDP</li><li>employment stats</li><li>investment flows</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Economic Models
@@ -11071,148 +13856,12 @@ Boundary Intelligence Center
 └── Efficiency (Cost-reducing)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۸۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تشخیص زودهنگام نوآوری‌های مخرب برای incumbents حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Market Share Capture</li><li>Performance Improvement Rate</li><li>Incumbent Response Time</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Disruption Potential = (Simplicity × Affordability × Accessibility) ÷ Incumbent Attention</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Disruptive Innovation Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی تهدیدهای disruptively و استراتژی پاسخ.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>market segments</li><li>performance thresholds</li><li>response strategies</li></ul></div>`
 },
 {
-  term: "نوآوری تدریجی (Incremental Innovation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>بهبودهای کوچک و مستمر در محصولات، خدمات یا فرآیندهای موجود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>نوآوری تدریجی در مقابل نوآوری رادیکال است. این نوع نوآوری ریسک کمتری دارد و توسط شرکت‌های جاافتاده برای حفظ مزیت رقابتی استفاده می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Current Product Analysis 2. Improvement Identification 3. Small-scale Testing 4. Iterative Release 5. Performance Measurement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"innovation_id": "uuid", "type": "product|process|service", "improvement_percentage": "float", "release_frequency": "string", "roi": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/incremental-innovation/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Innovation Management & Continuous Improvement Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>به‌روزرسانی‌های سالانه iPhone یا بهبودهای مستمر نرم‌افزار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نوآوری رادیکال که کاملاً جدید است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حفظ رقابت‌پذیری و بهبود مستمر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Improvement</li><li>Process Optimization</li><li>Customer Satisfaction</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Release Frequency</li><li>Improvement Metrics</li><li>Customer Feedback</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>product versions</li><li>improvement metrics</li><li>customer satisfaction</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Innovation Spectrum
-├── Incremental (Small improvements)
-├── Radical (Major breakthroughs)
-└── Disruptive (Market-changing)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین بهبود مستمر و نوآوری رادیکال.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Improvement Rate</li><li>Release Frequency</li><li>Customer Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Incremental Value = Σ(Small Improvements × Customer Impact) ÷ Development Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Continuous Improvement Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی بهبودها بر اساس تأثیر و هزینه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>improvement areas</li><li>release cadence</li><li>success metrics</li></ul></div>`
-},
-{
   term: "نوآوری باز (Open Innovation)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>رویکردی که در آن شرکت‌ها از ایده‌ها، فناوری‌ها و مسیرهای خارجی برای نوآوری استفاده می‌کنند و ایده‌های داخلی خود را نیز به بیرون ارائه می‌دهند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>نوآوری باز توسط Henry Chesbrough معرفی شد. این رویکرد مرزهای سازمان را باز می‌کند و با استارتاپ‌ها، دانشگاه‌ها و حتی رقبا همکاری می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. External Idea Sourcing 2. Partnership Formation 3. IP Licensing 4. Collaborative Development 5. Value Capture</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"open_innovation_id": "uuid", "partnerships": "int", "external_ideas_adopted": "int", "ip_licensed_out": "int", "innovation_roi": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/open-innovation/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Innovation Strategy & Collaboration Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>LEGO Ideas که ایده‌های کاربران را به محصولات تبدیل می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نوآوری بسته (Closed Innovation) که فقط از منابع داخلی استفاده می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شتاب نوآوری و کاهش هزینه‌های R&D.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Idea Generation</li><li>Technology Sourcing</li><li>Partnership Development</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Partnership Analysis</li><li>IP Flow Tracking</li><li>Innovation Speed</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>partnerships</li><li>IP licensing</li><li>collaborative projects</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Innovation Models
 ├── Open Innovation (External + Internal)
 ├── Closed Innovation (Internal only)
 └── Collaborative Innovation (Partnerships)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>مدیریت IP و حفظ مزیت رقابتی در عین همکاری.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>External Ideas Adopted</li><li>Partnership Success Rate</li><li>Innovation Speed</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Open Innovation Value = (External Ideas × Internal Capabilities) ÷ IP Protection Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Open Innovation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب شرکای نوآوری و مدل‌های همکاری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>partnership types</li><li>IP policies</li><li>collaboration platforms</li></ul></div>`
 },
-{
-  term: "اکوسیستم استارتاپی (Startup Ecosystem)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>شبکه‌ای از بازیگران، منابع و نهادها که از ایجاد و رشد استارتاپ‌ها حمایت می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اکوسیستم استارتاپی شامل کارآفرینان، سرمایه‌گذاران، دانشگاه‌ها، دولت، شتاب‌دهنده‌ها و خدمات پشتیبان است. اکوسیستم‌های قوی مانند Silicon Valley نوآوری و رشد اقتصادی ایجاد می‌کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Stakeholder Mapping 2. Resource Assessment 3. Connection Building 4. Policy Development 5. Ecosystem Growth</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ecosystem_id": "uuid", "region": "string", "startups": "int", "investors": "int", "funding_raised": "float", "exits": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/startup-ecosystem/{region}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Entrepreneurship & Economic Development Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Silicon Valley، Tel Aviv، یا Bangalore به عنوان اکوسیستم‌های برتر.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محیط‌های فاقد زیرساخت و حمایت برای استارتاپ‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد نوآوری، اشتغال و رشد اقتصادی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Policy Making</li><li>Investment Strategy</li><li>Startup Support</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Ecosystem Mapping</li><li>Startup Success Rate</li><li>Funding Availability</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>startup count</li><li>funding data</li><li>success stories</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Innovation Ecosystem
-├── Startup Ecosystem
-├── Corporate Innovation
-└── Academic Research</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>اکوسیستم قوی نیاز به همکاری همه بازیگران دارد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Startup Creation Rate</li><li>Funding Raised</li><li>Exit Success Rate</li><li>Job Creation</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Ecosystem Strength = (Capital × Talent × Culture × Policy) ÷ Barriers</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Startup Ecosystem Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی شکاف‌ها و فرصت‌های تقویت اکوسیستم.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>region focus</li><li>sector focus</li><li>stage focus</li></ul></div>`
-},
-{
-  term: "سرمایه‌گذاری خطرپذیر (Venture Capital)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سرمایه‌گذاری در استارتاپ‌ها و شرکت‌های با پتانسیل رشد بالا در ازای سهام، با ریسک بالا و بازده احتمالی بسیار بالا.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>VC موتور اصلی رشد استارتاپ‌هاست. VCها معمولاً در مراحل اولیه (Seed، Series A، B، C) سرمایه‌گذاری می‌کنند و در ازای آن سهام و اغلب صندلی هیئت مدیره می‌گیرند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Deal Sourcing 2. Due Diligence 3. Valuation 4. Term Sheet Negotiation 5. Investment 6. Portfolio Support 7. Exit</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"vc_fund_id": "uuid", "fund_size": "float", "stage_focus": "seed|series_a|series_b|growth", "portfolio_companies": "int", "target_irr": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/vc/fund/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Finance & Investment Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Sequoia Capital، Andreessen Horowitz، یا Accel.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سرمایه‌گذاری در شرکت‌های جاافتاده با ریسک کمتر (Private Equity).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأمین سرمایه برای رشد استارتاپ‌های نوآور.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Startup Funding</li><li>Growth Capital</li><li>Strategic Guidance</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Investment Thesis</li><li>Portfolio Performance</li><li>Exit Success Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>fund size</li><li>portfolio companies</li><li>exit history</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Investment Types
-├── Venture Capital (High risk/reward)
-├── Private Equity (Mature companies)
-└── Angel Investment (Individual investors)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۸۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>VCها معمولاً ۱۰ سال عمر دارند و به دنبال exit از طریق IPO یا M&A هستند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>IRR (Internal Rate of Return)</li><li>TVPI (Total Value to Paid-In)</li><li>DPI (Distributions to Paid-In)</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">VC Return = (Exit Value ÷ Investment) ^ (1 ÷ Years) - 1</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>VC Portfolio Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب استارتاپ‌ها برای سرمایه‌گذاری و زمان exit.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>investment stage</li><li>sector focus</li><li>check size</li></ul></div>`
-},
-{
-  term: "فرشته سرمایه‌گذار (Angel Investor)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرد ثروتمندی که سرمایه شخصی خود را در استارتاپ‌های اولیه در ازای سهام سرمایه‌گذاری می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>فرشته‌ها معمولاً در مراحل Seed و Pre-Seed سرمایه‌گذاری می‌کنند، زمانی که VCها هنوز وارد نمی‌شوند. آن‌ها اغلب mentorship و network خود را نیز ارائه می‌دهند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Deal Sourcing 2. Founder Meeting 3. Due Diligence 4. Valuation 5. Investment 6. Mentorship</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"angel_id": "uuid", "investments": "int", "total_invested": "float", "sectors": ["string"], "avg_check_size": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/angel-investor/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Early-stage Investment & Startup Finance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>فرشته‌هایی مانند Peter Thiel یا Ron Conway.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>VCها که سرمایه نهادی را مدیریت می‌کنند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأمین سرمایه اولیه و mentorship برای استارتاپ‌ها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Seed Funding</li><li>Founder Mentorship</li><li>Network Access</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Investment History</li><li>Sector Focus</li><li>Value-add Beyond Capital</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>investment portfolio</li><li>track record</li><li>expertise areas</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Investment Sources
-├── Angel Investors (Individuals)</li><li>├── Venture Capital (Institutional)</li><li>└── Crowdfunding (Community)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>فرشته‌ها معمولاً ۵۰-۵۰۰ هزار دلار سرمایه‌گذاری می‌کنند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Investment Count</li><li>Success Rate</li><li>Follow-on Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Angel Return = (Exit Value ÷ Investment) × Success Probability</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Angel Investment Portfolio</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب استارتاپ‌ها و میزان مشارکت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>check size range</li><li>sector preferences</li><li>involvement level</li></ul></div>`
-},
-{
-  term: "Crowdfunding (تأمین مالی جمعی)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>جمع‌آوری سرمایه از تعداد زیادی افراد، معمولاً از طریق پلتفرم‌های آنلاین، برای تأمین مالی یک پروژه یا کسب‌وکار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Crowdfunding جایگزینی برای سرمایه‌گذاری سنتی است. انواع مختلف دارد: reward-based (Kickstarter)، equity-based (AngelList)، debt-based (lending) و donation-based.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Campaign Creation 2. Marketing 3. Backer Acquisition 4. Fund Collection 5. Reward/Equity Delivery</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"campaign_id": "uuid", "type": "reward|equity|debt|donation", "target_amount": "float", "amount_raised": "float", "backers": "int", "success": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/crowdfunding/{campaign_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Alternative Finance & Community Funding Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Pebble Watch در Kickstarter که ۲۰ میلیون دلار جمع کرد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سرمایه‌گذاری سنتی از VCها یا بانک‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>دموکراتیزه کردن دسترسی به سرمایه و اعتبارسنجی بازار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Validation</li><li>Early-stage Funding</li><li>Community Building</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Campaign Success Rate</li><li>Backer Engagement</li><li>Fulfillment Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>campaign metrics</li><li>backer demographics</li><li>funding progress</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Funding Sources
-├── Crowdfunding (Community)</li><li>├── Venture Capital (Institutional)</li><li>└── Bootstrapping (Self-funded)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>بازاریابی قوی و ارتباط مستمر با backers حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Funding Success Rate</li><li>Backer Count</li><li>Average Pledge</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Crowdfunding Success = (Marketing × Product Appeal × Timing) ÷ Competition</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Crowdfunding Campaign Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب پلتفرم و استراتژی کمپین.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>funding type</li><li>platform choice</li><li>reward structure</li></ul></div>`
-},
-{
-  term: "IPO (Initial Public Offering)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند عرضه عمومی سهام یک شرکت خصوصی در بورس اوراق بهادار برای اولین بار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>IPO مهم‌ترین exit strategy برای VCها و بنیانگذاران است. این فرآیند شرکت را عمومی می‌کند، دسترسی به سرمایه را افزایش می‌دهد و liquidity ایجاد می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Investment Bank Selection 2. Due Diligence 3. S-1 Filing 4. Roadshow 5. Pricing 6. Listing 7. Lock-up Period</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ipo_id": "uuid", "company_name": "string", "ipo_price": "float", "shares_offered": "int", "market_cap": "float", "first_day_return": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/ipo/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Public Markets & Exit Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>IPOهای بزرگ مانند Facebook، Alibaba یا Snowflake.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خصوصی ماندن شرکت (Private Company).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد liquidity، افزایش اعتبار و دسترسی به سرمایه عمومی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Exit for Investors</li><li>Capital Raising</li><li>Company Valuation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>IPO Readiness Assessment</li><li>Market Conditions</li><li>Financial Metrics</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>financial statements</li><li>market conditions</li><li>comparable companies</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Exit Strategies
-├── IPO (Public markets)</li><li>├── M&A (Acquisition)</li><li>└── Secondary Sale</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>IPO پرهزینه و زمان‌بر است و نیاز به شفافیت کامل دارد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>IPO Proceeds</li><li>First Day Return</li><li>Post-IPO Performance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">IPO Valuation = Shares Offered × IPO Price</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>IPO Pipeline Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>زمان‌بندی IPO و انتخاب investment banks.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>exchange choice</li><li>offering size</li><li>pricing strategy</li></ul></div>`
-},
-{
-  term: "یونیکورن (Unicorn)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استارتاپ خصوصی با ارزش‌گذاری بیش از ۱ میلیارد دلار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اصطلاح Unicorn توسط Aileen Lee در ۲۰۱۳ ابداع شد. این استارتاپ‌ها نادر و ارزشمند هستند. مثال‌ها: SpaceX، Stripe، Databricks.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Valuation Tracking 2. Funding Rounds 3. Growth Metrics 4. Market Position 5. Exit Potential</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"unicorn_id": "uuid", "company_name": "string", "valuation": "float", "funding_stage": "string", "sector": "string", "founded_year": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/unicorns/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Valuation & Success Milestone Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Uber، Airbnb، SpaceX که به unicorn تبدیل شدند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>استارتاپ‌های با ارزش‌گذاری کمتر از ۱ میلیارد دلار.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>نشان‌دهنده موفقیت استارتاپ و جذابیت برای سرمایه‌گذاران.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investment Benchmarking</li><li>Market Analysis</li><li>Success Tracking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Valuation Analysis</li><li>Funding History</li><li>Growth Metrics</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>valuation data</li><li>funding rounds</li><li>growth metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Startup Milestones
-├── Unicorn (>1B valuation)
-├── Decacorn (>10B valuation)
-└── Hectocorn (>100B valuation)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعداد unicornها شاخصی از سلامت اکوسیستم استارتاپی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Number of Unicorns</li><li>Average Time to Unicorn</li><li>Sector Distribution</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Unicorn Status = Latest Valuation >= 1 Billion USD</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Unicorn Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی استارتاپ‌های با پتانسیل unicorn.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>valuation threshold</li><li>sector focus</li><li>geography</li></ul></div>`
-},
-{
-  term: "دکاکورن (Decacorn)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استارتاپ خصوصی با ارزش‌گذاری بیش از ۱۰ میلیارد دلار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Decacornها نادرتر از unicornها هستند و نشان‌دهنده موفقیت استثنایی هستند. مثال‌ها: SpaceX (۱۰۰B+)، Stripe (50B+)، Databricks.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Valuation Tracking 2. Funding Analysis 3. Market Dominance 4. Exit Strategy</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"decacorn_id": "uuid", "company_name": "string", "valuation": "float", "sector": "string", "founded_year": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/decacorns/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Valuation & Elite Success Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>SpaceX، Stripe، Canva که decacorn هستند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Unicornها با ارزش کمتر از ۱۰ میلیارد دلار.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>نشان‌دهنده رهبری بازار و موفقیت استثنایی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Market Analysis</li><li>Investment Benchmarking</li><li>Success Tracking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Valuation Analysis</li><li>Market Position</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>valuation data</li><li>market share</li><li>growth metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Startup Milestones
-├── Unicorn (>1B)</li><li>├── Decacorn (>10B)</li><li>└── Hectocorn (>100B)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعداد decacornها بسیار محدود است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Number of Decacorns</li><li>Average Valuation</li><li>Sector Distribution</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Decacorn Status = Latest Valuation >= 10 Billion USD</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Decacorn Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی الگوهای موفقیت decacornها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>valuation threshold</li><li>sector focus</li><li>geography</li></ul></div>`
-},
-{
-  term: "استراتژی خروج (Exit Strategy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>برنامه‌ای از پیش تعیین‌شده برای نقد کردن سرمایه‌گذاری و خروج از یک کسب‌وکار با حداکثر بازدهی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Exit Strategy برای سرمایه‌گذاران VC و فرشتگان حیاتی است، زیرا بازدهی آن‌ها فقط از طریق exit محقق می‌شود. مسیرهای اصلی: IPO، M&A، Secondary Sale و Buyback.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Exit Timing 2. Path Evaluation 3. Valuation 4. Negotiation 5. Transaction Execution</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"exit_id": "uuid", "company_id": "uuid", "exit_type": "ipo|ma|secondary|buyback", "exit_value": "float", "multiple": "float", "timeline": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/exit-strategy/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Investment Planning & Venture Capital Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Instagram که با ۱ میلیارد دلار به Facebook فروخته شد (M&A exit).</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>بدون برنامه exit و گیر افتادن در سرمایه‌گذاری.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تضمین بازدهی سرمایه‌گذار و ایجاد انگیزه برای بنیانگذاران.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investment Planning</li><li>Founder Incentives</li><li>Valuation Negotiation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Exit Readiness Assessment</li><li>Market Conditions</li><li>Comparable Transactions</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>company financials</li><li>market conditions</li><li>comparable exits</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Exit Strategies
-├── IPO (Public markets)
-├── M&A (Acquisition)
-├── Secondary Sale
-└── Buyback</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Exit strategy باید از روز اول سرمایه‌گذاری مشخص باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Exit Multiple</li><li>Time to Exit</li><li>Exit Success Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Exit Multiple = Exit Value ÷ Total Investment</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Exit Strategy Planner</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب بهترین زمان و مسیر exit.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>exit type preferences</li><li>target timeline</li><li>minimum return</li></ul></div>`
-},
-{
-  term: "M&A (Mergers & Acquisitions)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند خرید، فروش یا ادغام شرکت‌ها برای ایجاد ارزش استراتژیک یا مالی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>M&A یکی از مهم‌ترین exit strategies برای استارتاپ‌ها و VCهاست. ادغام‌ها می‌توانند برای دسترسی به فناوری جدید، بازار جدید، استعداد یا حذف رقیب انجام شوند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Target Identification 2. Due Diligence 3. Valuation 4. Negotiation 5. Integration 6. Value Realization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"ma_id": "uuid", "acquirer": "string", "target": "string", "deal_value": "float", "deal_type": "merger|acquisition|consolidation", "status": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/ma/{deal_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Corporate Finance & Strategic Transactions Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>خرید LinkedIn توسط Microsoft به قیمت ۲۶.۲ میلیارد دلار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>IPO که شرکت را عمومی می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد synergies، دسترسی به بازارهای جدید و رشد سریع.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Market Expansion</li><li>Technology Acquisition</li><li>Talent Acquisition</li><li>Competitive Consolidation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Deal Analysis</li><li>Synergy Assessment</li><li>Integration Success</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>deal terms</li><li>financial data</li><li>strategic rationale</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Corporate Transactions
-├── M&A (Mergers & Acquisitions)
-├── Joint Ventures
-└── Strategic Alliances</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>بیش از ۵۰٪ M&Aها در ایجاد ارزش مورد انتظار شکست می‌خورند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Deal Value</li><li>Integration Success</li><li>Synergy Realization</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">M&A Value = Standalone Value + Synergies - Integration Costs</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>M&A Deal Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>ارزیابی فرصت‌های M&A و قیمت منصفانه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>deal structure</li><li>integration plan</li><li>synergy targets</li></ul></div>`
-},
-{
-  term: "بررسی موشکافانه (Due Diligence)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند بررسی جامع و دقیق یک شرکت یا دارایی قبل از انجام یک معامله مالی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Due Diligence برای کاهش ریسک در M&A، سرمایه‌گذاری VC و معاملات بزرگ ضروری است. شامل بررسی مالی، حقوقی، فنی، عملیاتی و تجاری می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Financial Review 2. Legal Audit 3. Technical Assessment 4. Market Analysis 5. Risk Identification 6. Report Generation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"dd_id": "uuid", "target_company": "string", "dd_type": "financial|legal|technical|commercial", "findings": ["string"], "risk_level": "low|medium|high", "recommendation": "proceed|negotiate|walk_away"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/due-diligence/{target_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Transaction Risk Management & Investigation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بررسی کامل مالی و حقوقی یک استارتاپ قبل از سرمایه‌گذاری Series A.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سرمایه‌گذاری بدون بررسی کافی (blind investment).</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شناسایی ریسک‌های پنهان و اطمینان از ارزش واقعی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>M&A Transactions</li><li>VC Investments</li><li>IPO Preparation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Document Review</li><li>Management Interviews</li><li>Site Visits</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>financial statements</li><li>legal documents</li><li>technical architecture</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Transaction Process
-├── Due Diligence (Investigation)
-├── Valuation (Pricing)
-└── Negotiation (Terms)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Due Diligence کامل می‌تواند هفته‌ها یا ماه‌ها طول بکشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Issues Identified</li><li>Time to Complete</li><li>Risk Mitigation</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DD Value = (Risks Avoided + Value Confirmed) ÷ DD Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Due Diligence Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تصمیم ادامه یا توقف معامله بر اساس یافته‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>scope of review</li><li>depth of analysis</li><li>timeline</li></ul></div>`
-},
-{
-  term: "Valuation (ارزش‌گذاری)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند تعیین ارزش اقتصادی یک شرکت، دارایی یا سرمایه‌گذاری.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Valuation برای M&A، سرمایه‌گذاری VC، IPO و گزارش‌دهی مالی حیاتی است. روش‌های مختلف شامل DCF، Comparable Companies، Precedent Transactions و Venture Capital Method.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Method Selection 2. Data Collection 3. Assumption Setting 4. Calculation 5. Sensitivity Analysis 6. Valuation Range</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"valuation_id": "uuid", "company_id": "uuid", "method": "dcf|comps|precedent|vc_method", "valuation": "float", "valuation_range": {"low": "float", "high": "float"}, "confidence": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/valuation/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Corporate Finance & Investment Analysis Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>ارزش‌گذاری استارتاپ ۵۰ میلیون دلاری بر اساس روش VC Method.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قیمت‌گذاری بدون تحلیل و صرفاً بر اساس حدس.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعیین قیمت منصفانه در معاملات و جذب سرمایه.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>M&A Transactions</li><li>Fundraising</li><li>Financial Reporting</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Multiple Methods Comparison</li><li>Market Benchmarking</li><li>Sensitivity Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>financial projections</li><li>market data</li><li>comparable transactions</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Valuation Methods
-├── DCF (Discounted Cash Flow)
-├── Comparable Companies
-├── Precedent Transactions
-└── VC Method (for startups)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Valuation یک علم نیست، بلکه هنر است - همیشه یک range ارائه دهید.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Valuation Accuracy</li><li>Method Consensus</li><li>Market Acceptance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">DCF Value = Σ(Future Cash Flows ÷ (1 + Discount Rate)^t)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Valuation Analysis Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب روش مناسب و تعیین قیمت منصفانه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>valuation method</li><li>assumptions</li><li>discount rate</li></ul></div>`
-},
-{
-  term: "ارزش‌گذاری پیش از سرمایه (Pre-money Valuation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ارزش یک شرکت قبل از دریافت سرمایه جدید از سرمایه‌گذاران.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Pre-money valuation ارزش شرکت قبل از تزریق سرمایه است. این valuation پایه محاسبه سهام سرمایه‌گذار جدید است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Valuation Method Selection 2. Company Analysis 3. Market Comparison 4. Negotiation 5. Agreement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"valuation_id": "uuid", "company_id": "uuid", "pre_money_valuation": "float", "investment_amount": "float", "round": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/valuation/pre-money/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Finance & Investment Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>استارتاپی با pre-money valuation ۱۰ میلیون دلار و سرمایه‌گذاری ۲ میلیون دلار.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Post-money valuation که سرمایه جدید را شامل می‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعیین سهام سرمایه‌گذار جدید و dilution بنیانگذاران.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Fundraising Negotiation</li><li>Equity Allocation</li><li>Investor Returns</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Valuation Methods</li><li>Market Comparables</li><li>Negotiation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>company financials</li><li>market data</li><li>growth metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Valuation Types
-├── Pre-money (Before investment)
-└── Post-money (After investment)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۸۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Pre-money و Post-money را اشتباه نگیرید - تفاوت مهمی در محاسبه سهام دارد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Valuation Growth</li><li>Round-over-Round Increase</li><li>Market Comparison</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Pre-money = Post-money - Investment Amount</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Pre-money Valuation Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مذاکره بر سر valuation منصفانه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>valuation method</li><li>round type</li><li>market conditions</li></ul></div>`
-},
-{
-  term: "ارزش‌گذاری پس از سرمایه (Post-money Valuation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>ارزش یک شرکت پس از دریافت سرمایه جدید، شامل سرمایه تزریق‌شده.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Post-money valuation برابر است با pre-money valuation به علاوه مبلغ سرمایه‌گذاری جدید. این valuation برای محاسبه درصد سهام سرمایه‌گذار استفاده می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Pre-money Valuation 2. Investment Amount Addition 3. Equity Calculation 4. Dilution Analysis</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"valuation_id": "uuid", "pre_money_valuation": "float", "investment_amount": "float", "post_money_valuation": "float", "investor_equity_pct": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/valuation/post-money/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Startup Finance & Investment Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>با pre-money ۱۰ میلیون و سرمایه‌گذاری ۲ میلیون، post-money برابر ۱۲ میلیون و سهام سرمایه‌گذار ۱۶.۷٪ است.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Pre-money valuation که سرمایه جدید را شامل نمی‌شود.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>محاسبه دقیق سهام سرمایه‌گذار و dilution.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Equity Calculation</li><li>Investor Ownership</li><li>Cap Table Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Pre-money + Investment</li><li>Equity Allocation</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>pre-money valuation</li><li>investment amount</li><li>share structure</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Valuation Types
-├── Pre-money (Before investment)
-└── Post-money (After investment)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>همیشه مشخص کنید pre-money است یا post-money.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Post-money Growth</li><li>Investor Ownership</li><li>Round Progression</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Post-money = Pre-money + Investment Amount</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Post-money Valuation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>محاسبه سهام سرمایه‌گذار.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>pre-money base</li><li>investment amount</li><li>share class</li></ul></div>`
-},
-{
-  term: "Dilution (رقیق‌سازی)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>کاهش درصد مالکیت سهام‌داران موجود در اثر انتشار سهام جدید.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Dilution در هر دور سرمایه‌گذاری اتفاق می‌افتد. اگرچه درصد مالکیت کاهش می‌یابد، اما اگر valuation افزایش یابد، ارزش مطلق سهام می‌تواند افزایش یابد (pie gets bigger).</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Share Issuance 2. Ownership Recalculation 3. Dilution Impact Analysis 4. Anti-dilution Protection</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"dilution_id": "uuid", "shareholder_id": "uuid", "pre_round_ownership": "float", "post_round_ownership": "float", "dilution_pct": "float", "value_change": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/dilution/{shareholder_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Equity Management & Investment Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بنیان‌گذاری با ۱۰۰٪ مالکیت که پس از سه دور سرمایه‌گذاری به ۲۰٪ می‌رسد، اما ارزش سهامش از ۱۰۰ هزار به ۱۰ میلیون دلار می‌رسد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Anti-dilution protection که از dilution جلوگیری می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تأثیر مستقیم بر مالکیت و کنترل بنیانگذاران.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Fundraising Planning</li><li>Founder Equity</li><li>Employee Options</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cap Table Analysis</li><li>Ownership Tracking</li><li>Value Impact</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>share structure</li><li>new shares issued</li><li>ownership percentages</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Equity Management
-├── Dilution (Ownership reduction)
-├── Anti-dilution (Protection)
-└── Vesting (Earned ownership)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Dilution همیشه بد نیست - اگر valuation رشد کند، ارزش مطلق افزایش می‌یابد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Dilution Percentage</li><li>Value Change</li><li>Ownership Retention</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Dilution % = (New Shares ÷ Total Shares After) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Dilution & Cap Table Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین جذب سرمایه و حفظ مالکیت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>share classes</li><li>anti-dilution clauses</li><li>option pool</li></ul></div>`
-},
-{
-  term: "تفاهم‌نامه شرایط (Term Sheet)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سند غیرالزام‌آوری که شرایط اصلی یک معامله سرمایه‌گذاری را خلاصه می‌کند و پایه قرارداد نهایی است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Term Sheet مهم‌ترین سند در مذاکرات سرمایه‌گذاری است. شامل شرایط اقتصادی (valuation، amount) و شرایط کنترلی (board seats، voting rights) می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Economic Terms 2. Control Terms 3. Negotiation 4. Signing 5. Due Diligence 6. Final Documentation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"term_sheet_id": "uuid", "company_id": "uuid", "investor": "string", "valuation": "float", "investment_amount": "float", "key_terms": ["string"], "status": "draft|negotiating|signed"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/term-sheet/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Investment Documentation & Negotiation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Term Sheet یک دور Series A با valuation ۲۰ میلیون دلار و سرمایه‌گذاری ۵ میلیون.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>قرارداد نهایی و الزام‌آور.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تعیین چارچوب مذاکره و جلوگیری از سوءتفاهم.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>VC Investments</li><li>M&A Negotiations</li><li>Debt Financing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Term Analysis</li><li>Market Comparables</li><li>Legal Review</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>economic terms</li><li>control terms</li><li>legal provisions</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Investment Process
-├── Term Sheet (Preliminary)</li><li>├── Due Diligence (Verification)</li><li>└── Definitive Agreement (Final)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Term Sheet غیرالزام‌آور است اما نشان‌دهنده جدیت طرفین است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Time to Sign</li><li>Term Favorability</li><li>Deal Closure Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Term Sheet Value = Economic Terms + Control Terms + Protection Provisions</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Term Sheet Negotiation Tracker</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مذاکره بر سر شرایط کلیدی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>economic terms</li><li>governance terms</li><li>protective provisions</li></ul></div>`
-},
-{
-  term: "Cap Table (Capitalization Table)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>جدولی که مالکیت سهام یک شرکت را نشان می‌دهد، شامل تمام سهام‌داران، نوع سهام و درصد مالکیت هر یک.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Cap Table سند حیاتی برای هر استارتاپ است. این جدول نشان می‌دهد چه کسی چه مقدار از شرکت را مالک است و چگونه در هر دور سرمایه‌گذاری تغییر می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Shareholder Identification 2. Share Class Definition 3. Ownership Calculation 4. Dilution Modeling 5. Scenario Analysis</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cap_table_id": "uuid", "company_id": "uuid", "shareholders": [{"name": "string", "shares": "int", "ownership_pct": "float", "share_class": "string"}], "total_shares": "int", "fully_diluted_shares": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/cap-table/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Equity Management & Corporate Governance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Cap Table که نشان می‌دهد بنیانگذاران ۶۰٪، VCها ۳۰٪ و employee pool ۱۰٪ را دارند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>عدم شفافیت در مالکیت سهام.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شفافیت در مالکیت و پایه تصمیم‌گیری درباره سرمایه‌گذاری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Fundraising</li><li>Employee Equity</li><li>M&A Due Diligence</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Ownership Analysis</li><li>Dilution Modeling</li><li>Scenario Planning</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>shareholder list</li><li>share classes</li><li>vesting schedules</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Equity Management
-├── Cap Table (Ownership map)
-├── Dilution Analysis
-└── Vesting Schedules</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۱۰۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Cap Table باید همیشه به‌روز و دقیق باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Ownership Distribution</li><li>Founder Control</li><li>Option Pool Size</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Ownership % = (Individual Shares ÷ Total Shares) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Cap Table Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مدیریت equity و برنامه‌ریزی برای دورهای بعدی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>share classes</li><li>option pool</li><li>vesting terms</li></ul></div>`
-},
-{
-  term: "تخصیص تدریجی سهام (Vesting)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیندی که در آن سهام یا options به تدریج در طول زمان به فرد تعلق می‌گیرد، نه یک‌باره.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Vesting برای محافظت از شرکت و ایجاد انگیزه برای ماندن کارکنان و بنیانگذاران استفاده می‌شود. استاندارد صنعت ۴ سال vesting با ۱ سال cliff است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Vesting Schedule Definition 2. Cliff Period 3. Periodic Vesting 4. Acceleration Triggers 5. Forfeiture Handling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"vesting_id": "uuid", "holder_id": "uuid", "total_shares": "int", "vested_shares": "int", "unvested_shares": "int", "vesting_schedule": "string", "cliff_date": "timestamp"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/vesting/{holder_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Equity Compensation & Retention Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بنیان‌گذاری با ۱ میلیون سهم که طی ۴ سال vest می‌شود، با ۱ سال cliff.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>دریافت تمام سهام در روز اول بدون vesting.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد انگیزه برای ماندن و محافظت در برابر خروج زودهنگام.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Founder Equity</li><li>Employee Stock Options</li><li>Advisor Compensation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Vesting Schedule Review</li><li>Cliff Analysis</li><li>Acceleration Terms</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>vesting schedule</li><li>start date</li><li>cliff period</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Equity Compensation
-├── Vesting (Time-based earning)
-├── Stock Options (Right to buy)
-└── RSUs (Restricted Stock)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۱۰۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>استاندارد ۴ سال vesting با ۱ سال cliff است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Vested Percentage</li><li>Retention Rate</li><li>Cliff Achievement</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Vested Shares = Total Shares × (Months Elapsed ÷ Total Months)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Vesting Schedule Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی vesting schedule مناسب برای هر نقش.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>vesting period</li><li>cliff duration</li><li>acceleration triggers</li></ul></div>`
-},
-{
-  term: "اختیار خرید سهام (Stock Options)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>حق خرید سهام شرکت با قیمت از پیش تعیین‌شده (strike price) در آینده.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Stock Options ابزار اصلی جبران خدمات در استارتاپ‌ها هستند. آن‌ها به کارکنان اجازه می‌دهند در موفقیت شرکت سهیم شوند. انواع اصلی: ISO (Incentive) و NSO (Non-Qualified).</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Option Grant 2. Vesting Schedule 3. Exercise Decision 4. Tax Implications 5. Share Issuance</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"option_id": "uuid", "holder_id": "uuid", "options_granted": "int", "strike_price": "float", "vested_options": "int", "expiration_date": "timestamp", "option_type": "iso|nso"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/stock-options/{holder_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Equity Compensation & Employee Incentive Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>کارمندی با ۱۰,۰۰۰ option با strike price ۱ دلار که می‌تواند پس از vesting با قیمت ۱ دلار بخرد، حتی اگر ارزش بازار ۱۰ دلار باشد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>RSUs که سهام واقعی را اعطا می‌کنند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>جذب و حفظ استعدادها با پتانسیل بازدهی بالا.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Employee Compensation</li><li>Talent Attraction</li><li>Alignment with Shareholders</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Option Valuation (Black-Scholes)</li><li>Vesting Analysis</li><li>Tax Planning</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>strike price</li><li>vesting schedule</li><li>current valuation</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Equity Compensation
-├── Stock Options (Right to buy)
-├── RSUs (Actual shares)
-└── SARs (Stock Appreciation Rights)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Options فقط زمانی ارزش دارند که ارزش شرکت بالاتر از strike price باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Option Value</li><li>Exercise Rate</li><li>Employee Retention</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Option Value = (Current Price - Strike Price) × Number of Options</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Stock Options Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>زمان exercise و برنامه‌ریزی مالیاتی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>strike price</li><li>vesting schedule</li><li>option type</li></ul></div>`
-},
-{
-  term: "Equity (سهام)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مالکیت یک شرکت که از طریق سهام نشان داده می‌شود و به دارنده حق رأی و سهم در سود می‌دهد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Equity پایه سرمایه‌گذاری در استارتاپ‌ها و شرکت‌های عمومی است. انواع مختلف شامل Common Stock، Preferred Stock و Options. Equity می‌تواند به عنوان جبران خدمات، جذب سرمایه یا پاداش استفاده شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Share Class Definition 2. Issuance 3. Vesting 4. Transfer 5. Valuation 6. Exit</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"equity_id": "uuid", "holder_id": "uuid", "share_class": "common|preferred|options", "shares": "int", "ownership_pct": "float", "value": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/equity/{holder_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Corporate Finance & Ownership Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>بنیان‌گذاری که ۴۰٪ equity در استارتاپ خود دارد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Debt (بدهی) که مالکیت ایجاد نمی‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>نشان‌دهنده مالکیت و حق رأی در شرکت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Fundraising</li><li>Employee Compensation</li><li>Founder Ownership</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cap Table Analysis</li><li>Share Class Review</li><li>Ownership Tracking</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>share certificates</li><li>cap table</li><li>valuation data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Capital Structure
-├── Equity (Ownership)
-├── Debt (Loans)
-└── Convertible Instruments</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۹٪ تا ۱۰۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Equity انواع مختلف دارد - هر کدام حقوق متفاوتی می‌دهد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Equity Value</li><li>Ownership Percentage</li><li>Dilution Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Equity Value = Shares Owned × Price per Share</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Equity Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>مدیریت مالکیت و برنامه‌ریزی برای exit.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>share classes</li><li>vesting terms</li><li>transfer restrictions</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 9,
-        title: "فصل ۹: فناوری‌های نوظهور",
-        words: [
 {
   term: "اینترنت اشیا (IoT)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>شبکه‌ای از دستگاه‌های فیزیکی متصل به اینترنت که می‌توانند داده جمع‌آوری، تبادل و دریافت دستور کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>IoT دنیای فیزیکی را به دیجیتال متصل می‌کند. از خانه‌های هوشمند تا کارخانه‌های هوشمند، IoT داده‌های بلادرنگ از محیط فیزیکی فراهم می‌کند و امکان اتوماسیون و بهینه‌سازی را ایجاد می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Device Connectivity 2. Data Collection 3. Edge Processing 4. Cloud Integration 5. Analytics & Action</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"iot_device_id": "uuid", "device_type": "sensor|actuator|gateway", "data_points": ["object"], "connectivity": "wifi|cellular|lora", "status": "online|offline"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/iot/devices/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Connected Devices & Smart Systems Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>ترموستات هوشمند Nest که دما را بر اساس رفتار کاربر تنظیم می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>دستگاه‌های منفصل بدون قابلیت اتصال به اینترنت.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد داده‌های بلادرنگ از دنیای فیزیکی و اتوماسیون فرآیندها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Smart Homes</li><li>Industrial IoT</li><li>Healthcare Monitoring</li><li>Smart Cities</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Device Count</li><li>Data Volume</li><li>Connectivity Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sensor data</li><li>device telemetry</li><li>command logs</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">IoT Architecture
@@ -11227,11 +13876,6 @@ Boundary Intelligence Center
 ├── Cloud (Centralized)
 ├── Edge (Distributed)
 └── Fog (Between cloud and edge)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین edge processing و cloud analytics.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Latency Reduction</li><li>Bandwidth Savings</li><li>Local Processing Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Edge Value = (Latency Reduction × Bandwidth Savings) ÷ (Infrastructure Cost + Complexity)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Edge Computing Monitor</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعیین چه داده‌هایی در edge پردازش شوند.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>processing rules</li><li>sync policies</li><li>resource allocation</li></ul></div>`
-},
-{
-  term: "رایانش کوانتومی (Quantum Computing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>نوعی از محاسبات که از اصول مکانیک کوانتومی (superposition و entanglement) برای حل مسائل پیچیده استفاده می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>رایانش کوانتومی می‌تواند مسائل خاصی را که برای کامپیوترهای کلاسیک غیرممکن هستند، حل کند. مانند شبیه‌سازی مولکولی، بهینه‌سازی پیچیده و رمزگشایی. هنوز در مراحل اولیه است اما پتانسیل تحول‌آفرینی دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Qubit Initialization 2. Quantum Gate Operations 3. Superposition & Entanglement 4. Quantum Algorithm Execution 5. Measurement & Decoherence</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"quantum_job_id": "uuid", "qubits_used": "int", "algorithm": "string", "execution_time": "float", "success_probability": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/quantum/execute</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Advanced Computing & Quantum Mechanics Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Google Sycamore که "quantum supremacy" را نشان داد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>رایانش کلاسیک مبتنی بر بیت‌های ۰ و ۱.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حل مسائل غیرقابل حل برای کامپیوترهای کلاسیک.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Drug Discovery</li><li>Cryptography</li><li>Optimization Problems</li><li>Material Science</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Quantum Advantage Analysis</li><li>Algorithm Suitability</li><li>Error Rate Measurement</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>quantum circuits</li><li>qubit states</li><li>measurement results</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Computing Paradigms
-├── Classical Computing (Bits)</li><li>├── Quantum Computing (Qubits)</li><li>└── Neuromorphic Computing (Brain-inspired)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۶۰٪ تا ۸۰٪ (فناوری ناپایدار)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Quantum computing هنوز experimental است و error rates بالا دارد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Qubit Count</li><li>Error Rate</li><li>Quantum Advantage</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Quantum Speedup = Classical Time ÷ Quantum Time</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Quantum Computing Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی مسائل مناسب برای quantum computing.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>qubit count</li><li>error correction</li><li>algorithm selection</li></ul></div>`
 },
 {
   term: "واقعیت افزوده (AR)",
@@ -11256,139 +13900,23 @@ Boundary Intelligence Center
 └── Virtual Environment</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Spatial mapping و object persistence چالش‌برانگیز است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Spatial Accuracy</li><li>Interaction Success</li><li>User Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">MR Value = (Real-Digital Integration × Interaction Depth) ÷ Technical Complexity</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Mixed Reality Analytics</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی تعامل بین اشیاء دیجیتال و فیزیکی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>spatial mapping</li><li>interaction models</li><li>object persistence</li></ul></div>`
 },
 {
-  term: "چاپ سه‌بعدی (چاپ سه‌بعدی (3D Printing))",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند ساخت اشیاء فیزیکی لایه به لایه از مدل دیجیتال.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>چاپ سه‌بعدی یا Additive Manufacturing انقلابی در تولید ایجاد کرده است. امکان ساخت قطعات پیچیده، سفارشی‌سازی و تولید on-demand را فراهم می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. 3D Model Creation 2. Slicing 3. Material Selection 4. Layer-by-Layer Printing 5. Post-processing</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"print_job_id": "uuid", "model_file": "string", "material": "string", "print_time_hours": "float", "material_used_grams": "float", "success": "boolean"}</div><strong>🔌 API:</strong> <span class="api-endpoint">POST /api/3d-print/job</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Additive Manufacturing & Digital Fabrication Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>چاپ قطعات یدکی برای هواپیما یا پروتزهای پزشکی سفارشی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Manufacturing سنتی (کاهنده) که مواد را حذف می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>سفارشی‌سازی، کاهش waste و تولید on-demand.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Prototyping</li><li>Custom Manufacturing</li><li>Medical Implants</li><li>Aerospace Parts</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Print Quality</li><li>Material Efficiency</li><li>Production Speed</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>3D models</li><li>material properties</li><li>print parameters</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Manufacturing Methods
-├── Additive (3D Printing)</li><li>├── Subtractive (CNC)</li><li>└── Formative (Molding)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Design for Additive Manufacturing (DfAM) حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Print Success Rate</li><li>Material Efficiency</li><li>Production Time</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">3D Print Value = (Customization × Speed) ÷ (Material Cost + Post-processing)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>3D Printing Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی طراحی و پارامترهای چاپ.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>material type</li><li>layer height</li><li>infill density</li></ul></div>`
-},
-{
-  term: "رباتیک (Robotics)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>طراحی، ساخت و استفاده از ربات‌ها برای انجام وظایف به صورت خودکار یا نیمه‌خودکار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>رباتیک ترکیبی از مهندسی مکانیک، الکترونیک و هوش مصنوعی است. ربات‌ها می‌توانند وظایف خطرناک، تکراری یا دقیق را انجام دهند. از کارخانه‌ها تا جراحی، رباتیک در حال تحول صنایع است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Sensor Input 2. Decision Making 3. Actuator Control 4. Movement Execution 5. Feedback Loop</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"robot_id": "uuid", "type": "industrial|service|collaborative", "tasks_completed": "int", "efficiency": "float", "status": "operational|maintenance|error"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/robotics/{robot_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Automation & Intelligent Machines Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>ربات‌های صنعتی در خط تولید خودرو یا ربات‌های جراحی Da Vinci.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>کار دستی بدون اتوماسیون.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش بهره‌وری، دقت و ایمنی در صنایع مختلف.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Manufacturing</li><li>Healthcare Surgery</li><li>Logistics & Warehousing</li><li>Service Robots</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Task Completion Rate</li><li>Precision Measurement</li><li>Efficiency Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sensor data</li><li>movement logs</li><li>task execution</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Robot Types
-├── Industrial (Manufacturing)
-├── Service (Customer-facing)
-├── Collaborative (Human-robot)
-└── Autonomous (Self-driving)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Safety و human-robot interaction حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Task Success Rate</li><li>Efficiency Gain</li><li>Downtime</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Robot ROI = (Labor Savings + Quality Improvement) ÷ (Robot Cost + Maintenance)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Robot Fleet Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی عملکرد ربات و برنامه‌ریزی نگهداری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>task programming</li><li>safety zones</li><li>collaboration modes</li></ul></div>`
-},
-{
-  term: "خودروهای خودران (Autonomous Vehicles)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>خودروهایی که می‌توانند بدون دخالت انسان رانندگی کنند، با استفاده از حسگرها، AI و نقشه‌ها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>خودروهای خودران از سطح ۰ (بدون اتوماسیون) تا سطح ۵ (کاملاً خودران) طبقه‌بندی می‌شوند. این فناوری می‌تواند تصادفات را کاهش، ترافیک را بهینه و دسترسی حمل‌ونقل را افزایش دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Sensor Fusion (LiDAR, Camera, Radar) 2. Perception 3. Localization 4. Path Planning 5. Control Execution</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"vehicle_id": "uuid", "autonomy_level": "0-5", "sensors_active": "int", "distance_driven": "float", "disengagements": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/autonomous-vehicle/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Autonomous Systems & Transportation Technology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Waymo vehicles در سان‌فرانسیسکو یا Tesla Autopilot.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>خودروهای سنتی با راننده انسانی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایمنی، کارایی و دسترسی به حمل‌ونقل.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Ride-hailing Services</li><li>Trucking & Logistics</li><li>Public Transportation</li><li>Personal Vehicles</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Autonomy Level</li><li>Safety Metrics</li><li>Disengagement Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sensor data</li><li>mapping data</li><li>driving logs</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Autonomy Levels (SAE)
-├── Level 0-2 (Driver assistance)
-├── Level 3 (Conditional automation)
-├── Level 4 (High automation)
-└── Level 5 (Full automation)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪ (بسته به سطح)</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Safety و regulatory compliance اولویت اول است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Miles per Disengagement</li><li>Safety Record</li><li>User Acceptance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Autonomy Value = (Safety Improvement × Efficiency Gain) ÷ (Technology Cost + Regulatory Risk)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Autonomous Vehicle Fleet Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی مسیر و مدیریت ناوگان.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>autonomy level</li><li>safety parameters</li><li>operational design domain</li></ul></div>`
-},
-{
   term: "پهپاد (Drone)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>هواگرد بدون سرنشین که از راه دور کنترل می‌شود یا به صورت خودکار پرواز می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>پهپادها (UAVs) در صنایع مختلف از جمله کشاورزی، فیلم‌برداری، بازرسی و تحویل استفاده می‌شوند. آن‌ها دسترسی به مناطق دشوار را فراهم و هزینه‌ها را کاهش می‌دهند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Flight Planning 2. Autonomous Navigation 3. Sensor Data Collection 4. Real-time Transmission 5. Landing & Recovery</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"drone_id": "uuid", "flight_time_minutes": "float", "distance_covered": "float", "data_collected": "object", "battery_remaining": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/drone/{id}/status</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Unmanned Aerial Systems & Remote Sensing Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>پهپادهای DJI برای فیلم‌برداری یا پهپادهای کشاورزی برای سم‌پاشی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>هواپیماهای سرنشین‌دار سنتی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>دسترسی به مناطق دشوار، کاهش هزینه و افزایش ایمنی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Aerial Photography</li><li>Agriculture</li><li>Inspection & Monitoring</li><li>Delivery Services</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Flight Performance</li><li>Data Quality</li><li>Safety Compliance</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>flight logs</li><li>sensor data</li><li>maintenance records</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Drone Types
 ├── Consumer (Photography)
 ├── Commercial (Inspection)
 ├── Industrial (Heavy-lift)
 └── Military (Surveillance)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Regulatory compliance و safety حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Flight Success Rate</li><li>Data Collection Quality</li><li>Cost per Mission</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Drone Value = (Mission Efficiency × Data Value) ÷ (Operational Cost + Regulatory Risk)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Drone Fleet Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی مسیر و برنامه‌ریزی مأموریت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>flight parameters</li><li>payload configuration</li><li>safety protocols</li></ul></div>`
-},
-{
-  term: "بیوتکنولوژی (Biotechnology)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استفاده از سیستم‌های بیولوژیکی، موجودات زنده یا فرآیندهای بیولوژیکی برای توسعه محصولات و فناوری‌ها.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>بیوتکنولوژی در حوزه‌های مختلفی از جمله پزشکی (داروسازی، ژن‌درمانی)، کشاورزی (محصولات اصلاح‌شده)، صنعتی (آنزیم‌ها) و محیط‌زیست (bioremediation) کاربرد دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Biological Research 2. Genetic Engineering 3. Cell Culture 4. Product Development 5. Clinical Trials</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"biotech_project_id": "uuid", "field": "medical|agricultural|industrial|environmental", "stage": "research|development|clinical|market", "investment": "float", "timeline_years": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/biotech/{project_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Life Sciences & Biological Innovation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>واکسن‌های mRNA یا محصولات کشاورزی GMO.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>روش‌های سنتی بدون استفاده از بیوتکنولوژی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حل چالش‌های بهداشتی، غذایی و محیط‌زیستی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Pharmaceuticals</li><li>Agriculture</li><li>Industrial Enzymes</li><li>Environmental Cleanup</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Innovation Assessment</li><li>Clinical Success</li><li>Market Adoption</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>research data</li><li>clinical trials</li><li>regulatory approvals</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Biotech Applications
-├── Red (Medical)
-├── Green (Agricultural)
-├── White (Industrial)
-└── Blue (Marine)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۰٪ تا ۸۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Regulatory approval و ethical considerations حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Patents Filed</li><li>Clinical Success Rate</li><li>Time to Market</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Biotech Value = (Health Impact × Market Size) ÷ (R&D Cost + Regulatory Risk)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Biotech Pipeline Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی پروژه‌ها و تخصیص منابع R&D.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>research focus</li><li>regulatory strategy</li><li>partnership models</li></ul></div>`
-},
-{
-  term: "نانوتکنولوژی (Nanotechnology)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>دستکاری مواد در مقیاس اتمی و مولکولی (۱ تا ۱۰۰ نانومتر) برای ایجاد مواد و دستگاه‌های جدید.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>نانوتکنولوژی در حوزه‌های مختلفی از جمله پزشکی (drug delivery)، الکترونیک (نانوچیپ‌ها)، انرژی (سلول‌های خورشیدی) و مواد (مواد قوی‌تر و سبک‌تر) کاربرد دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Nanomaterial Synthesis 2. Characterization 3. Property Testing 4. Application Development 5. Scale-up</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"nano_project_id": "uuid", "material_type": "string", "size_nm": "float", "application": "string", "properties": ["string"]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/nanotech/{project_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Materials Science & Atomic-scale Engineering Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>نانوذرات برای drug delivery یا nanocoatings ضد خش.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>مواد و فرآیندهای مقیاس ماکرو.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد مواد با خواص منحصربه‌فرد و کاربردهای نوآورانه.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Medicine (Drug delivery)</li><li>Electronics (Smaller chips)</li><li>Energy (Better solar cells)</li><li>Materials (Stronger, lighter)</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Material Characterization</li><li>Performance Testing</li><li>Safety Assessment</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>material properties</li><li>synthesis parameters</li><li>application data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Nano Applications
-├── Medicine (Nanomedicine)
-├── Electronics (Nano-electronics)
-├── Energy (Nano-energy)
-└── Materials (Nanomaterials)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Safety و environmental impact حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Material Performance</li><li>Production Scalability</li><li>Cost Effectiveness</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Nano Value = (Property Enhancement × Application Impact) ÷ (Production Cost + Safety Risk)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Nanotechnology Research Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب مواد و کاربردهای مناسب.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>material synthesis</li><li>characterization methods</li><li>safety protocols</li></ul></div>`
-}
-        ]
-      },
-      {
-        id: 10,
-        title: "فصل ۱۰: پایداری و مسئولیت اجتماعی",
-        words: [
-{
-  term: "فناوری‌های پاک (Clean Tech)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فناوری‌ها و خدماتی که اثرات زیست‌محیطی منفی را کاهش و استفاده از منابع طبیعی را بهینه می‌کنند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Clean Tech شامل انرژی تجدیدپذیر، حمل‌ونقل پاک، مدیریت آب، بازیافت و کشاورزی پایدار می‌شود. این فناوری‌ها برای مقابله با تغییرات اقلیمی و ایجاد اقتصاد پایدار حیاتی هستند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Environmental Impact Assessment 2. Technology Selection 3. Implementation 4. Performance Monitoring 5. Carbon Reduction Measurement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cleantech_id": "uuid", "technology_type": "renewable_energy|clean_transport|water_management|waste", "co2_reduced_tons": "float", "energy_saved_mwh": "float", "roi": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/cleantech/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Technology & Environmental Innovation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>پنل‌های خورشیدی، خودروهای الکتریکی یا سیستم‌های بازیافت پیشرفته.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فناوری‌های مبتنی بر سوخت‌های فسیلی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مقابله با تغییرات اقلیمی و ایجاد اقتصاد پایدار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Renewable Energy</li><li>Electric Vehicles</li><li>Water Purification</li><li>Waste Recycling</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Environmental Impact</li><li>Carbon Reduction</li><li>Resource Efficiency</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>emissions data</li><li>energy consumption</li><li>resource usage</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Clean Tech Sectors
-├── Renewable Energy
-├── Clean Transportation
-├── Water & Wastewater
-└── Waste & Recycling</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Economic viability و scalability حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>CO2 Reduction</li><li>Energy Efficiency</li><li>Cost per Ton Reduced</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Clean Tech Value = (Environmental Impact × Economic Return) ÷ Implementation Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Clean Tech Impact Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب فناوری‌های پاک با بهترین ROI زیست‌محیطی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>technology type</li><li>scale of implementation</li><li>environmental targets</li></ul></div>`
-},
-{
-  term: "انرژی تجدیدپذیر (Renewable Energy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>انرژی از منابعی که به طور طبیعی تجدید می‌شوند، مانند خورشید، باد، آب و زمین‌گرمایی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>انرژی تجدیدپذیر جایگزین سوخت‌های فسیلی است و برای مقابله با تغییرات اقلیمی حیاتی است. هزینه‌ها به شدت کاهش یافته و در بسیاری از مناطق ارزان‌ترین منبع انرژی جدید است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Resource Assessment 2. Technology Selection 3. Installation 4. Grid Integration 5. Performance Monitoring</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"renewable_project_id": "uuid", "energy_type": "solar|wind|hydro|geothermal", "capacity_mw": "float", "annual_generation_mwh": "float", "co2_avoided_tons": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/renewable-energy/{project_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Energy & Clean Technology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>مزارع خورشیدی یا توربین‌های بادی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نیروگاه‌های زغال‌سنگ یا گاز طبیعی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش انتشار کربن و ایجاد انرژی پایدار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Utility-scale Power</li><li>Commercial Buildings</li><li>Residential Solar</li><li>Off-grid Solutions</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Energy Output</li><li>Capacity Factor</li><li>Levelized Cost</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>resource data</li><li>generation data</li><li>weather data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Renewable Sources
-├── Solar (Photovoltaic)</li><li>├── Wind (Onshore/Offshore)</li><li>├── Hydro (Large/Small)</li><li>└── Geothermal</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Grid integration و energy storage چالش‌برانگیز است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Capacity Factor</li><li>LCOE (Levelized Cost)</li><li>Carbon Avoidance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">LCOE = (Total Cost ÷ Lifetime Generation)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Renewable Energy Portfolio Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب منبع انرژی و بهینه‌سازی عملکرد.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>energy source</li><li>system size</li><li>storage capacity</li></ul></div>`
-},
-{
-  term: "اقتصاد چرخشی (Circular Economy)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مدل اقتصادی که بر استفاده مجدد، بازیافت و بازیابی مواد تمرکز دارد تا ضایعات را به حداقل برساند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>اقتصاد چرخشی در مقابل اقتصاد خطی (تولید-مصرف-دورریز) است. هدف ایجاد حلقه‌های بسته است که در آن مواد به طور مداوم استفاده مجدد می‌شوند. این مدل پایداری و کارایی منابع را افزایش می‌دهد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Material Flow Analysis 2. Waste Identification 3. Recycling/Reuse Strategy 4. Implementation 5. Impact Measurement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"circular_economy_id": "uuid", "material_type": "string", "recycling_rate": "float", "waste_reduced": "float", "value_recovered": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/circular-economy/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Economics & Resource Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>برنامه‌های take-back برای الکترونیک یا بسته‌بندی‌های قابل استفاده مجدد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اقتصاد خطی که مواد را یک‌بار مصرف و دور می‌ریزد.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش ضایعات، حفظ منابع و ایجاد ارزش اقتصادی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Design</li><li>Waste Management</li><li>Supply Chain Optimization</li><li>Business Model Innovation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Material Flow Analysis</li><li>Recycling Rate</li><li>Waste Reduction</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>material flows</li><li>waste data</li><li>recycling rates</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Economic Models
-├── Linear (Take-Make-Waste)</li><li>├── Circular (Closed-loop)</li><li>└── Regenerative (Nature-positive)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Design for circularity از ابتدا حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Recycling Rate</li><li>Waste Reduction</li><li>Material Recovery</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Circularity = (Materials Reused + Recycled) ÷ Total Materials Used</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Circular Economy Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی فرصت‌های بازیابی ارزش از ضایعات.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>material types</li><li>recovery methods</li><li>business models</li></ul></div>`
-},
-{
-  term: "پایداری (Sustainability)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>توانایی برآوردن نیازهای حاضر بدون به خطر انداختن توانایی نسل‌های آینده برای برآوردن نیازهایشان.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>پایداری سه بُعد دارد: زیست‌محیطی، اجتماعی و اقتصادی. کسب‌وکارهای پایدار تعادل بین این سه بُعد را حفظ می‌کنند و اثرات منفی را به حداقل می‌رسانند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Impact Assessment 2. Goal Setting 3. Strategy Development 4. Implementation 5. Monitoring & Reporting</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"sustainability_id": "uuid", "dimensions": {"environmental": "float", "social": "float", "economic": "float"}, "sdgs_aligned": ["string"], "carbon_footprint": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/sustainability/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Development & Corporate Responsibility Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>شرکتی که carbon neutral است و از مواد بازیافتی استفاده می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>کسب‌وکارهایی که فقط بر سود کوتاه‌مدت تمرکز دارند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>بقای بلندمدت کسب‌وکار و مسئولیت در برابر جامعه و محیط‌زیست.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Corporate Strategy</li><li>Supply Chain Management</li><li>Product Design</li><li>Investment Decisions</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>ESG Scoring</li><li>Impact Assessment</li><li>SDG Alignment</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>environmental data</li><li>social impact</li><li>economic performance</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Sustainability Pillars
-├── Environmental (Planet)</li><li>├── Social (People)</li><li>└── Economic (Profit)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Integration در تمام عملیات کسب‌وکار حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Carbon Footprint</li><li>ESG Score</li><li>SDG Alignment</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Sustainability = (Environmental + Social + Economic Performance) ÷ Resource Consumption</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Sustainability Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین ابعاد مختلف پایداری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>sustainability goals</li><li>measurement frameworks</li><li>reporting standards</li></ul></div>`
-},
-{
-  term: "ESG (Environmental, Social, Governance)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>معیارهایی برای ارزیابی عملکرد یک شرکت در سه حوزه محیط‌زیست، اجتماعی و حاکمیت شرکتی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>ESG چارچوبی برای سرمایه‌گذاری مسئولانه است. سرمایه‌گذاران از ESG برای ارزیابی ریسک‌ها و فرصت‌های غیرمالی استفاده می‌کنند. شرکت‌های با ESG قوی معمولاً عملکرد بلندمدت بهتری دارند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Data Collection 2. Metric Calculation 3. Benchmarking 4. Rating 5. Reporting</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"esg_id": "uuid", "company_id": "uuid", "environmental_score": "float", "social_score": "float", "governance_score": "float", "overall_esg": "float", "rating": "AAA|AA|A|BBB|BB|B|CCC"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/esg/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Investing & Corporate Performance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>رتبه‌بندی ESG توسط MSCI یا S&P برای شرکت‌های عمومی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ارزیابی فقط بر اساس معیارهای مالی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>جذب سرمایه، مدیریت ریسک و ایجاد ارزش بلندمدت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Investment Decisions</li><li>Risk Management</li><li>Corporate Strategy</li><li>Stakeholder Communication</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>ESG Rating Agencies</li><li>Self-assessment</li><li>Third-party Audits</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>environmental metrics</li><li>social impact data</li><li>governance practices</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">ESG Components
-├── Environmental (Climate, Resources)</li><li>├── Social (Employees, Communities)</li><li>└── Governance (Ethics, Board)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Standardization و comparability چالش‌برانگیز است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>ESG Score</li><li>Rating Improvement</li><li>Investor Interest</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">ESG Score = (E Score + S Score + G Score) ÷ 3</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>ESG Performance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهبود عملکرد در حوزه‌های ضعیف ESG.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>ESG frameworks</li><li>reporting standards</li><li>materiality assessment</li></ul></div>`
-},
-{
-  term: "مسئولیت اجتماعی شرکتی (CSR)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>تعهد یک شرکت به رفتار اخلاقی و مشارکت در بهبود کیفیت زندگی کارکنان، خانواده‌هایشان، جامعه محلی و جامعه بزرگتر.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>CSR فراتر از رعایت قانون است. شرکت‌ها داوطلبانه مسئولیت اجتماعی و زیست‌محیطی خود را می‌پذیرند. این شامل خیریه، داوطلبگری، پایداری زیست‌محیطی و اخلاق کسب‌وکار می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Stakeholder Identification 2. Impact Assessment 3. Strategy Development 4. Implementation 5. Reporting & Communication</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"csr_id": "uuid", "company_id": "uuid", "initiatives": ["string"], "social_investment": "float", "environmental_impact": "float", "stakeholder_satisfaction": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/csr/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Corporate Citizenship & Ethical Business Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>برنامه‌های خیریه شرکتی، کاهش ردپای کربن، یا حمایت از آموزش محلی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>تمرکز صرف بر سود سهامداران بدون توجه به جامعه.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد شهرت مثبت، جذب استعدادها و ایجاد ارزش بلندمدت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Brand Reputation</li><li>Employee Engagement</li><li>Community Relations</li><li>Risk Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Impact Measurement</li><li>Stakeholder Feedback</li><li>Third-party Audits</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>social initiatives</li><li>environmental metrics</li><li>community feedback</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Corporate Responsibility
-├── CSR (Voluntary)</li><li>├── ESG (Investment-focused)</li><li>└── Sustainability (Long-term)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Authenticity و alignment با core business حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Social Impact Score</li><li>Employee Engagement</li><li>Community Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">CSR Value = (Social Impact + Environmental Benefit) ÷ Investment Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>CSR Impact Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب ابتکارات CSR با بیشترین تأثیر.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>focus areas</li><li>investment level</li><li>measurement frameworks</li></ul></div>`
-},
-{
-  term: "تأثیر اجتماعی (Social Impact)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>اثر مثبت یا منفی قابل اندازه‌گیری یک فعالیت، سازمان یا سرمایه‌گذاری بر جامعه و محیط‌زیست.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>تأثیر اجتماعی فراتر از CSR است. این مفهوم به اندازه‌گیری دقیق اثرات واقعی بر زندگی مردم و محیط‌زیست تمرکز دارد. Impact measurement برای جذب سرمایه‌گذاری تأثیرگذار حیاتی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Theory of Change 2. Impact Metrics Definition 3. Data Collection 4. Impact Measurement 5. SROI Calculation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"impact_id": "uuid", "initiative": "string", "beneficiaries": "int", "social_return": "float", "environmental_benefit": "float", "measurement_period": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/social-impact/{initiative_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Impact Measurement & Social Value Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اندازه‌گیری تعداد افرادی که از برنامه آموزشی بهره‌مند شده‌اند و بهبود درآمدشان.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فعالیت‌های خیریه بدون اندازه‌گیری اثر واقعی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>اثبات ارزش اجتماعی و جذب سرمایه‌گذاری تأثیرگذار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Impact Investing</li><li>Social Enterprises</li><li>CSR Programs</li><li>Policy Making</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Impact Assessment</li><li>SROI Analysis</li><li>Beneficiary Surveys</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>beneficiary data</li><li>outcome metrics</li><li>baseline comparisons</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Social Value
-├── Social Impact (Measured outcomes)</li><li>├── CSR (Activities)</li><li>└── Social Enterprise (Business model)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Theory of Change و measurement framework حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Beneficiaries Reached</li><li>SROI (Social Return on Investment)</li><li>Outcome Achievement</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">SROI = (Social Value Created ÷ Investment) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Social Impact Measurement Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی برنامه‌ها برای حداکثر تأثیر اجتماعی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>impact metrics</li><li>measurement methodology</li><li>reporting standards</li></ul></div>`
-},
-{
-  term: "کارآفرینی اجتماعی (Social Entrepreneurship)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استفاده از اصول کسب‌وکار برای حل مسائل اجتماعی و زیست‌محیطی، با هدف ایجاد تأثیر مثبت به جای حداکثرسازی سود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>کارآفرینان اجتماعی نوآورانی هستند که مسائل اجتماعی را با رویکرد کسب‌وکار حل می‌کنند. آن‌ها پایداری مالی را با تأثیر اجتماعی ترکیب می‌کنند. مثال: Grameen Bank، TOMS Shoes.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Social Problem Identification 2. Business Model Design 3. Impact Measurement 4. Scaling Strategy 5. Sustainability Planning</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"social_enterprise_id": "uuid", "mission": "string", "business_model": "string", "social_impact": "float", "financial_sustainability": "float", "beneficiaries": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/social-enterprise/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Social Innovation & Impact Business Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Grameen Bank که microcredit به فقرا می‌دهد یا Warby Parker که عینک می‌فروشد و یکی اهدا می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سازمان‌های خیریه سنتی که فقط بر کمک تمرکز دارند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>حل مسائل اجتماعی با رویکرد پایدار و مقیاس‌پذیر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Poverty Alleviation</li><li>Education Access</li><li>Healthcare Delivery</li><li>Environmental Solutions</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Dual Bottom Line</li><li>Impact Measurement</li><li>Business Viability</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>social metrics</li><li>financial performance</li><li>beneficiary data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Social Innovation
-├── Social Entrepreneurship (Business approach)</li><li>├── Traditional Charity (Donation-based)</li><li>└── Impact Investing (Capital allocation)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین mission و margin حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Social Impact Score</li><li>Financial Sustainability</li><li>Beneficiaries Served</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Social Enterprise Value = (Social Impact × Financial Sustainability) ÷ Resource Constraints</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Social Enterprise Performance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین رشد تأثیر اجتماعی و پایداری مالی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>mission focus</li><li>business model</li><li>impact measurement</li></ul></div>`
-},
-{
-  term: "شرکت بی‌کورپ (B-Corp)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>گواهینامه‌ای که به شرکت‌هایی اعطا می‌شود که استانداردهای بالای عملکرد اجتماعی و زیست‌محیطی، شفافیت و مسئولیت‌پذیری را دارند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>B-Corp توسط B Lab اعطا می‌شود و نشان‌دهنده تعهد شرکت به استفاده کسب‌وکار به عنوان نیروی خوب است. شرکت‌های B-Corp باید هر سه سال مجدداً ارزیابی شوند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. BIA Assessment 2. Score Calculation 3. Legal Requirement 4. Certification 5. Recertification (Every 3 years)</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"bcorp_id": "uuid", "company_id": "uuid", "bia_score": "float", "certification_date": "timestamp", "recertification_date": "timestamp", "impact_areas": {"governance": "float", "workers": "float", "community": "float", "environment": "float", "customers": "float"}}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/bcorp/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Certification & Responsible Business Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Patagonia، Ben & Jerry's، یا Danone که B-Corp هستند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>شرکت‌های بدون گواهینامه B-Corp.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد اعتماد، تمایز از رقبا و جذب سرمایه‌گذاران تأثیرگذار.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Brand Differentiation</li><li>Investor Attraction</li><li>Employee Engagement</li><li>Supply Chain Standards</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>BIA Score</li><li>Certification Status</li><li>Impact Areas Performance</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>BIA assessment</li><li>impact metrics</li><li>legal structure</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Responsible Business
-├── B-Corp (Certification)</li><li>├── ESG (Investment criteria)</li><li>└── CSR (Voluntary activities)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>نیاز به تغییر ساختار حقوقی برای حمایت از mission.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>BIA Score</li><li>Impact Area Performance</li><li>Certification Maintenance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">B-Corp Status = BIA Score >= 80 + Legal Requirement + Verification</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>B-Corp Certification Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهبود عملکرد در حوزه‌های ضعیف impact.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>impact areas</li><li>legal structure</li><li>recertification timeline</li></ul></div>`
-},
-{
-  term: "خط سه‌گانه پایه (Triple Bottom Line)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>چارچوبی که عملکرد شرکت را بر اساس سه بُعد ارزیابی می‌کند: سود (Profit)، مردم (People) و سیاره (Planet).</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Triple Bottom Line توسط John Elkington در ۱۹۹۴ معرفی شد. این چارچوب موفقیت را فراتر از سود مالی تعریف می‌کند و مسئولیت اجتماعی و زیست‌محیطی را نیز در نظر می‌گیرد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Financial Performance 2. Social Impact Measurement 3. Environmental Impact Assessment 4. Integrated Reporting 5. Stakeholder Communication</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"tbl_id": "uuid", "company_id": "uuid", "profit": "float", "people_impact": "float", "planet_impact": "float", "overall_score": "float", "reporting_period": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/triple-bottom-line/{company_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Business & Performance Measurement Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>شرکتی که گزارش سالانه خود را با سه بخش سود، تأثیر اجتماعی و زیست‌محیطی ارائه می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>گزارش‌دهی فقط بر اساس معیارهای مالی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ارزیابی جامع عملکرد و ایجاد ارزش بلندمدت.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Performance Reporting</li><li>Strategic Planning</li><li>Stakeholder Communication</li><li>Impact Investing</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Integrated Reporting</li><li>Impact Measurement</li><li>Stakeholder Feedback</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>financial data</li><li>social metrics</li><li>environmental metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Performance Frameworks
-├── Triple Bottom Line (3Ps)</li><li>├── ESG (Investment focus)</li><li>└── Balanced Scorecard (Traditional)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعادل بین سه بُعد و جلوگیری از trade-off.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Profit Margin</li><li>Social Impact Score</li><li>Environmental Footprint</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">TBL Score = (Profit + People + Planet) ÷ 3</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Triple Bottom Line Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین سه بُعد برای حداکثر ارزش بلندمدت.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>measurement frameworks</li><li>reporting standards</li><li>stakeholder priorities</li></ul></div>`
-},
-{
-  term: "سرمایه‌گذاری اثرگذار (Impact Investing)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سرمایه‌گذاری با هدف ایجاد تأثیر اجتماعی و زیست‌محیطی قابل اندازه‌گیری در کنار بازده مالی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Impact Investing بین سرمایه‌گذاری سنتی (فقط سود) و خیریه (فقط تأثیر) قرار دارد. سرمایه‌گذاران تأثیرگذار به دنبال هر دو هستند: بازده مالی و تأثیر مثبت.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Impact Thesis 2. Deal Sourcing 3. Due Diligence (Financial + Impact) 4. Investment 5. Impact Measurement 6. Reporting</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"impact_fund_id": "uuid", "fund_size": "float", "target_impact": "string", "financial_return_target": "float", "impact_metrics": ["string"], "portfolio_companies": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/impact-investing/{fund_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Finance & Impact Capital Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>صندوق‌هایی که در انرژی پاک، آموزش یا بهداشت سرمایه‌گذاری می‌کنند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>سرمایه‌گذاری سنتی بدون در نظر گرفتن تأثیر اجتماعی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>هدایت سرمایه به سمت حل مسائل اجتماعی و زیست‌محیطی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Social Enterprises</li><li>Clean Technology</li><li>Financial Inclusion</li><li>Sustainable Agriculture</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Impact Measurement</li><li>Financial Performance</li><li>Additionality Assessment</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>impact metrics</li><li>financial returns</li><li>portfolio performance</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Investment Spectrum
-├── Traditional (Financial only)</li><li>├── Impact Investing (Financial + Impact)</li><li>└── Philanthropy (Impact only)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Impact measurement و reporting حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Impact Achievement</li><li>Financial Return</li><li>Capital Deployed</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Impact Investing Value = (Financial Return + Social Impact) ÷ Risk</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Impact Investment Portfolio Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تعادل بین بازده مالی و تأثیر اجتماعی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>impact thesis</li><li>return expectations</li><li>impact measurement</li></ul></div>`
-},
-{
-  term: "اوراق سبز (Green Bonds)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>اوراق قرضه‌ای که درآمد آن منحصراً برای تأمین مالی پروژه‌های زیست‌محیطی یا اقلیمی استفاده می‌شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Green Bonds بازار رو به رشدی دارند و به شرکت‌ها و دولت‌ها اجازه می‌دهند برای پروژه‌های پایدار سرمایه جذب کنند. این اوراق باید استانداردهای Green Bond Principles را رعایت کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Project Selection 2. Use of Proceeds 3. Process Management 4. Reporting 5. Third-party Verification</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"green_bond_id": "uuid", "issuer": "string", "bond_size": "float", "projects_funded": ["string"], "environmental_impact": "float", "verification_status": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/green-bonds/{bond_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Sustainable Finance & Green Investment Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>اوراق قرضه سبز برای تأمین مالی مزارع خورشیدی یا حمل‌ونقل پاک.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>اوراق قرضه سنتی بدون الزامات زیست‌محیطی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>هدایت سرمایه به سمت پروژه‌های پایدار و مقابله با تغییرات اقلیمی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Renewable Energy</li><li>Clean Transportation</li><li>Energy Efficiency</li><li>Sustainable Water Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Use of Proceeds</li><li>Environmental Impact</li><li>Third-party Verification</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>project details</li><li>environmental metrics</li><li>verification reports</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Sustainable Finance
-├── Green Bonds (Environmental)</li><li>├── Social Bonds (Social)</li><li>└── Sustainability Bonds (Both)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Transparency و reporting حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Environmental Impact</li><li>Capital Raised</li><li>Project Completion</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Green Bond Value = Environmental Impact ÷ Capital Deployed</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Green Bond Portfolio Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب پروژه‌های با بیشترین تأثیر زیست‌محیطی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>project eligibility</li><li>reporting standards</li><li>verification requirements</li></ul></div>`
-},
-{
-  term: "اعتبار کربن (Carbon Credits)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مجوزی که به دارنده اجازه می‌دهد یک تن دی‌اکسید کربن (یا معادل آن) منتشر کند. هر credit برابر با یک تن CO2 است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Carbon Credits ابزار بازار برای کاهش انتشار گازهای گلخانه‌ای هستند. شرکت‌ها می‌توانند credits را بخرند یا بفروشند. این سیستم انگیزه اقتصادی برای کاهش انتشار ایجاد می‌کند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Emission Measurement 2. Reduction Verification 3. Credit Issuance 4. Trading 5. Retirement</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"carbon_credit_id": "uuid", "project_type": "renewable|forestry|efficiency", "credits_issued": "int", "credits_traded": "int", "price_per_ton": "float", "co2_reduced_tons": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/carbon-credits/{project_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Carbon Market & Climate Finance Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>خرید carbon credits توسط شرکت‌ها برای جبران انتشار کربن.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>انتشار کربن بدون هیچ محدودیت یا هزینه.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد انگیزه اقتصادی برای کاهش انتشار و مقابله با تغییرات اقلیمی.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Carbon Offset</li><li>Emissions Trading</li><li>Climate Finance</li><li>Corporate Sustainability</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Verification Standards</li><li>Market Price</li><li>Project Additionality</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>emission data</li><li>project verification</li><li>market transactions</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Carbon Markets
-├── Compliance Markets (Regulated)</li><li>├── Voluntary Markets (Voluntary)</li><li>└── Carbon Credits (Tradeable units)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Quality و integrity credits حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>CO2 Reduced</li><li>Credit Price</li><li>Market Liquidity</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Carbon Credit Value = Market Price × Quantity × Quality Factor</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Carbon Credit Trading Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>خرید یا فروش credits بر اساس استراتژی کربن.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>credit type</li><li>verification standard</li><li>retirement strategy</li></ul></div>`
 }
         ]
       },
       {
         id: 11,
-        title: "فصل ۱۱: مدیریت محصول و رشد چابک",
+        title: "فصل ۶: مدیریت محصول و رشد چابک",
         words: [
 {
   term: "مدیریت محصول (Product Management)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند هدایت توسعه محصول از ایده تا عرضه و فراتر از آن، با تمرکز بر ایجاد ارزش برای کاربران و کسب‌وکار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>مدیر محصول (PM) در تقاطع کسب‌وکار، فناوری و تجربه کاربری قرار دارد. PM مسئول vision محصول، استراتژی، نقشه راه و اولویت‌بندی ویژگی‌ها است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Market Research 2. User Needs Analysis 3. Product Strategy 4. Roadmap Planning 5. Feature Prioritization 6. Launch & Iteration</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"product_id": "uuid", "name": "string", "stage": "discovery|definition|development|launch|growth|maturity", "team_size": "int", "key_metrics": ["string"], "roadmap_items": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/product/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Product Development & Business Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>مدیر محصول در Spotify که ویژگی‌های جدید را برای کاربران تعریف می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>توسعه محصول بدون استراتژی یا research کاربر.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد محصولات موفق که نیازهای کاربر و اهداف کسب‌وکار را برآورده می‌کنند.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Strategy</li><li>Feature Prioritization</li><li>Cross-functional Leadership</li><li>User-Centric Design</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Product Success Metrics</li><li>User Satisfaction</li><li>Business Impact</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user research</li><li>market data</li><li>business metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Product Development
 ├── Product Management (Strategy)</li><li>├── Product Design (UX/UI)</li><li>└── Product Engineering (Development)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Balance بین user needs، business goals و technical feasibility.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>User Adoption</li><li>Revenue Impact</li><li>Time to Market</li><li>User Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Product Success = (User Value × Business Value) ÷ Development Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product Management Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی ویژگی‌ها و تخصیص منابع.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>product vision</li><li>roadmap priorities</li><li>stakeholder alignment</li></ul></div>`
-},
-{
-  term: "چرخه حیات محصول (Product Lifecycle)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>مراحل مختلف یک محصول از معرفی تا رشد، بلوغ و در نهایت افول.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>چرخه حیات محصول شامل چهار مرحله اصلی است: Introduction (معرفی)، Growth (رشد)، Maturity (بلوغ) و Decline (افول). هر مرحله استراتژی متفاوتی نیاز دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Stage Identification 2. Performance Analysis 3. Strategy Adjustment 4. Resource Allocation 5. Exit Planning</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"product_id": "uuid", "current_stage": "introduction|growth|maturity|decline", "stage_duration": "string", "revenue_trend": "increasing|stable|decreasing", "recommended_actions": ["string"]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/product-lifecycle/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Product Strategy & Marketing Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>iPhone که هر سال وارد مرحله جدیدی از چرخه حیات می‌شود.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>محصولاتی که هرگز از مرحله معرفی خارج نمی‌شوند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تطبیق استراتژی با مرحله چرخه حیات برای حداکثر سودآوری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Marketing Strategy</li><li>Pricing Decisions</li><li>Resource Allocation</li><li>Product Retirement</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Sales Trend Analysis</li><li>Market Share</li><li>Profitability</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sales data</li><li>market trends</li><li>competitive analysis</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Product Lifecycle
-├── Introduction (Launch)</li><li>├── Growth (Scaling)</li><li>├── Maturity (Optimization)</li><li>└── Decline (Exit)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تشخیص به موقع انتقال بین مراحل حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Revenue Growth</li><li>Market Share</li><li>Profit Margin</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Lifecycle Stage = f(Sales Growth, Market Share, Profit Margin)</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product Lifecycle Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تطبیق استراتژی با مرحله چرخه حیات.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>stage identification</li><li>strategy alignment</li><li>resource allocation</li></ul></div>`
 },
 {
   term: "MVP (Minimum Viable Product)",
@@ -11401,19 +13929,9 @@ Boundary Intelligence Center
 ├── Problem-Solution Fit</li><li>├── Product-Market Fit (PMF)</li><li>└── Scale</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>PMF یک نقطه نیست، یک طیف است و نیاز به حفظ دارد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>User Retention</li><li>Organic Growth</li><li>NPS Score</li><li>Sean Ellis Test</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">PMF Score = (Retention × Organic Growth × User Satisfaction) ÷ Market Size</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product-Market Fit Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تصمیم scale یا iterate بر اساس PMF status.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>target market</li><li>success criteria</li><li>measurement methods</li></ul></div>`
 },
 {
-  term: "نقشه راه محصول (Product Roadmap)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>سند استراتژیک که vision، جهت‌گیری و اولویت‌های محصول را در طول زمان نشان می‌دهد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Roadmap ابزار ارتباطی بین محصول و ذینفعان است. این سند نشان می‌دهد چه چیزی، چرا و چه زمانی ساخته خواهد شد. Roadmap باید انعطاف‌پذیر و مبتنی بر اهداف باشد، نه فقط لیست ویژگی‌ها.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Strategy Alignment 2. Initiative Prioritization 3. Timeline Planning 4. Stakeholder Communication 5. Regular Updates</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"roadmap_id": "uuid", "product_id": "uuid", "time_horizon": "string", "initiatives": [{"name": "string", "priority": "high|medium|low", "target_date": "timestamp", "status": "planned|in_progress|completed"}], "strategic_themes": ["string"]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/roadmap/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Product Strategy & Planning Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>نقشه راه ۱۲ ماهه که themes استراتژیک و initiatives کلیدی را نشان می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>لیست ویژگی‌ها بدون استراتژی یا اولویت.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>همسوسازی تیم و ذینفعان و ارتباط vision محصول.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Strategic Planning</li><li>Stakeholder Communication</li><li>Resource Allocation</li><li>Progress Tracking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Strategic Alignment</li><li>Priority Clarity</li><li>Communication Effectiveness</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>strategic goals</li><li>market research</li><li>resource constraints</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Product Planning
-├── Product Vision (Long-term)</li><li>├── Product Roadmap (Strategic)</li><li>└── Product Backlog (Tactical)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Outcome-focused نه output-focused.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Roadmap Adherence</li><li>Strategic Alignment</li><li>Stakeholder Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Roadmap Value = (Strategic Clarity × Team Alignment) ÷ Change Frequency</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product Roadmap Visualizer</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی initiatives و تخصیص منابع.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>time horizon</li><li>granularity level</li><li>update frequency</li></ul></div>`
-},
-{
   term: "OKR (Objectives and Key Results)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>چارچوب تعیین اهداف که شامل یک Objective (هدف کیفی) و چند Key Result (نتایج کلیدی کمی) است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>OKR توسط Intel ابداع و توسط Google محبوب شد. OKRها ambitious، measurable و time-bound هستند. آن‌ها alignment و focus را در سازمان افزایش می‌دهند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Objective Setting 2. Key Results Definition 3. Alignment 4. Tracking 5. Grading & Reflection</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"okr_id": "uuid", "objective": "string", "key_results": [{"description": "string", "target": "float", "current": "float", "progress": "float"}], "quarter": "string", "owner": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/okr/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Goal Setting & Performance Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Objective: "بهبود تجربه کاربر" با Key Results: "NPS از ۳۰ به ۵۰" و "کاهش churn به ۵٪".</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>KPIهای سنتی بدون اهداف ambitious.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد focus، alignment و accountability در سازمان.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Strategic Planning</li><li>Team Alignment</li><li>Performance Tracking</li><li>Goal Communication</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>OKR Quality</li><li>Achievement Rate</li><li>Alignment Score</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>objectives</li><li>key results</li><li>progress tracking</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Goal Frameworks
 ├── OKR (Ambitious goals)</li><li>├── KPI (Performance metrics)</li><li>└── SMART Goals (Traditional)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>۷۰٪ achievement نشانه ambitious بودن OKR است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>OKR Achievement Rate</li><li>Alignment Score</li><li>Focus Index</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">OKR Success = (Objective Achievement × Key Result Progress) ÷ Ambition Level</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>OKR Tracking Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>تنظیم OKRهای quarterly و tracking progress.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>OKR cadence</li><li>alignment levels</li><li>grading criteria</li></ul></div>`
-},
-{
-  term: "KPI محصول (Product KPI)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>معیارهای کلیدی که برای سنجش موفقیت و سلامت یک محصول استفاده می‌شوند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Product KPIها بسته به مرحله محصول و اهداف کسب‌وکار متفاوت هستند. KPIهای رایج شامل retention، engagement، revenue و user satisfaction می‌شوند. انتخاب KPIهای درست برای تصمیم‌گیری داده‌محور حیاتی است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. KPI Selection 2. Baseline Establishment 3. Data Collection 4. Performance Tracking 5. Action Planning</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"kpi_id": "uuid", "product_id": "uuid", "kpi_name": "string", "current_value": "float", "target_value": "float", "trend": "improving|stable|declining", "data_source": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/product-kpi/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Product Analytics & Performance Measurement Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>DAU/MAU، retention rate، conversion rate، ARPU برای یک اپلیکیشن.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>معیارهای مبهم یا غیرقابل اقدام.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>سنجش عملکرد محصول و هدایت تصمیم‌گیری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Performance Monitoring</li><li>Decision Making</li><li>Stakeholder Reporting</li><li>Optimization</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>KPI Relevance</li><li>Actionability</li><li>Measurement Accuracy</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user behavior</li><li>business metrics</li><li>product analytics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Product Metrics
-├── Acquisition KPIs</li><li>├── Engagement KPIs</li><li>├── Retention KPIs</li><li>└── Revenue KPIs</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>انتخاب ۳-۵ KPI کلیدی نه بیشتر.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>KPI Achievement</li><li>Data Quality</li><li>Action Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">KPI Value = (Measurement Accuracy × Actionability) ÷ Complexity</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product KPI Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی areas نیازمند بهبود.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>KPI selection</li><li>target values</li><li>measurement frequency</li></ul></div>`
 },
 {
   term: "شاخص ستاره شمالی (North Star Metric)",
@@ -11421,34 +13939,9 @@ Boundary Intelligence Center
 ├── North Star Metric (Single focus)</li><li>├── Input Metrics (Drivers)</li><li>└── KPIs (Supporting metrics)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>NSM باید منعکس‌کننده ارزش مشتری و منجر به رشد کسب‌وکار باشد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>NSM Growth</li><li>Input Metric Performance</li><li>Team Alignment Score</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">NSM = Core Customer Value × Engagement Frequency</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>North Star Metric Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>هم‌راستایی تمام تیم‌ها حول NSM.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>metric definition</li><li>input metrics</li><li>target values</li></ul></div>`
 },
 {
-  term: "داستان کاربر (User Story)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>توضیحی کوتاه از یک ویژگی نرم‌افزار از دید کاربر نهایی، با فرمت: "به عنوان [نقش]، می‌خواهم [هدف] تا [ارزش]".</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>User Storyها ابزار اصلی در Agile و Scrum برای ثبت نیازهای کاربر هستند. آن‌ها بر ارزش کاربر تمرکز دارند و به تیم کمک می‌کنند بفهمند چرا یک ویژگی مهم است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. User Role Identification 2. Goal Definition 3. Value Articulation 4. Acceptance Criteria 5. Estimation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"story_id": "uuid", "role": "string", "goal": "string", "value": "string", "acceptance_criteria": ["string"], "story_points": "int", "status": "todo|in_progress|done"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/user-stories/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Agile Development & Requirements Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>"به عنوان مشتری، می‌خواهم سفارش خود را ردیابی کنم تا بدانم کی می‌رسد."</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نیازمندی‌های فنی بدون در نظر گرفتن کاربر.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تمرکز بر ارزش کاربر و ارتباط مؤثر بین تیم‌ها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Agile Development</li><li>Backlog Management</li><li>Sprint Planning</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>INVEST Criteria</li><li>Acceptance Criteria</li><li>User Value</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user research</li><li>product backlog</li><li>acceptance criteria</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Agile Artifacts
-├── User Stories (Requirements)</li><li>├── Product Backlog (Prioritized)</li><li>└── Sprint Backlog (Committed)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>User Storyها باید مستقل، قابل مذاکره، ارزشمند، قابل تخمین، کوچک و قابل تست باشند (INVEST).</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Story Completion Rate</li><li>Velocity</li><li>User Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Story Value = (User Value × Business Value) ÷ Effort</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>User Story Tracking Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی و تخمین storyها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>story format</li><li>acceptance criteria</li><li>estimation method</li></ul></div>`
-},
-{
-  term: "بک‌لاگ محصول (Product Backlog)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>لیست اولویت‌بندی‌شده از تمام ویژگی‌ها، بهبودها و باگ‌fixهایی که باید در محصول انجام شود.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Product Backlog منبع واحد حقیقت برای کار محصول است. این لیست پویا است و به طور مداوم به‌روز می‌شود. Product Owner مسئول اولویت‌بندی و نگهداری backlog است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Item Collection 2. Prioritization 3. Refinement 4. Estimation 5. Sprint Selection</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"backlog_id": "uuid", "product_id": "uuid", "total_items": "int", "items": [{"id": "uuid", "title": "string", "priority": "int", "estimate": "int", "status": "string"}]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/backlog/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Agile Development & Product Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>لیست Jira یا Trello که تمام ویژگی‌های آینده را نشان می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>لیست ثابت و غیراولویت‌بندی‌شده از ایده‌ها.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شفافیت در کار آینده و اولویت‌بندی مؤثر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Sprint Planning</li><li>Roadmap Planning</li><li>Stakeholder Communication</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Backlog Health</li><li>Priority Clarity</li><li>Refinement Quality</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user stories</li><li>bug reports</li><li>feature requests</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Agile Artifacts
-├── Product Backlog (All work)</li><li>├── Sprint Backlog (Current sprint)</li><li>└── Increment (Completed work)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Backlog grooming منظم برای حفظ سلامت backlog.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Backlog Size</li><li>Refinement Rate</li><li>Priority Accuracy</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Backlog Health = (Prioritized Items ÷ Total Items) × Refinement Quality</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product Backlog Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی و refinement آیتم‌ها.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>prioritization method</li><li>refinement cadence</li><li>estimation technique</li></ul></div>`
-},
-{
-  term: "اسپرینت (Sprint)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>بازه زمانی ثابت (معمولاً ۱-۴ هفته) که در آن تیم Scrum مجموعه‌ای از کارهای از پیش تعیین‌شده را تکمیل می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Sprint قلب Scrum است. در هر sprint، تیم یک increment قابل تحویل از محصول می‌سازد. Sprint با Sprint Planning شروع و با Sprint Review و Retrospective تمام می‌شود.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Sprint Planning 2. Daily Standups 3. Development Work 4. Sprint Review 5. Sprint Retrospective</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"sprint_id": "uuid", "sprint_number": "int", "start_date": "timestamp", "end_date": "timestamp", "committed_stories": "int", "completed_stories": "int", "velocity": "int"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/sprint/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Agile Development & Scrum Framework Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Sprint دو هفته‌ای که تیم ۲۰ story point را تکمیل می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>توسعه بدون time-boxing یا iteration.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد ریتم، پیش‌بینی‌پذیری و بهبود مستمر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Development</li><li>Team Planning</li><li>Progress Tracking</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Sprint Completion Rate</li><li>Velocity</li><li>Team Satisfaction</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>committed work</li><li>completed work</li><li>velocity trends</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Scrum Ceremonies
-├── Sprint Planning</li><li>├── Daily Standup</li><li>├── Sprint Review</li><li>└── Sprint Retrospective</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Sprint length باید ثابت باشد برای predictability.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Sprint Velocity</li><li>Completion Rate</li><li>Say-Do Ratio</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Sprint Success = (Completed Stories ÷ Committed Stories) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Sprint Progress Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>برنامه‌ریزی sprint و تنظیم velocity.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>sprint length</li><li>team capacity</li><li>definition of done</li></ul></div>`
-},
-{
   term: "چابک (Agile)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>رویکردی به توسعه نرم‌افزار که بر iteration، collaboration و پاسخ به تغییر تأکید دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Agile در Manifesto Agile (2001) تعریف شد. چهار ارزش اصلی: افراد و تعاملات بر فرآیندها و ابزارها، نرم‌افزار کارا بر مستندات جامع، همکاری با مشتری بر مذاکره قرارداد، و پاسخ به تغییر بر پیروی از برنامه.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Requirements Gathering 2. Iterative Development 3. Continuous Testing 4. Customer Feedback 5. Adaptation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"agile_project_id": "uuid", "methodology": "scrum|kanban|xp|safe", "iterations": "int", "team_size": "int", "velocity": "int", "customer_satisfaction": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/agile/{project_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Software Development Methodology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تیمی که هر دو هفته یک increment قابل تحویل ارائه می‌دهد.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Waterfall که خطی و غیرتکراری است.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>افزایش انعطاف‌پذیری، کیفیت و رضایت مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Software Development</li><li>Product Management</li><li>Project Management</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Agile Maturity</li><li>Iteration Frequency</li><li>Customer Collaboration</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sprint metrics</li><li>velocity trends</li><li>customer feedback</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Agile Frameworks
 ├── Scrum (Iterations)</li><li>├── Kanban (Flow)</li><li>├── XP (Engineering practices)</li><li>└── SAFe (Enterprise scale)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Agile یک mindset است، نه فقط فرآیند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Delivery Speed</li><li>Quality Metrics</li><li>Customer Satisfaction</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Agile Value = (Speed + Quality + Flexibility) ÷ Process Overhead</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Agile Performance Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>انتخاب framework مناسب و بهبود مستمر.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>framework choice</li><li>iteration length</li><li>team structure</li></ul></div>`
-},
-{
-  term: "اسکرام (Scrum)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فریم‌ورک Agile که در آن تیم‌ها در بازه‌های زمانی ثابت (sprint) کار می‌کنند و به طور منظم بازبینی و تطبیق می‌دهند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Scrum محبوب‌ترین فریم‌ورک Agile است. شامل سه نقش (Product Owner، Scrum Master، Development Team)، پنج رویداد (Sprint، Planning، Daily، Review، Retrospective) و سه artifact (Backlog، Sprint Backlog، Increment) است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Product Backlog Creation 2. Sprint Planning 3. Daily Scrum 4. Sprint Review 5. Sprint Retrospective</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"scrum_team_id": "uuid", "team_size": "int", "sprint_length": "string", "velocity": "int", "completed_sprints": "int", "product_increment": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/scrum/{team_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Agile Framework & Team Management Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تیمی ۷ نفره که هر دو هفته یک sprint تکمیل می‌کند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>توسعه بدون فریم‌ورک مشخص.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ساختار، شفافیت و بازرسی-تطبیق.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Development</li><li>Team Management</li><li>Complex Projects</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Scrum Adherence</li><li>Team Velocity</li><li>Sprint Success</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sprint metrics</li><li>team velocity</li><li>burndown charts</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Scrum Elements
-├── Roles (PO, SM, Team)</li><li>├── Events (5 ceremonies)</li><li>└── Artifacts (3 artifacts)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Scrum Master نقش تسهیل‌گر دارد، نه مدیر.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Team Velocity</li><li>Sprint Success Rate</li><li>Team Happiness</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Scrum Effectiveness = (Velocity × Quality × Team Satisfaction) ÷ Process Overhead</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Scrum Team Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهبود مستمر فرآیند تیم.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>sprint length</li><li>team size</li><li>definition of done</li></ul></div>`
-},
-{
-  term: "استارتاپ ناب (Lean Startup)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>متدولوژی توسعه محصول که بر ساخت-اندازه‌گیری-یادگیری تأکید دارد و از هدررفت منابع جلوگیری می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Lean Startup توسط Eric Ries معرفی شد. اصول اصلی: کارآفرینان همه جا هستند، entrepreneurship مدیریت است، یادگیری معتبر، ساخت-اندازه‌گیری-یادگیری، و نوآوری حسابداری.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Hypothesis Formation 2. MVP Development 3. Build-Measure-Learn Loop 4. Pivot or Persevere 5. Scale</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"startup_id": "uuid", "hypotheses_tested": "int", "validated_learning": ["string"], "pivot_count": "int", "current_stage": "discovery|validation|scale"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/lean-startup/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Entrepreneurship & Innovation Methodology Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Dropbox با ویدیوی MVP قبل از ساخت محصول.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>ساخت محصول کامل قبل از اعتبارسنجی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>کاهش ریسک و افزایش سرعت یادگیری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Startup Development</li><li>New Product Launch</li><li>Innovation Projects</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Learning Velocity</li><li>Pivot Frequency</li><li>Validated Learning</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>experiment results</li><li>customer feedback</li><li>metrics data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Lean Startup Cycle
-├── Build (MVP)</li><li>├── Measure (Data)</li><li>└── Learn (Insights)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Pivot یا Persevere تصمیم کلیدی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Learning Velocity</li><li>Experiment Success Rate</li><li>Pivot Effectiveness</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Lean Value = (Validated Learning × Speed) ÷ Resource Waste</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Lean Startup Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>Pivot یا Persevere بر اساس یادگیری.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>experiment cadence</li><li>success criteria</li><li>pivot triggers</li></ul></div>`
 },
 {
   term: "تفکر طراحی (Design Thinking)",
@@ -11459,26 +13952,6 @@ Boundary Intelligence Center
   term: "رشد هکی (Growth Hacking)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>رویکردی خلاقانه و داده‌محور برای رشد سریع کسب‌وکار با استفاده از آزمایش‌های سریع و بهینه‌سازی.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Growth Hacking توسط Sean Ellis معرفی شد. این رویکرد بر رشد مقیاس‌پذیر با هزینه کم تمرکز دارد و از ترکیب بازاریابی، محصول و داده استفاده می‌کند. چرخه اصلی: تحلیل، ایده‌پردازی، اولویت‌بندی، آزمایش و تحلیل.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Data Analysis 2. Hypothesis Generation 3. Experiment Design 4. A/B Testing 5. Result Analysis 6. Scaling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"growth_experiment_id": "uuid", "hypothesis": "string", "test_type": "ab_test|multivariate", "metric_impact": "float", "statistical_significance": "float", "status": "running|successful|failed"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/growth-hacking/{experiment_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Strategy & Experimentation Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Dropbox با referral program که رشد ۳۹۰۰٪ داشت.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>بازاریابی سنتی با بودجه‌های بزرگ.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>رشد سریع با هزینه کم برای استارتاپ‌ها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>User Acquisition</li><li>Activation</li><li>Retention</li><li>Revenue</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Experiment Velocity</li><li>Success Rate</li><li>Growth Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user analytics</li><li>experiment results</li><li>growth metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Hacking Cycle
 ├── Analyze (Data)</li><li>├── Ideate (Hypotheses)</li><li>├── Prioritize (ICE/RICE)</li><li>├── Test (Experiments)</li><li>└── Scale (Winners)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>آزمایش‌های سریع و یادگیری مستمر.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Experiment Velocity</li><li>Success Rate</li><li>Growth Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Growth Hacking Value = (Experiments × Success Rate × Impact) ÷ Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Growth Experiment Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی آزمایش‌ها و scaling winners.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>experiment cadence</li><li>success criteria</li><li>scaling thresholds</li></ul></div>`
-},
-{
-  term: "AARRR Funnel (Pirate Metrics)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>چارچوبی برای تحلیل سفر مشتری شامل پنج مرحله: Acquisition، Activation، Retention، Revenue و Referral.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>AARRR توسط Dave McClure معرفی شد. این چارچوب به استارتاپ‌ها کمک می‌کند نقاط ضعف در سفر مشتری را شناسایی و بهینه‌سازی کنند. هر مرحله معیارهای خاص خود را دارد.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Acquisition Tracking 2. Activation Measurement 3. Retention Analysis 4. Revenue Optimization 5. Referral Tracking</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"funnel_id": "uuid", "product_id": "uuid", "acquisition": "int", "activation": "int", "retention": "int", "revenue": "float", "referral": "int", "conversion_rates": {"a_to_act": "float", "act_to_ret": "float", "ret_to_rev": "float"}}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/aarrr/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Metrics & Customer Journey Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تحلیل funnel برای یک اپلیکیشن موبایل.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نگاه به معیارهای کلی بدون تفکیک مراحل.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شناسایی bottlenecks در سفر مشتری.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Growth Analysis</li><li>Funnel Optimization</li><li>Resource Allocation</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Funnel Analysis</li><li>Conversion Rates</li><li>Cohort Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user journey data</li><li>conversion metrics</li><li>cohort data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">AARRR Funnel
-├── Acquisition (Get users)</li><li>├── Activation (First value)</li><li>├── Retention (Keep users)</li><li>├── Revenue (Monetize)</li><li>└── Referral (Grow virally)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۸٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تمرکز بر ضعیف‌ترین مرحله funnel.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Stage Conversion Rates</li><li>Funnel Efficiency</li><li>Bottleneck Identification</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Funnel Efficiency = (Final Stage ÷ Initial Stage) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>AARRR Funnel Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و بهینه‌سازی bottlenecks.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>funnel stages</li><li>conversion definitions</li><li>measurement period</li></ul></div>`
-},
-{
-  term: "Product-Led Growth (PLG)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی رشد که در آن خود محصول اصلی موتور جذب، تبدیل و حفظ مشتری است.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>PLG در مقابل Sales-Led Growth است. در PLG، کاربران می‌توانند محصول را به صورت رایگان یا freemium امتحان کنند و خودشان به نسخه پولی ارتقا دهند. مثال‌ها: Slack، Zoom، Dropbox.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Free Trial/Freemium Design 2. Onboarding Optimization 3. Value Realization 4. Conversion Optimization 5. Viral Loops</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"plg_id": "uuid", "product_id": "uuid", "free_users": "int", "paid_conversion_rate": "float", "time_to_value": "float", "viral_coefficient": "float", "net_revenue_retention": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/plg/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Strategy & Product Strategy Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Slack که کاربران به صورت رایگان شروع می‌کنند و تیم‌ها ارتقا می‌دهند.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>Sales-Led Growth که فروشندگان مشتریان را جذب می‌کنند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>رشد مقیاس‌پذیر با CAC پایین.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>SaaS Products</li><li>Self-Serve Models</li><li>Viral Products</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Free-to-Paid Conversion</li><li>Time to Value</li><li>Viral Coefficient</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user behavior</li><li>conversion metrics</li><li>viral loops</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Models
-├── Product-Led Growth (Product-driven)</li><li>├── Sales-Led Growth (Sales-driven)</li><li>└── Marketing-Led Growth (Marketing-driven)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>محصول باید به سرعت value را نشان دهد.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Free-to-Paid Conversion</li><li>Time to Value</li><li>Product Qualified Leads</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">PLG Success = (Free Users × Conversion Rate × ARPU) ÷ CAC</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Product-Led Growth Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی onboarding و conversion.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>freemium model</li><li>conversion triggers</li><li>viral mechanics</li></ul></div>`
-},
-{
-  term: "Sales-Led Growth (SLG)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی رشد که در آن تیم فروش نقش اصلی در جذب و تبدیل مشتریان را دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>SLG مدل سنتی B2B است. تیم فروش لیدها را جذب، qualification و close می‌کند. این مدل برای محصولات پیچیده، گران و با چرخه فروش طولانی مناسب است.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Lead Generation 2. Qualification 3. Demo & Proposal 4. Negotiation 5. Closing 6. Account Management</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"slg_id": "uuid", "sales_team_size": "int", "leads_generated": "int", "qualified_leads": "int", "deals_closed": "int", "win_rate": "float", "avg_deal_size": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/slg/{team_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Strategy & Sales Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>Oracle یا Salesforce با تیم‌های فروش بزرگ.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>PLG که محصول خود رشد می‌کند.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>مناسب برای معاملات بزرگ و پیچیده.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Enterprise Sales</li><li>Complex Products</li><li>High-Ticket Deals</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Win Rate</li><li>Sales Cycle Length</li><li>Deal Size</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>sales pipeline</li><li>win/loss data</li><li>deal metrics</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Models
-├── Sales-Led Growth (Sales-driven)</li><li>├── Product-Led Growth (Product-driven)</li><li>└── Marketing-Led Growth (Marketing-driven)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Sales enablement و training حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Win Rate</li><li>Sales Cycle Length</li><li>Revenue per Rep</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">SLG Efficiency = (Revenue Closed ÷ Sales Cost) × Win Rate</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Sales-Led Growth Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی sales process و enablement.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>sales process</li><li>compensation structure</li><li>territory design</li></ul></div>`
-},
-{
-  term: "Marketing-Led Growth (MLG)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>استراتژی رشد که در آن بازاریابی نقش اصلی در جذب و پرورش لیدها را دارد.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>MLG بر content marketing، demand generation و brand building تمرکز دارد. تیم بازاریابی لیدها را جذب و nurture می‌کند تا برای فروش آماده شوند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Content Creation 2. Demand Generation 3. Lead Nurturing 4. MQL to SQL 5. Sales Handoff</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"mlg_id": "uuid", "leads_generated": "int", "mqls": "int", "sqls": "int", "marketing_sourced_revenue": "float", "cac": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/mlg/{campaign_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Growth Strategy & Marketing Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>HubSpot با content marketing قوی.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>فقط فروش بدون بازاریابی.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>ایجاد pipeline پایدار و مقیاس‌پذیر.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>B2B Marketing</li><li>Demand Generation</li><li>Brand Building</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Lead Generation Rate</li><li>MQL to SQL Conversion</li><li>Marketing ROI</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>campaign metrics</li><li>lead data</li><li>revenue attribution</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Growth Models
-├── Marketing-Led Growth (Marketing-driven)</li><li>├── Sales-Led Growth (Sales-driven)</li><li>└── Product-Led Growth (Product-driven)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۰٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Alignment بین marketing و sales حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Lead Generation Rate</li><li>MQL to SQL Rate</li><li>Marketing ROI</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">MLG Value = (Marketing Sourced Revenue ÷ Marketing Cost) × Pipeline Quality</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Marketing-Led Growth Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>بهینه‌سازی کمپین‌ها و allocation بودجه.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>channel mix</li><li>content strategy</li><li>lead scoring</li></ul></div>`
 },
 {
   term: "نگهداشت (Retention)",
@@ -11501,24 +13974,9 @@ Boundary Intelligence Center
 ├── Virality (User-driven)</li><li>├── Network Effects (Value-driven)</li><li>└── Paid Acquisition (Budget-driven)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۷۵٪ تا ۹۰٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Viral loops باید در محصول تعبیه شوند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>K-factor</li><li>Share Rate</li><li>Viral Conversion</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">K-factor = Invites per User × Conversion Rate of Invites</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Virality Analytics Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>طراحی و بهینه‌سازی viral loops.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>viral mechanics</li><li>share incentives</li><li>network effects</li></ul></div>`
 },
 {
-  term: "تحلیل کوهورت (Cohort Analysis)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>تکنیک تحلیل که کاربران را بر اساس زمان شروع (یا رویداد مشترک) گروه‌بندی می‌کند و رفتار هر گروه را در طول زمان ردیابی می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Cohort Analysis برای درک retention، engagement و رشد ضروری است. به جای نگاه به معیارهای کلی، این تکنیک نشان می‌دهد هر گروه از کاربران چگونه رفتار می‌کنند.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Cohort Definition 2. User Grouping 3. Behavior Tracking 4. Trend Analysis 5. Insight Generation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"cohort_id": "uuid", "cohort_definition": "string", "cohort_size": "int", "retention_curve": ["float"], "engagement_trend": ["float"], "revenue_per_user": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/cohort-analysis/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Data Analysis & User Behavior Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>مقایسه retention کاربران ژانویه با فوریه.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نگاه به معیارهای aggregate بدون تفکیک cohort.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>درک دقیق رفتار کاربران و شناسایی روندها.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Retention Analysis</li><li>Product Improvement</li><li>Marketing Effectiveness</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cohort Retention Curves</li><li>Trend Analysis</li><li>Comparative Analysis</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user activity</li><li>cohort definitions</li><li>time-series data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Analysis Techniques
-├── Cohort Analysis (Group-based)</li><li>├── Funnel Analysis (Journey-based)</li><li>└── Segmentation (Attribute-based)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعریف cohortهای معنادار و کافی.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Cohort Retention</li><li>Cohort Engagement</li><li>Cohort Revenue</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Cohort Retention = (Active Users in Period ÷ Initial Cohort Size) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Cohort Analysis Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی روندها و بهبود cohortهای جدید.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>cohort definition</li><li>time periods</li><li>metrics tracked</li></ul></div>`
-},
-{
-  term: "تحلیل قیف (Funnel Analysis)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>تکنیک تحلیل که مراحل سفر کاربر را ردیابی و نرخ تبدیل بین هر مرحله را اندازه‌گیری می‌کند.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Funnel Analysis برای شناسایی bottlenecks و بهینه‌سازی conversion حیاتی است. این تکنیک نشان می‌دهد کاربران در کدام مرحله drop off می‌کنند و چرا.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Funnel Definition 2. Step Tracking 3. Conversion Measurement 4. Drop-off Analysis 5. Optimization</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"funnel_id": "uuid", "funnel_name": "string", "steps": [{"name": "string", "users": "int", "conversion_rate": "float"}], "overall_conversion": "float", "biggest_drop_off": "string"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/funnel-analysis/{funnel_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Conversion Optimization & User Journey Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تحلیل funnel ثبت‌نام: Landing → Signup → Activation → Purchase.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>نگاه به conversion کلی بدون تفکیک مراحل.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شناسایی bottlenecks و بهینه‌سازی conversion.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Conversion Optimization</li><li>UX Improvement</li><li>Marketing Effectiveness</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Step-by-Step Conversion</li><li>Drop-off Analysis</li><li>Segment Comparison</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user journey</li><li>step completion</li><li>drop-off points</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Analysis Techniques
-├── Funnel Analysis (Journey-based)</li><li>├── Cohort Analysis (Group-based)</li><li>└── Segmentation (Attribute-based)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۵٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>تعریف funnelهای معنادار و قابل اقدام.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Step Conversion Rates</li><li>Overall Conversion</li><li>Drop-off Points</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Funnel Conversion = (Users at End ÷ Users at Start) × 100</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Funnel Analysis Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی و بهینه‌سازی bottlenecks.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>funnel steps</li><li>conversion definitions</li><li>time windows</li></ul></div>`
-},
-{
   term: "بخش‌بندی (Segmentation)",
   meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند تقسیم کاربران یا مشتریان به گروه‌های مجزا بر اساس ویژگی‌ها، رفتارها یا نیازهای مشترک.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Segmentation برای شخصی‌سازی تجربه، بهینه‌سازی بازاریابی و افزایش conversion حیاتی است. سگمنت‌های رایج: جمعیت‌شناختی، رفتاری، جغرافیایی و روانشناختی.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Data Collection 2. Feature Selection 3. Clustering Algorithm 4. Segment Definition 5. Validation</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"segmentation_id": "uuid", "segment_type": "demographic|behavioral|geographic|psychographic", "segments": [{"name": "string", "size": "int", "characteristics": ["string"], "value": "float"}]}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/segmentation/{product_id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Customer Analytics & Personalization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تقسیم کاربران به "power users"، "casual users" و "at-risk".</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>درمان همه کاربران یکسان.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>شخصی‌سازی و بهینه‌سازی منابع.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Targeted Marketing</li><li>Personalization</li><li>Product Strategy</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Cluster Analysis</li><li>Segment Validation</li><li>Behavioral Patterns</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>user attributes</li><li>behavioral data</li><li>demographic data</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Analysis Techniques
 ├── Segmentation (Attribute-based)</li><li>├── Cohort Analysis (Group-based)</li><li>└── Funnel Analysis (Journey-based)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۸۵٪ تا ۹۵٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>سگمنت‌ها باید actionable و measurable باشند.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Segment Size</li><li>Segment Value</li><li>Segment Performance</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Segment Value = (Segment Size × ARPU × Retention) ÷ Cost to Serve</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Customer Segmentation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>شناسایی سگمنت‌های ارزشمند و طراحی استراتژی.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>segmentation criteria</li><li>segment definitions</li><li>personalization rules</li></ul></div>`
-},
-{
-  term: "آزمایش‌گری (Experimentation)",
-  meaning: `<div class="dict-section"><h4>۳. تعریف ساده</h4><p>فرآیند سیستماتیک آزمایش فرضیه‌ها از طریق A/B testing و سایر روش‌های آزمایشی برای بهبود محصول و کسب‌وکار.</p></div><div class="dict-section"><h4>۴. تعریف تحلیلی</h4><p>Experimentation قلب فرهنگ داده‌محور است. به جای تکیه بر نظرات، شرکت‌ها فرضیه‌ها را تست می‌کنند و بر اساس داده تصمیم می‌گیرند. چرخه اصلی: فرضیه، طراحی آزمایش، اجرا، تحلیل و یادگیری.</p></div><div class="dict-section"><h4>۵. تعریف فنی (سطح ۲)</h4><div class="tech-block"><strong>⚙️ پردازش:</strong> 1. Hypothesis Formation 2. Experiment Design 3. Sample Size Calculation 4. Test Execution 5. Statistical Analysis 6. Learning & Scaling</div><strong>📤 خروجی (JSON):</strong><div class="json-code">{"experiment_id": "uuid", "hypothesis": "string", "test_type": "ab_test|multivariate", "sample_size": "int", "statistical_significance": "float", "result": "string", "impact": "float"}</div><strong>🔌 API:</strong> <span class="api-endpoint">GET /api/experiment/{id}</span></div><div class="dict-section"><h4>۶. نوع اصطلاح</h4><p>Data-Driven Decision Making & Optimization Concept</p></div><div class="dict-section"><h4>۷. مثال واقعی</h4><p>تست دو نسخه از landing page برای افزایش conversion.</p></div><div class="dict-section"><h4>۸. مثال متضاد</h4><p>تصمیم‌گیری بر اساس نظر یا حدس.</p></div><div class="dict-section"><h4>۹. اهمیت</h4><p>تصمیم‌گیری مبتنی بر داده و کاهش ریسک.</p></div><div class="dict-section"><h4>۱۰. موارد استفاده</h4><ul style="margin-right:20px"><li>Product Optimization</li><li>Marketing Campaigns</li><li>UX Improvement</li></ul></div><div class="dict-section"><h4>۱۱. روش تشخیص</h4><ul style="margin-right:20px"><li>Statistical Significance</li><li>Experiment Velocity</li><li>Learning Rate</li></ul></div><div class="dict-section"><h4>۱۲. داده‌ها</h4><ul style="margin-right:20px"><li>experiment results</li><li>user behavior</li><li>statistical analysis</li></ul></div><div class="dict-section"><h4>۱۳. ارتباط</h4><div class="tree-diagram">Experimentation Process
-├── Hypothesis (What to test)</li><li>├── Design (How to test)</li><li>├── Execution (Run test)</li><li>├── Analysis (Learn)</li><li>└── Scale (Apply learnings)</div></div><div class="dict-section"><h4>۱۴. اطمینان</h4><p>۹۰٪ تا ۹۹٪</p></div><div class="dict-section"><h4>۱۵. نکات طراحی</h4><p>Statistical rigor و proper sample size حیاتی است.</p></div><div class="dict-section"><h4>۱۶. KPIها</h4><div class="kpi-list"><ul style="margin-right:20px"><li>Experiment Velocity</li><li>Success Rate</li><li>Learning Rate</li></ul></div></div><div class="dict-section"><h4>۱۷. فرمول</h4><div class="formula-box">Experimentation Value = (Experiments × Success Rate × Impact) ÷ Cost</div></div><div class="dict-section"><h4>۱۸. داشبورد</h4><p>Experimentation Dashboard</p></div><div class="dict-section"><h4>۱۹. تصمیم‌یار</h4><p>اولویت‌بندی آزمایش‌ها و scaling winners.</p></div><div class="dict-section"><h4>۲۰. تنظیمات</h4><ul style="margin-right:20px"><li>experiment cadence</li><li>success criteria</li><li>statistical thresholds</li></ul></div>`
 }
         ]
       }
